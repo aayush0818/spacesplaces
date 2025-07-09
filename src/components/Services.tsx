@@ -5,40 +5,28 @@ import { Button } from '@/components/ui/button';
 const Services = () => {
   const services = [
     {
-      icon: Home,
-      title: "Interior Design & Planning",
-      description: "Complete interior design solutions from concept to execution, tailored to your lifestyle and preferences.",
-      features: ["Space Planning", "Color Consultation", "Furniture Selection", "Design Documentation"]
+      icon: Building,
+      title: "Exterior Design",
+      description: "Transform your building's facade and outdoor spaces with stunning exterior design solutions.",
+      features: ["Facade Design", "Landscape Planning", "Outdoor Lighting", "Material Selection"]
     },
     {
-      icon: PaintBucket,
-      title: "Modular Kitchen & Wardrobes",
-      description: "Custom modular solutions that maximize space efficiency while maintaining aesthetic appeal.",
-      features: ["Custom Cabinetry", "Premium Hardware", "Space Optimization", "Modern Finishes"]
+      icon: Home,
+      title: "Architecture Design",
+      description: "Comprehensive architectural planning and design services for residential and commercial projects.",
+      features: ["Structural Planning", "Space Optimization", "Building Permits", "Code Compliance"]
     },
     {
       icon: Sofa,
-      title: "Furniture Customization",
-      description: "Bespoke furniture pieces designed specifically for your space and functional requirements.",
-      features: ["Custom Design", "Quality Materials", "Expert Craftsmanship", "Unique Pieces"]
-    },
-    {
-      icon: Building,
-      title: "Commercial Interiors",
-      description: "Professional commercial space design that enhances productivity and brand identity.",
-      features: ["Office Design", "Retail Spaces", "Hospitality", "Brand Integration"]
+      title: "Furniture Design",
+      description: "Custom furniture pieces crafted to perfectly complement your interior spaces and lifestyle needs.",
+      features: ["Bespoke Furniture", "Material Selection", "Ergonomic Design", "Quality Craftsmanship"]
     },
     {
       icon: Ruler,
       title: "2D & 3D Layouts",
       description: "Detailed visualizations and technical drawings to help you envision your transformed space.",
       features: ["Floor Plans", "3D Renderings", "Technical Drawings", "Virtual Walkthroughs"]
-    },
-    {
-      icon: Wrench,
-      title: "Full Turnkey Projects",
-      description: "Complete project management from design to installation, ensuring seamless execution.",
-      features: ["Project Management", "Quality Control", "Timeline Management", "Installation Services"]
     }
   ];
 

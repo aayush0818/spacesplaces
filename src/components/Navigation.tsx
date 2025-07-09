@@ -59,13 +59,13 @@ const Navigation = () => {
           {/* Contact Info & CTA */}
           <div className="hidden lg:flex items-center space-x-4">
             <div className="flex flex-col text-right text-sm">
-              <a href="tel:+91-9876543210" className="flex items-center text-muted-foreground hover:text-primary transition-colors">
+              <a href="tel:7506333130" className="flex items-center text-muted-foreground hover:text-primary transition-colors">
                 <Phone className="h-4 w-4 mr-2" />
-                +91-9876543210
+                7506333130 / 9769282895
               </a>
-              <a href="mailto:hello@spacesandplaces.com" className="flex items-center text-muted-foreground hover:text-primary transition-colors">
+              <a href="mailto:info@spacesplaces.in" className="flex items-center text-muted-foreground hover:text-primary transition-colors">
                 <Mail className="h-4 w-4 mr-2" />
-                hello@spacesandplaces.com
+                info@spacesplaces.in
               </a>
             </div>
             <Button className="btn-luxury ml-4">
@@ -99,13 +99,13 @@ const Navigation = () => {
                 </Link>
               ))}
               <div className="pt-4 border-t space-y-2">
-                <a href="tel:+91-9876543210" className="flex items-center text-muted-foreground">
+                <a href="tel:7506333130" className="flex items-center text-muted-foreground">
                   <Phone className="h-4 w-4 mr-2" />
-                  +91-9876543210
+                  7506333130 / 9769282895
                 </a>
-                <a href="mailto:hello@spacesandplaces.com" className="flex items-center text-muted-foreground">
+                <a href="mailto:info@spacesplaces.in" className="flex items-center text-muted-foreground">
                   <Mail className="h-4 w-4 mr-2" />
-                  hello@spacesandplaces.com
+                  info@spacesplaces.in
                 </a>
                 <Button className="btn-luxury w-full mt-4">
                   Get Free Quote

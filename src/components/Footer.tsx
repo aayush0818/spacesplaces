@@ -7,12 +7,12 @@ const Footer = () => {
     {
       title: "Services",
       links: [
-        "Interior Design",
-        "Modular Kitchen",
-        "Bedroom Design", 
-        "Office Interior",
-        "Furniture Customization",
-        "3D Visualization"
+        "Exterior Design",
+        "Architecture Design",
+        "Furniture Design",
+        "2D & 3D Layouts",
+        "Interior Planning",
+        "Design Consultation"
       ]
     },
     {
@@ -97,8 +97,8 @@ const Footer = () => {
               <Phone className="h-5 w-5 text-primary mr-3" />
               <div>
                 <div className="text-sm text-background/80">Call Us</div>
-                <a href="tel:+91-9876543210" className="font-medium hover:text-primary transition-colors">
-                  +91-9876543210
+                <a href="tel:7506333130" className="font-medium hover:text-primary transition-colors">
+                  7506333130 / 9769282895
                 </a>
               </div>
             </div>
@@ -107,8 +107,8 @@ const Footer = () => {
               <Mail className="h-5 w-5 text-primary mr-3" />
               <div>
                 <div className="text-sm text-background/80">Email Us</div>
-                <a href="mailto:hello@spacesandplaces.com" className="font-medium hover:text-primary transition-colors">
-                  hello@spacesandplaces.com
+                <a href="mailto:info@spacesplaces.in" className="font-medium hover:text-primary transition-colors">
+                  info@spacesplaces.in
                 </a>
               </div>
             </div>
@@ -117,7 +117,8 @@ const Footer = () => {
               <MapPin className="h-5 w-5 text-primary mr-3" />
               <div>
                 <div className="text-sm text-background/80">Visit Us</div>
-                <div className="font-medium">Mumbai, India</div>
+                <div className="font-medium text-sm">348, Powai Plaza, Hiranandani Gardens, Powai, Mumbai 400076</div>
+                <div className="text-xs text-background/60 mt-1">Mon - Sat: 09:00 AM - 05:00 PM</div>
               </div>
             </div>
           </div>
