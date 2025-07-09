@@ -52,8 +52,7 @@ const FeaturedProjects = () => {
           {projects.map((project, index) => (
             <Card 
               key={project.id} 
-              className="group hover-lift border-0 shadow-soft overflow-hidden"
-              style={{ animationDelay: `${index * 0.2}s` }}
+              className={`group hover-lift hover-shimmer border-0 shadow-soft overflow-hidden stagger-fade`}
             >
               <div className="relative overflow-hidden">
                 <img 

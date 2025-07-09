@@ -20,7 +20,7 @@ const Navigation = () => {
     { name: 'Home', href: '/' },
     { name: 'About', href: '/about' },
     { name: 'Portfolio', href: '/portfolio' },
-    { name: 'Services', href: '/#services' },
+    { name: 'Services', href: '/services' },
     { name: 'Contact', href: '/contact' },
   ];
 
@@ -41,31 +41,18 @@ const Navigation = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
-              item.href.startsWith('/#') ? (
-                <a
-                  key={item.name}
-                  href={item.href}
-                  className={`transition-colors duration-300 font-medium ${
-                    location.pathname === '/' && location.hash === item.href.slice(1)
-                      ? 'text-primary'
-                      : 'text-foreground hover:text-primary'
-                  }`}
-                >
-                  {item.name}
-                </a>
-              ) : (
-                <Link
-                  key={item.name}
-                  to={item.href}
-                  className={`transition-colors duration-300 font-medium ${
-                    location.pathname === item.href
-                      ? 'text-primary'
-                      : 'text-foreground hover:text-primary'
-                  }`}
-                >
-                  {item.name}
-                </Link>
-              )
+              <Link
+                key={item.name}
+                to={item.href}
+                className={`transition-smooth font-medium hover-lift relative group ${
+                  location.pathname === item.href
+                    ? 'text-primary'
+                    : 'text-foreground hover:text-primary'
+                }`}
+              >
+                {item.name}
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-accent transition-all duration-300 group-hover:w-full"></span>
+              </Link>
             ))}
           </div>
 
@@ -102,25 +89,14 @@ const Navigation = () => {
           <div className="md:hidden absolute top-full left-0 right-0 bg-background/95 backdrop-blur-md border-t shadow-elegant">
             <div className="px-4 py-6 space-y-4">
               {navItems.map((item) => (
-                item.href.startsWith('/#') ? (
-                  <a
-                    key={item.name}
-                    href={item.href}
-                    className="block text-foreground hover:text-primary transition-colors font-medium"
-                    onClick={() => setIsMobileMenuOpen(false)}
-                  >
-                    {item.name}
-                  </a>
-                ) : (
-                  <Link
-                    key={item.name}
-                    to={item.href}
-                    className="block text-foreground hover:text-primary transition-colors font-medium"
-                    onClick={() => setIsMobileMenuOpen(false)}
-                  >
-                    {item.name}
-                  </Link>
-                )
+                <Link
+                  key={item.name}
+                  to={item.href}
+                  className="block text-foreground hover:text-primary transition-smooth font-medium hover-lift"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  {item.name}
+                </Link>
               ))}
               <div className="pt-4 border-t space-y-2">
                 <a href="tel:+91-9876543210" className="flex items-center text-muted-foreground">

@@ -63,8 +63,7 @@ const Services = () => {
             return (
               <Card 
                 key={service.title}
-                className="group hover-lift border-0 shadow-soft transition-all duration-500 hover:shadow-elegant hover:border-primary/20 fade-in scale-in"
-                style={{ animationDelay: `${index * 0.15}s` }}
+                className={`group hover-lift hover-shimmer border-0 shadow-soft transition-all duration-500 hover:shadow-elegant hover:border-primary/20 stagger-fade`}
               >
                 <CardContent className="p-8">
                   <div className="mb-6">

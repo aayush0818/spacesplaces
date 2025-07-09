@@ -51,8 +51,7 @@ const Testimonials = () => {
           {testimonials.map((testimonial, index) => (
             <Card 
               key={testimonial.id}
-              className="border-0 shadow-soft hover:shadow-elegant transition-all duration-300 relative overflow-hidden"
-              style={{ animationDelay: `${index * 0.2}s` }}
+              className={`border-0 shadow-soft hover:shadow-elegant hover-glow transition-all duration-300 relative overflow-hidden stagger-fade`}
             >
               <CardContent className="p-8">
                 {/* Quote Icon */}
@@ -92,21 +91,21 @@ const Testimonials = () => {
 
         {/* Trust Indicators */}
         <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-          <div>
-            <div className="text-3xl font-playflair font-bold text-primary mb-2">150+</div>
-            <div className="text-sm text-muted-foreground">Happy Clients</div>
+          <div className="stagger-fade hover-lift group cursor-pointer">
+            <div className="text-3xl font-playfair font-bold text-primary mb-2 transition-all duration-300 group-hover:scale-110 group-hover:text-primary-glow">150+</div>
+            <div className="text-sm text-muted-foreground transition-colors group-hover:text-foreground">Happy Clients</div>
           </div>
-          <div>
-            <div className="text-3xl font-playfair font-bold text-primary mb-2">200+</div>
-            <div className="text-sm text-muted-foreground">Projects Delivered</div>
+          <div className="stagger-fade hover-lift group cursor-pointer">
+            <div className="text-3xl font-playfair font-bold text-primary mb-2 transition-all duration-300 group-hover:scale-110 group-hover:text-primary-glow">200+</div>
+            <div className="text-sm text-muted-foreground transition-colors group-hover:text-foreground">Projects Delivered</div>
           </div>
-          <div>
-            <div className="text-3xl font-playfair font-bold text-primary mb-2">12+</div>
-            <div className="text-sm text-muted-foreground">Years Experience</div>
+          <div className="stagger-fade hover-lift group cursor-pointer">
+            <div className="text-3xl font-playfair font-bold text-primary mb-2 transition-all duration-300 group-hover:scale-110 group-hover:text-primary-glow">12+</div>
+            <div className="text-sm text-muted-foreground transition-colors group-hover:text-foreground">Years Experience</div>
           </div>
-          <div>
-            <div className="text-3xl font-playfair font-bold text-primary mb-2">98%</div>
-            <div className="text-sm text-muted-foreground">Satisfaction Rate</div>
+          <div className="stagger-fade hover-lift group cursor-pointer">
+            <div className="text-3xl font-playfair font-bold text-primary mb-2 transition-all duration-300 group-hover:scale-110 group-hover:text-primary-glow">98%</div>
+            <div className="text-sm text-muted-foreground transition-colors group-hover:text-foreground">Satisfaction Rate</div>
           </div>
         </div>
       </div>
