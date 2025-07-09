@@ -1,0 +1,115 @@
+import { useState, useEffect } from 'react';
+import { Menu, X, Phone, Mail } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+
+const Navigation = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const navItems = [
+    { name: 'Home', href: '#home' },
+    { name: 'About', href: '#about' },
+    { name: 'Portfolio', href: '#portfolio' },
+    { name: 'Services', href: '#services' },
+    { name: 'Contact', href: '#contact' },
+  ];
+
+  return (
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      isScrolled ? 'bg-background/95 backdrop-blur-md shadow-soft' : 'bg-transparent'
+    }`}>
+      <div className="container-luxury">
+        <div className="flex items-center justify-between h-20">
+          {/* Logo */}
+          <div className="flex-shrink-0">
+            <h1 className="text-2xl font-playfair font-bold text-foreground">
+              Spaces & Places
+            </h1>
+            <p className="text-sm text-muted-foreground -mt-1">Interior Design</p>
+          </div>
+
+          {/* Desktop Navigation */}
+          <div className="hidden md:flex items-center space-x-8">
+            {navItems.map((item) => (
+              <a
+                key={item.name}
+                href={item.href}
+                className="text-foreground hover:text-primary transition-colors duration-300 font-medium"
+              >
+                {item.name}
+              </a>
+            ))}
+          </div>
+
+          {/* Contact Info & CTA */}
+          <div className="hidden lg:flex items-center space-x-4">
+            <div className="flex flex-col text-right text-sm">
+              <a href="tel:+91-9876543210" className="flex items-center text-muted-foreground hover:text-primary transition-colors">
+                <Phone className="h-4 w-4 mr-2" />
+                +91-9876543210
+              </a>
+              <a href="mailto:hello@spacesandplaces.com" className="flex items-center text-muted-foreground hover:text-primary transition-colors">
+                <Mail className="h-4 w-4 mr-2" />
+                hello@spacesandplaces.com
+              </a>
+            </div>
+            <Button className="btn-luxury ml-4">
+              Get Free Quote
+            </Button>
+          </div>
+
+          {/* Mobile menu button */}
+          <div className="md:hidden">
+            <button
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              className="text-foreground hover:text-primary transition-colors"
+            >
+              {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            </button>
+          </div>
+        </div>
+
+        {/* Mobile Navigation */}
+        {isMobileMenuOpen && (
+          <div className="md:hidden absolute top-full left-0 right-0 bg-background/95 backdrop-blur-md border-t shadow-elegant">
+            <div className="px-4 py-6 space-y-4">
+              {navItems.map((item) => (
+                <a
+                  key={item.name}
+                  href={item.href}
+                  className="block text-foreground hover:text-primary transition-colors font-medium"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  {item.name}
+                </a>
+              ))}
+              <div className="pt-4 border-t space-y-2">
+                <a href="tel:+91-9876543210" className="flex items-center text-muted-foreground">
+                  <Phone className="h-4 w-4 mr-2" />
+                  +91-9876543210
+                </a>
+                <a href="mailto:hello@spacesandplaces.com" className="flex items-center text-muted-foreground">
+                  <Mail className="h-4 w-4 mr-2" />
+                  hello@spacesandplaces.com
+                </a>
+                <Button className="btn-luxury w-full mt-4">
+                  Get Free Quote
+                </Button>
+              </div>
+            </div>
+          </div>
+        )}
+      </div>
+    </nav>
+  );
+};
+
+export default Navigation;
