@@ -56,33 +56,37 @@ const Services = () => {
           </p>
         </div>
 
-        {/* Services Grid */}
+        {/* Enhanced Services Grid with Animations */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {services.map((service, index) => {
             const IconComponent = service.icon;
             return (
               <Card 
                 key={service.title}
-                className="group hover-lift border-0 shadow-soft transition-all duration-300 hover:shadow-elegant"
-                style={{ animationDelay: `${index * 0.1}s` }}
+                className="group hover-lift border-0 shadow-soft transition-all duration-500 hover:shadow-elegant hover:border-primary/20 fade-in scale-in"
+                style={{ animationDelay: `${index * 0.15}s` }}
               >
                 <CardContent className="p-8">
                   <div className="mb-6">
-                    <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-2xl mb-4 group-hover:bg-primary/20 transition-colors">
-                      <IconComponent className="h-8 w-8 text-primary" />
+                    <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-2xl mb-4 group-hover:bg-primary/20 group-hover:scale-110 transition-all duration-300 hover-glow">
+                      <IconComponent className="h-8 w-8 text-primary transition-all duration-300 group-hover:text-primary-glow" />
                     </div>
-                    <h3 className="text-xl font-playfair font-medium text-foreground mb-3">
+                    <h3 className="text-xl font-playfair font-medium text-foreground mb-3 transition-colors group-hover:text-primary">
                       {service.title}
                     </h3>
-                    <p className="text-muted-foreground leading-relaxed mb-4">
+                    <p className="text-muted-foreground leading-relaxed mb-4 transition-colors group-hover:text-foreground/80">
                       {service.description}
                     </p>
                   </div>
                   
-                  <ul className="space-y-2">
-                    {service.features.map((feature) => (
-                      <li key={feature} className="flex items-center text-sm text-muted-foreground">
-                        <div className="w-1.5 h-1.5 bg-primary rounded-full mr-3 flex-shrink-0"></div>
+                  <ul className="space-y-3">
+                    {service.features.map((feature, featureIndex) => (
+                      <li 
+                        key={feature} 
+                        className="flex items-center text-sm text-muted-foreground transition-all duration-300 hover:text-foreground fade-in"
+                        style={{ animationDelay: `${(index * 0.15) + (featureIndex * 0.05)}s` }}
+                      >
+                        <div className="w-2 h-2 bg-primary rounded-full mr-3 flex-shrink-0 transition-all duration-300 group-hover:bg-primary-glow group-hover:shadow-glow"></div>
                         {feature}
                       </li>
                     ))}
@@ -90,7 +94,7 @@ const Services = () => {
 
                   <Button 
                     variant="ghost" 
-                    className="w-full mt-6 text-primary hover:text-primary-foreground hover:bg-primary"
+                    className="w-full mt-6 text-primary hover:text-primary-foreground hover:bg-primary transition-all duration-300 hover-lift group-hover:shadow-elegant"
                   >
                     Learn More
                   </Button>
