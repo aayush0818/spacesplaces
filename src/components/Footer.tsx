@@ -1,3 +1,4 @@
+
 import { Phone, Mail, MapPin, Instagram, Facebook, Twitter, Linkedin } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
@@ -48,9 +49,18 @@ const Footer = () => {
           <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-8">
             {/* Brand Section */}
             <div className="lg:col-span-1">
-              <h3 className="text-2xl font-playfair font-bold mb-4">
-                Spaces & Places
-              </h3>
+              <div className="flex items-center space-x-3 mb-4">
+                <img 
+                  src="/lovable-uploads/13b534ba-169c-42a2-81b2-db4a755ccb88.png" 
+                  alt="Spaces & Places Logo" 
+                  className="h-10 w-auto brightness-0 invert"
+                />
+                <div>
+                  <h3 className="text-xl font-playfair font-bold">
+                    Spaces & Places
+                  </h3>
+                </div>
+              </div>
               <p className="text-background/80 mb-6 leading-relaxed">
                 Creating beautiful, functional spaces that reflect your personality and enhance your lifestyle. 
                 Professional interior design services with a personal touch.

@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from 'react';
 import { Menu, X, Phone, Mail } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -31,11 +32,19 @@ const Navigation = () => {
       <div className="container-luxury">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link to="/" className="flex-shrink-0">
-            <h1 className="text-2xl font-playfair font-bold text-foreground">
-              Spaces & Places
-            </h1>
-            <p className="text-sm text-muted-foreground -mt-1">Interior Design</p>
+          <Link to="/" className="flex items-center space-x-3 flex-shrink-0">
+            <img 
+              src="/lovable-uploads/13b534ba-169c-42a2-81b2-db4a755ccb88.png" 
+              alt="Spaces & Places Logo" 
+              className="h-12 w-auto"
+              style={{ filter: 'drop-shadow(0 0 0 transparent)' }}
+            />
+            <div>
+              <h1 className="text-xl font-playfair font-bold text-foreground">
+                Spaces & Places
+              </h1>
+              <p className="text-xs text-muted-foreground -mt-1">Interior Design</p>
+            </div>
           </Link>
 
           {/* Desktop Navigation */}

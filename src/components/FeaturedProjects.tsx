@@ -52,11 +52,11 @@ const FeaturedProjects = () => {
               key={project.id} 
               className={`group hover-lift hover-shimmer border-0 shadow-soft overflow-hidden stagger-fade`}
             >
-              <div className="relative overflow-hidden">
+              <div className="relative overflow-hidden aspect-[4/3]">
                 <img 
                   src={project.image} 
                   alt={project.title}
-                  className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-overlay opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                   <Button variant="outline" className="bg-background/90 hover:bg-background">
