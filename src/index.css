@@ -191,24 +191,74 @@ All colors MUST be HSL.
 
   /* Typography Utilities */
   .text-hero {
-    @apply text-5xl md:text-7xl lg:text-9xl font-bold leading-tight;
+    @apply text-4xl md:text-6xl lg:text-7xl font-bold leading-tight;
   }
 
   .text-section-title {
-    @apply text-3xl md:text-4xl lg:text-5xl font-medium mb-6;
+    @apply text-2xl md:text-3xl lg:text-4xl font-medium mb-4 md:mb-6;
   }
 
   .text-luxury {
-    @apply text-lg md:text-xl text-muted-foreground leading-relaxed;
+    @apply text-base md:text-lg lg:text-xl text-muted-foreground leading-relaxed;
   }
 
   /* Layout Utilities */
   .section-padding {
-    @apply py-16 md:py-24 lg:py-32;
+    @apply py-12 md:py-20 lg:py-28;
   }
 
   .container-luxury {
     @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Mobile Optimization */
+  @media (max-width: 768px) {
+    .mobile-space-y-6 > * + * {
+      margin-top: 1.5rem;
+    }
+    
+    .mobile-text-center {
+      text-align: center;
+    }
+    
+    .mobile-px-6 {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+    
+    .mobile-py-8 {
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+    }
+    
+    /* Prevent horizontal scroll */
+    .mobile-no-overflow {
+      overflow-x: hidden;
+    }
+    
+    /* Better touch targets */
+    .mobile-touch-target {
+      min-height: 44px;
+      min-width: 44px;
+    }
+    
+    /* Responsive image container */
+    .mobile-img-container {
+      position: relative;
+      width: 100%;
+      height: auto;
+      overflow: hidden;
+    }
+  }
+
+  /* Prevent layout shifts */
+  .prevent-shift {
+    contain: layout style;
+  }
+
+  /* Better focus states for accessibility */
+  .focus-ring {
+    @apply focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2;
   }
 }
 
