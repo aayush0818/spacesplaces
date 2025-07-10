@@ -45,8 +45,6 @@ const Hero = () => {
                   alt={`Luxury Interior Design ${index + 1}`}
                   className="w-full h-full object-cover transition-transform duration-[8000ms] ease-out hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-r from-background/90 via-background/50 to-background/20"></div>
-                <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent"></div>
               </div>
             </CarouselItem>
           ))}
