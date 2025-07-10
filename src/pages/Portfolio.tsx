@@ -1,4 +1,3 @@
-
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import ImageViewer from '@/components/ImageViewer';
@@ -103,6 +102,87 @@ const Portfolio = () => {
       year: "2024",
       image: "/lovable-uploads/7f3f75de-9ac6-43df-8e17-73616d407665.png",
       tags: ["Kitchen", "Luxury", "Decorative"]
+    },
+    {
+      id: 11,
+      title: "Elegant Arched Doorway Design",
+      category: "residential",
+      location: "Mumbai, India",
+      year: "2024",
+      image: "/lovable-uploads/1064d50e-b7d4-4aac-ba16-ae02dddae5e3.png",
+      tags: ["Doorway", "Elegant", "Architectural Detail"]
+    },
+    {
+      id: 12,
+      title: "Modern Bar and Entertainment Unit",
+      category: "residential",
+      location: "Gurgaon, India",
+      year: "2024",
+      image: "/lovable-uploads/bc80cd73-b042-4e91-8405-c935b69c7f7c.png",
+      tags: ["Bar", "Entertainment", "Modern"]
+    },
+    {
+      id: 13,
+      title: "Kids Study Room with Creative Storage",
+      category: "residential",
+      location: "Noida, India",
+      year: "2024",
+      image: "/lovable-uploads/8de7986c-e31c-46be-8b10-f00c0dfa73e6.png",
+      tags: ["Kids Room", "Study", "Storage"]
+    },
+    {
+      id: 14,
+      title: "Space-Themed Children's Bedroom",
+      category: "residential",
+      location: "Bangalore, India",
+      year: "2024",
+      image: "/lovable-uploads/90f00acc-8701-4177-99c9-2f6c5bb409ef.png",
+      tags: ["Kids Room", "Space Theme", "Playful"]
+    },
+    {
+      id: 15,
+      title: "Contemporary Bedroom with Murphy Bed",
+      category: "residential",
+      location: "Pune, India",
+      year: "2024",
+      image: "/lovable-uploads/08fd3178-62b5-40ac-8be1-0ed0f3c658a9.png",
+      tags: ["Bedroom", "Murphy Bed", "Space Saving"]
+    },
+    {
+      id: 16,
+      title: "Compact Home Office Nook",
+      category: "residential",
+      location: "Chennai, India",
+      year: "2024",
+      image: "/lovable-uploads/48a21fec-c60b-456b-a0be-8c2c4b9e1e3a.png",
+      tags: ["Home Office", "Compact", "Efficient"]
+    },
+    {
+      id: 17,
+      title: "Luxury Bathroom with LED Mirrors",
+      category: "residential",
+      location: "Delhi, India",
+      year: "2024",
+      image: "/lovable-uploads/a4b932f3-a065-4eaa-8bd5-7f36fc267ad2.png",
+      tags: ["Bathroom", "Luxury", "LED Lighting"]
+    },
+    {
+      id: 18,
+      title: "Traditional Pooja Room with Ornate Design",
+      category: "residential",
+      location: "Surat, India",
+      year: "2024",
+      image: "/lovable-uploads/15b998f4-d4c9-491f-b5bc-81cd56f3fcff.png",
+      tags: ["Pooja Room", "Traditional", "Ornate"]
+    },
+    {
+      id: 19,
+      title: "Modern Wall Art Feature",
+      category: "residential",
+      location: "Hyderabad, India",
+      year: "2024",
+      image: "/lovable-uploads/b48b3b85-2acc-46fb-9f43-8f68a117b7cf.png",
+      tags: ["Wall Art", "Modern", "Statement Piece"]
     }
   ];
 
