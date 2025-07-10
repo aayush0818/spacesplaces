@@ -1,4 +1,5 @@
 import { Phone, Mail, MapPin, Instagram, Facebook, Twitter, Linkedin } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -7,34 +8,34 @@ const Footer = () => {
     {
       title: "Services",
       links: [
-        "Exterior Design",
-        "Architecture Design",
-        "Furniture Design",
-        "2D & 3D Layouts",
-        "Interior Planning",
-        "Design Consultation"
+        { name: "Exterior Design", href: "/services" },
+        { name: "Architecture Design", href: "/services" },
+        { name: "Furniture Design", href: "/services" },
+        { name: "2D & 3D Layouts", href: "/services" },
+        { name: "Interior Planning", href: "/services" },
+        { name: "Design Consultation", href: "/contact" }
       ]
     },
     {
       title: "Company",
       links: [
-        "About Us",
-        "Our Team",
-        "Portfolio",
-        "Process",
-        "Careers",
-        "Blog"
+        { name: "About Us", href: "/about" },
+        { name: "Our Team", href: "/about" },
+        { name: "Portfolio", href: "/portfolio" },
+        { name: "Process", href: "/about" },
+        { name: "Careers", href: "/contact" },
+        { name: "Blog", href: "#" }
       ]
     },
     {
       title: "Support",
       links: [
-        "Contact Us",
-        "Free Consultation",
-        "FAQ",
-        "Privacy Policy",
-        "Terms of Service",
-        "Warranty"
+        { name: "Contact Us", href: "/contact" },
+        { name: "Free Consultation", href: "/contact" },
+        { name: "FAQ", href: "/contact" },
+        { name: "Privacy Policy", href: "#" },
+        { name: "Terms of Service", href: "#" },
+        { name: "Warranty", href: "/contact" }
       ]
     }
   ];
@@ -57,16 +58,16 @@ const Footer = () => {
               
               {/* Social Links */}
               <div className="flex space-x-4">
-                <a href="#" className="w-10 h-10 bg-background/10 rounded-full flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors">
+                <a href="https://instagram.com/spacesplaces" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-background/10 rounded-full flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors hover-lift">
                   <Instagram className="h-5 w-5" />
                 </a>
-                <a href="#" className="w-10 h-10 bg-background/10 rounded-full flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors">
+                <a href="https://facebook.com/spacesplaces" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-background/10 rounded-full flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors hover-lift">
                   <Facebook className="h-5 w-5" />
                 </a>
-                <a href="#" className="w-10 h-10 bg-background/10 rounded-full flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors">
+                <a href="https://twitter.com/spacesplaces" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-background/10 rounded-full flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors hover-lift">
                   <Twitter className="h-5 w-5" />
                 </a>
-                <a href="#" className="w-10 h-10 bg-background/10 rounded-full flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors">
+                <a href="https://linkedin.com/company/spacesplaces" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-background/10 rounded-full flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors hover-lift">
                   <Linkedin className="h-5 w-5" />
                 </a>
               </div>
@@ -78,10 +79,16 @@ const Footer = () => {
                 <h4 className="text-lg font-medium mb-4">{section.title}</h4>
                 <ul className="space-y-3">
                   {section.links.map((link) => (
-                    <li key={link}>
-                      <a href="#" className="text-background/80 hover:text-primary transition-colors">
-                        {link}
-                      </a>
+                    <li key={link.name}>
+                      {link.href.startsWith('#') ? (
+                        <a href={link.href} className="text-background/80 hover:text-primary transition-colors hover-lift">
+                          {link.name}
+                        </a>
+                      ) : (
+                        <Link to={link.href} className="text-background/80 hover:text-primary transition-colors hover-lift">
+                          {link.name}
+                        </Link>
+                      )}
                     </li>
                   ))}
                 </ul>
@@ -131,15 +138,15 @@ const Footer = () => {
               © {currentYear} Spaces & Places Interior. All rights reserved.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
-              <a href="#" className="text-background/60 hover:text-primary text-sm transition-colors">
+              <Link to="/contact" className="text-background/60 hover:text-primary text-sm transition-colors hover-lift">
                 Privacy Policy
-              </a>
-              <a href="#" className="text-background/60 hover:text-primary text-sm transition-colors">
+              </Link>
+              <Link to="/contact" className="text-background/60 hover:text-primary text-sm transition-colors hover-lift">
                 Terms of Service
-              </a>
-              <a href="#" className="text-background/60 hover:text-primary text-sm transition-colors">
+              </Link>
+              <Link to="/portfolio" className="text-background/60 hover:text-primary text-sm transition-colors hover-lift">
                 Sitemap
-              </a>
+              </Link>
             </div>
           </div>
         </div>

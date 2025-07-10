@@ -68,8 +68,8 @@ const Navigation = () => {
                 info@spacesplaces.in
               </a>
             </div>
-            <Button className="btn-luxury ml-4">
-              Get Free Quote
+            <Button className="btn-luxury ml-4" asChild>
+              <Link to="/contact">Get Free Quote</Link>
             </Button>
           </div>
 
@@ -107,8 +107,8 @@ const Navigation = () => {
                   <Mail className="h-4 w-4 mr-2" />
                   info@spacesplaces.in
                 </a>
-                <Button className="btn-luxury w-full mt-4">
-                  Get Free Quote
+                <Button className="btn-luxury w-full mt-4" asChild>
+                  <Link to="/contact">Get Free Quote</Link>
                 </Button>
               </div>
             </div>
