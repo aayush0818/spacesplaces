@@ -1,86 +1,128 @@
+
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
+import ImageViewer from '@/components/ImageViewer';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Filter, Grid, List } from 'lucide-react';
 import { useState } from 'react';
-import heroImage from '@/assets/hero-interior.jpg';
-import bedroomImage from '@/assets/bedroom-project.jpg';
-import kitchenImage from '@/assets/kitchen-project.jpg';
-import officeImage from '@/assets/office-project.jpg';
 
 const Portfolio = () => {
   const [filter, setFilter] = useState('all');
   const [viewMode, setViewMode] = useState('grid');
+  const [selectedImage, setSelectedImage] = useState<{ src: string; alt: string } | null>(null);
 
   const projects = [
     {
       id: 1,
-      title: "Modern Luxury Living Room",
+      title: "Elegant Living Room with Crystal Chandelier",
       category: "residential",
-      location: "Manhattan, NY",
+      location: "Mumbai, India",
       year: "2024",
-      image: heroImage,
-      tags: ["Modern", "Luxury", "Living Room"]
+      image: "/lovable-uploads/33079f5b-2cb1-4a9c-8b2b-576ebb30018a.png",
+      tags: ["Luxury", "Chandelier", "Living Room"]
     },
     {
       id: 2,
-      title: "Serene Master Bedroom",
+      title: "Modern Home Office Design",
       category: "residential",
-      location: "Beverly Hills, CA",
-      year: "2023",
-      image: bedroomImage,
-      tags: ["Contemporary", "Bedroom", "Minimalist"]
+      location: "Pune, India",
+      year: "2024",
+      image: "/lovable-uploads/6cacc49f-0656-415e-9433-7e2b3933a288.png",
+      tags: ["Modern", "Office", "Workspace"]
     },
     {
       id: 3,
-      title: "Gourmet Kitchen Design",
+      title: "Contemporary Storage Solutions",
       category: "residential",
-      location: "Austin, TX",
+      location: "Delhi, India",
       year: "2024",
-      image: kitchenImage,
-      tags: ["Modern", "Kitchen", "Functional"]
+      image: "/lovable-uploads/89dc1d00-3dca-43e9-ac8b-07c431cc05cf.png",
+      tags: ["Storage", "Contemporary", "Functional"]
     },
     {
       id: 4,
-      title: "Executive Office Suite",
-      category: "commercial",
-      location: "Downtown LA",
-      year: "2023",
-      image: officeImage,
-      tags: ["Professional", "Office", "Corporate"]
+      title: "Luxury Open Living Space",
+      category: "residential",
+      location: "Bangalore, India",
+      year: "2024",
+      image: "/lovable-uploads/fcc525e6-b663-4098-b889-1bb10d0803ed.png",
+      tags: ["Luxury", "Open Plan", "Modern"]
     },
     {
       id: 5,
-      title: "Penthouse Living Space",
+      title: "Serene Master Bedroom Suite",
       category: "residential",
-      location: "Miami, FL",
+      location: "Hyderabad, India",
       year: "2024",
-      image: heroImage,
-      tags: ["Luxury", "Penthouse", "Contemporary"]
+      image: "/lovable-uploads/6d240345-fb7f-4115-a724-6adfad014099.png",
+      tags: ["Bedroom", "Serene", "Ambient Lighting"]
     },
     {
       id: 6,
-      title: "Boutique Hotel Lobby",
-      category: "hospitality",
-      location: "San Francisco, CA",
-      year: "2023",
-      image: officeImage,
-      tags: ["Hospitality", "Lobby", "Elegant"]
+      title: "Contemporary Kitchen Design",
+      category: "residential",
+      location: "Chennai, India",
+      year: "2024",
+      image: "/lovable-uploads/301e6616-bd72-46d7-af39-cbd2af69e499.png",
+      tags: ["Kitchen", "Contemporary", "Functional"]
+    },
+    {
+      id: 7,
+      title: "Modern Kitchen with Island",
+      category: "residential",
+      location: "Kolkata, India",
+      year: "2024",
+      image: "/lovable-uploads/a2d52684-ade1-4bff-ab46-9d063164e91b.png",
+      tags: ["Kitchen", "Island", "Modern"]
+    },
+    {
+      id: 8,
+      title: "Traditional Pooja Room Design",
+      category: "residential",
+      location: "Ahmedabad, India",
+      year: "2024",
+      image: "/lovable-uploads/a44d1cfb-6e31-49d2-a279-6e1ea332fca2.png",
+      tags: ["Traditional", "Pooja Room", "Sacred Space"]
+    },
+    {
+      id: 9,
+      title: "Modern Wardrobe Solutions",
+      category: "residential",
+      location: "Jaipur, India",
+      year: "2024",
+      image: "/lovable-uploads/37c89905-d8f3-4a2b-b2aa-2eda3505ce72.png",
+      tags: ["Wardrobe", "Modern", "Storage"]
+    },
+    {
+      id: 10,
+      title: "Luxury Kitchen with Decorative Elements",
+      category: "residential",
+      location: "Lucknow, India",
+      year: "2024",
+      image: "/lovable-uploads/7f3f75de-9ac6-43df-8e17-73616d407665.png",
+      tags: ["Kitchen", "Luxury", "Decorative"]
     }
   ];
 
   const categories = [
     { value: 'all', label: 'All Projects' },
     { value: 'residential', label: 'Residential' },
-    { value: 'commercial', label: 'Commercial' },
-    { value: 'hospitality', label: 'Hospitality' }
+    { value: 'commercial', label: 'Commercial' }
   ];
 
   const filteredProjects = filter === 'all' 
     ? projects 
     : projects.filter(project => project.category === filter);
+
+  const handleImageClick = (image: string, title: string) => {
+    setSelectedImage({ src: image, alt: title });
+  };
+
+  const closeImageViewer = () => {
+    setSelectedImage(null);
+  };
 
   return (
     <div className="min-h-screen">
@@ -151,11 +193,11 @@ const Portfolio = () => {
           }`}>
             {filteredProjects.map((project) => (
               <Card key={project.id} className="hover-lift overflow-hidden">
-                <div className="relative">
+                <div className="relative cursor-pointer" onClick={() => handleImageClick(project.image, project.title)}>
                   <img 
                     src={project.image} 
                     alt={project.title}
-                    className="w-full h-64 object-cover"
+                    className="w-full h-64 object-cover hover:scale-105 transition-transform duration-300"
                   />
                   <div className="absolute top-4 left-4">
                     <Badge className="bg-primary/90 text-primary-foreground">
@@ -188,6 +230,13 @@ const Portfolio = () => {
           </div>
         </div>
       </section>
+
+      <ImageViewer
+        src={selectedImage?.src || ''}
+        alt={selectedImage?.alt || ''}
+        isOpen={!!selectedImage}
+        onClose={closeImageViewer}
+      />
 
       <Footer />
     </div>

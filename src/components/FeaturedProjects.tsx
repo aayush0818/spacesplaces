@@ -1,35 +1,33 @@
+
 import { ArrowRight, ExternalLink } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import kitchenProject from '@/assets/kitchen-project.jpg';
-import bedroomProject from '@/assets/bedroom-project.jpg';
-import officeProject from '@/assets/office-project.jpg';
 
 const FeaturedProjects = () => {
   const projects = [
     {
       id: 1,
-      title: "Modern Kitchen Transformation",
+      title: "Elegant Living Space",
       category: "Residential",
-      description: "Complete modular kitchen redesign with custom cabinetry and premium finishes.",
-      image: kitchenProject,
-      tags: ["Modular Kitchen", "Custom Design", "Luxury Finishes"]
+      description: "Luxurious living room featuring crystal chandelier and premium ambient lighting.",
+      image: "/lovable-uploads/33079f5b-2cb1-4a9c-8b2b-576ebb30018a.png",
+      tags: ["Luxury Living", "Crystal Lighting", "Premium Design"]
     },
     {
       id: 2,
-      title: "Serene Master Bedroom",
+      title: "Contemporary Kitchen Design",
       category: "Residential",
-      description: "Elegant bedroom suite with custom wardrobes and ambient lighting solutions.",
-      image: bedroomProject,
-      tags: ["Bedroom Design", "Custom Furniture", "Lighting"]
+      description: "Modern kitchen with sleek finishes and functional layout for everyday living.",
+      image: "/lovable-uploads/301e6616-bd72-46d7-af39-cbd2af69e499.png",
+      tags: ["Modern Kitchen", "Functional Design", "Contemporary"]
     },
     {
       id: 3,
-      title: "Corporate Office Redesign",
-      category: "Commercial",
-      description: "Modern office space promoting productivity and employee well-being.",
-      image: officeProject,
-      tags: ["Commercial", "Workspace", "Modern Design"]
+      title: "Home Office Setup",
+      category: "Residential",
+      description: "Efficient workspace design promoting productivity and comfort.",
+      image: "/lovable-uploads/6cacc49f-0656-415e-9433-7e2b3933a288.png",
+      tags: ["Home Office", "Workspace", "Productivity"]
     }
   ];
 
