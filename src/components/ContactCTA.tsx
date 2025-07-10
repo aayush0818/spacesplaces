@@ -29,8 +29,8 @@ const ContactCTA = () => {
                 </div>
                 <div>
                   <h4 className="font-medium text-foreground">Phone</h4>
-                  <a href="tel:+91-9876543210" className="text-muted-foreground hover:text-primary transition-colors">
-                    +91-9876543210
+                  <a href="tel:9699578902" className="text-muted-foreground hover:text-primary transition-colors">
+                    9699578902
                   </a>
                 </div>
               </div>
@@ -41,8 +41,8 @@ const ContactCTA = () => {
                 </div>
                 <div>
                   <h4 className="font-medium text-foreground">Email</h4>
-                  <a href="mailto:hello@spacesandplaces.com" className="text-muted-foreground hover:text-primary transition-colors">
-                    hello@spacesandplaces.com
+                  <a href="mailto:info@spacesplacesinterior.com" className="text-muted-foreground hover:text-primary transition-colors">
+                    info@spacesplacesinterior.com
                   </a>
                 </div>
               </div>

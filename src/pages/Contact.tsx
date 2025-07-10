@@ -13,22 +13,22 @@ const Contact = () => {
     {
       icon: MapPin,
       title: "Our Location",
-      details: ["123 Design Avenue", "New York, NY 10001"]
+      details: ["348, Powai Plaza, Hiranandani Gardens", "Powai, Mumbai 400076"]
     },
     {
       icon: Phone,
       title: "Phone Number",
-      details: ["+1 (555) 123-4567", "+1 (555) 987-6543"]
+      details: ["9699578902"]
     },
     {
       icon: Mail,
       title: "Email Address",
-      details: ["hello@spacesandplaces.com", "projects@spacesandplaces.com"]
+      details: ["info@spacesplacesinterior.com"]
     },
     {
       icon: Clock,
       title: "Business Hours",
-      details: ["Mon - Fri: 9:00 AM - 6:00 PM", "Sat: 10:00 AM - 4:00 PM"]
+      details: ["Mon - Sat: 09:00 AM - 05:00 PM", "Sunday: Closed"]
     }
   ];
 
@@ -179,7 +179,7 @@ const Contact = () => {
                   Visit Our Studio
                 </h3>
                 <p className="text-muted-foreground">
-                  123 Design Avenue, New York, NY 10001
+                  348, Powai Plaza, Hiranandani Gardens, Powai, Mumbai 400076
                 </p>
               </div>
             </div>

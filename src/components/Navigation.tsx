@@ -68,13 +68,13 @@ const Navigation = () => {
           {/* Contact Info & CTA */}
           <div className="hidden lg:flex items-center space-x-4">
             <div className="flex flex-col text-right text-sm">
-              <a href="tel:7506333130" className="flex items-center text-muted-foreground hover:text-primary transition-colors">
+              <a href="tel:9699578902" className="flex items-center text-muted-foreground hover:text-primary transition-colors">
                 <Phone className="h-4 w-4 mr-2" />
-                7506333130 / 9769282895
+                9699578902
               </a>
-              <a href="mailto:info@spacesplaces.in" className="flex items-center text-muted-foreground hover:text-primary transition-colors">
+              <a href="mailto:info@spacesplacesinterior.com" className="flex items-center text-muted-foreground hover:text-primary transition-colors">
                 <Mail className="h-4 w-4 mr-2" />
-                info@spacesplaces.in
+                info@spacesplacesinterior.com
               </a>
             </div>
             <Button className="btn-luxury ml-4" asChild>
@@ -108,13 +108,13 @@ const Navigation = () => {
                 </Link>
               ))}
               <div className="pt-4 border-t space-y-2">
-                <a href="tel:7506333130" className="flex items-center text-muted-foreground">
+                <a href="tel:9699578902" className="flex items-center text-muted-foreground">
                   <Phone className="h-4 w-4 mr-2" />
-                  7506333130 / 9769282895
+                  9699578902
                 </a>
-                <a href="mailto:info@spacesplaces.in" className="flex items-center text-muted-foreground">
+                <a href="mailto:info@spacesplacesinterior.com" className="flex items-center text-muted-foreground">
                   <Mail className="h-4 w-4 mr-2" />
-                  info@spacesplaces.in
+                  info@spacesplacesinterior.com
                 </a>
                 <Button className="btn-luxury w-full mt-4" asChild>
                   <Link to="/contact">Get Free Quote</Link>

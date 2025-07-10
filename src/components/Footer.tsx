@@ -68,17 +68,21 @@ const Footer = () => {
               
               {/* Social Links */}
               <div className="flex space-x-4">
-                <a href="https://instagram.com/spacesplaces" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-background/10 rounded-full flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors hover-lift">
+                <a href="https://www.instagram.com/spacesplacesdesigns?utm_source=qr&igsh=MW10cTNiM3I4czNhdA==" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-background/10 rounded-full flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors hover-lift">
                   <Instagram className="h-5 w-5" />
                 </a>
-                <a href="https://facebook.com/spacesplaces" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-background/10 rounded-full flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors hover-lift">
+                <a href="https://www.facebook.com/profile.php?id=61565562218535&mibextid=ZbWKwL" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-background/10 rounded-full flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors hover-lift">
                   <Facebook className="h-5 w-5" />
                 </a>
-                <a href="https://twitter.com/spacesplaces" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-background/10 rounded-full flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors hover-lift">
-                  <Twitter className="h-5 w-5" />
+                <a href="https://youtube.com/@spacesplaces-r3p?si=yJG_LM2HYahAevHq" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-background/10 rounded-full flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors hover-lift">
+                  <svg className="h-5 w-5" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                  </svg>
                 </a>
-                <a href="https://linkedin.com/company/spacesplaces" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-background/10 rounded-full flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors hover-lift">
-                  <Linkedin className="h-5 w-5" />
+                <a href="https://spacesplacesinterior.com/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-background/10 rounded-full flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors hover-lift">
+                  <svg className="h-5 w-5" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                  </svg>
                 </a>
               </div>
             </div>
@@ -114,8 +118,8 @@ const Footer = () => {
               <Phone className="h-5 w-5 text-primary mr-3" />
               <div>
                 <div className="text-sm text-background/80">Call Us</div>
-                <a href="tel:7506333130" className="font-medium hover:text-primary transition-colors">
-                  7506333130 / 9769282895
+                <a href="tel:9699578902" className="font-medium hover:text-primary transition-colors">
+                  9699578902
                 </a>
               </div>
             </div>
@@ -124,8 +128,8 @@ const Footer = () => {
               <Mail className="h-5 w-5 text-primary mr-3" />
               <div>
                 <div className="text-sm text-background/80">Email Us</div>
-                <a href="mailto:info@spacesplaces.in" className="font-medium hover:text-primary transition-colors">
-                  info@spacesplaces.in
+                <a href="mailto:info@spacesplacesinterior.com" className="font-medium hover:text-primary transition-colors">
+                  info@spacesplacesinterior.com
                 </a>
               </div>
             </div>
