@@ -49,10 +49,7 @@ const About = () => {
                 Our Story
               </h2>
               <div className="space-y-6 text-luxury">
-                <p>
-                  Founded in 2012 by award-winning designer Sarah Chen, Spaces & Places began with a simple 
-                  vision: to create interiors that not only look beautiful but feel like home.
-                </p>
+                <p>Founded in 2012 by award-winning designer, Spaces & Places began with a simple vision: to create interiors that not only look beautiful but feel like home.</p>
                 <p>
                   What started as a boutique design studio has grown into a full-service interior design firm, 
                   yet we've never lost sight of our core mission - creating personalized spaces that reflect 
