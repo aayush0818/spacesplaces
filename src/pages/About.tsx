@@ -34,13 +34,24 @@ const About = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="section-padding bg-gradient-hero">
-        <div className="container-luxury">
+      <section className="relative section-padding min-h-[60vh] flex items-center justify-center overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <img 
+            src={designerImage}
+            alt="About Spaces & Places"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/70 to-background/30"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent"></div>
+        </div>
+        
+        <div className="container-luxury relative z-10">
           <div className="text-center max-w-4xl mx-auto">
-            <h1 className="text-section-title font-playfair text-foreground mb-6">
-              About <span className="text-primary">Spaces & Places</span>
+            <h1 className="text-section-title font-playfair text-white drop-shadow-2xl mb-6">
+              About <span className="text-primary-glow">Spaces & Places</span>
             </h1>
-            <p className="text-luxury">
+            <p className="text-xl text-white/90 leading-relaxed drop-shadow-lg">
               For over a decade, we've been transforming ordinary spaces into extraordinary experiences. 
               Our passion for design and commitment to excellence has made us a trusted name in luxury interior design.
             </p>

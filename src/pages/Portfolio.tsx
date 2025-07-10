@@ -87,13 +87,24 @@ const Portfolio = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="section-padding bg-gradient-hero">
-        <div className="container-luxury">
+      <section className="relative section-padding min-h-[60vh] flex items-center justify-center overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <img 
+            src={heroImage}
+            alt="Our Portfolio"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/70 to-background/30"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent"></div>
+        </div>
+        
+        <div className="container-luxury relative z-10">
           <div className="text-center max-w-4xl mx-auto">
-            <h1 className="text-section-title font-playfair text-foreground mb-6">
-              Our <span className="text-primary">Portfolio</span>
+            <h1 className="text-section-title font-playfair text-white drop-shadow-2xl mb-6">
+              Our <span className="text-primary-glow">Portfolio</span>
             </h1>
-            <p className="text-luxury">
+            <p className="text-xl text-white/90 leading-relaxed drop-shadow-lg">
               Explore our collection of thoughtfully designed spaces that showcase our commitment 
               to creating extraordinary interiors.
             </p>
