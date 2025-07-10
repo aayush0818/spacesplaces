@@ -4,33 +4,25 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Award, Users, Target, Heart } from 'lucide-react';
 import designerImage from '@/assets/designer-portrait.jpg';
-
 const About = () => {
-  const values = [
-    {
-      icon: Target,
-      title: "Excellence",
-      description: "We pursue perfection in every detail, from initial concept to final execution."
-    },
-    {
-      icon: Heart,
-      title: "Passion",
-      description: "Our love for design drives us to create spaces that truly inspire and delight."
-    },
-    {
-      icon: Users,
-      title: "Collaboration",
-      description: "We work closely with our clients to ensure their vision becomes reality."
-    },
-    {
-      icon: Award,
-      title: "Innovation",
-      description: "We stay ahead of trends while creating timeless designs that endure."
-    }
-  ];
-
-  return (
-    <div className="min-h-screen">
+  const values = [{
+    icon: Target,
+    title: "Excellence",
+    description: "We pursue perfection in every detail, from initial concept to final execution."
+  }, {
+    icon: Heart,
+    title: "Passion",
+    description: "Our love for design drives us to create spaces that truly inspire and delight."
+  }, {
+    icon: Users,
+    title: "Collaboration",
+    description: "We work closely with our clients to ensure their vision becomes reality."
+  }, {
+    icon: Award,
+    title: "Innovation",
+    description: "We stay ahead of trends while creating timeless designs that endure."
+  }];
+  return <div className="min-h-screen">
       <Navigation />
       
       {/* Hero Section */}
@@ -77,15 +69,8 @@ const About = () => {
               </Button>
             </div>
             <div className="relative">
-              <img 
-                src={designerImage} 
-                alt="Sarah Chen, Founder" 
-                className="rounded-lg shadow-elegant w-full"
-              />
-              <div className="absolute bottom-4 left-4 bg-background/90 backdrop-blur-sm rounded-lg p-4">
-                <h3 className="font-playfair font-medium text-foreground">Sarah Chen</h3>
-                <p className="text-sm text-muted-foreground">Founder & Creative Director</p>
-              </div>
+              
+              
             </div>
           </div>
         </div>
@@ -104,8 +89,7 @@ const About = () => {
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {values.map((value, index) => (
-              <Card key={index} className="hover-lift">
+            {values.map((value, index) => <Card key={index} className="hover-lift">
                 <CardContent className="p-6 text-center">
                   <value.icon className="w-12 h-12 text-primary mx-auto mb-4" />
                   <h3 className="font-playfair font-medium text-foreground mb-3">
@@ -115,8 +99,7 @@ const About = () => {
                     {value.description}
                   </p>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>)}
           </div>
         </div>
       </section>
@@ -146,8 +129,6 @@ const About = () => {
       </section>
 
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default About;
