@@ -37,10 +37,9 @@ const Hero = () => {
         <CarouselNext className="right-4 md:right-8 bg-black/40 border-white/30 text-white hover:bg-primary hover:border-primary backdrop-blur-sm transition-all duration-300 z-30" />
       </Carousel>
 
-      {/* Enhanced Gradient Overlays for Better Text Visibility */}
-      <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/30 to-black/70 z-10"></div>
-      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-black/40 z-10"></div>
-      <div className="absolute inset-0 bg-black/20 z-10"></div>
+      {/* Subtle Gradient Overlays for Text Visibility */}
+      <div className="absolute inset-0 bg-gradient-to-r from-black/40 via-black/10 to-black/40 z-10"></div>
+      <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-black/20 z-10"></div>
 
       {/* Static Content with Enhanced Positioning */}
       <div className="relative z-20 container-luxury px-4 md:px-8">
@@ -55,8 +54,8 @@ const Hero = () => {
             </h1>
             
             {/* Description with Enhanced Readability */}
-            <div className="bg-black/40 backdrop-blur-sm rounded-2xl p-6 md:p-8 max-w-4xl mx-auto mb-12 border border-white/10">
-              <p className="text-lg md:text-xl lg:text-2xl text-white leading-relaxed font-medium">
+            <div className="bg-black/25 backdrop-blur-sm rounded-2xl p-6 md:p-8 max-w-4xl mx-auto mb-12 border border-white/20">
+              <p className="text-lg md:text-xl lg:text-2xl text-white leading-relaxed font-medium filter drop-shadow-lg">
                 We create extraordinary interior experiences that blend luxury with functionality. From concept to completion, every space tells your unique story through thoughtful design and unparalleled craftsmanship.
               </p>
             </div>
@@ -85,17 +84,17 @@ const Hero = () => {
 
           {/* Enhanced Stats Section with Better Visibility */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto fade-in" style={{ animationDelay: "0.6s" }}>
-            <div className="text-center group hover-lift bg-black/40 backdrop-blur-md border border-white/30 rounded-xl p-6 transition-all duration-300 hover:bg-black/50 hover:border-primary/50">
+            <div className="text-center group hover-lift bg-black/25 backdrop-blur-md border border-white/30 rounded-xl p-6 transition-all duration-300 hover:bg-black/35 hover:border-primary/50">
               <div className="text-4xl lg:text-5xl font-playfair font-bold text-primary-glow mb-2 transition-transform group-hover:scale-110 filter drop-shadow-lg">150+</div>
               <div className="text-white font-medium text-lg">Projects Completed</div>
               <div className="text-white/70 text-sm mt-1">Luxury Spaces Crafted</div>
             </div>
-            <div className="text-center group hover-lift bg-black/40 backdrop-blur-md border border-white/30 rounded-xl p-6 transition-all duration-300 hover:bg-black/50 hover:border-primary/50">
+            <div className="text-center group hover-lift bg-black/25 backdrop-blur-md border border-white/30 rounded-xl p-6 transition-all duration-300 hover:bg-black/35 hover:border-primary/50">
               <div className="text-4xl lg:text-5xl font-playfair font-bold text-primary-glow mb-2 transition-transform group-hover:scale-110 filter drop-shadow-lg">12+</div>
               <div className="text-white font-medium text-lg">Years Experience</div>
               <div className="text-white/70 text-sm mt-1">Design Excellence</div>
             </div>
-            <div className="text-center group hover-lift bg-black/40 backdrop-blur-md border border-white/30 rounded-xl p-6 transition-all duration-300 hover:bg-black/50 hover:border-primary/50">
+            <div className="text-center group hover-lift bg-black/25 backdrop-blur-md border border-white/30 rounded-xl p-6 transition-all duration-300 hover:bg-black/35 hover:border-primary/50">
               <div className="text-4xl lg:text-5xl font-playfair font-bold text-primary-glow mb-2 transition-transform group-hover:scale-110 filter drop-shadow-lg">98%</div>
               <div className="text-white font-medium text-lg">Client Satisfaction</div>
               <div className="text-white/70 text-sm mt-1">Happy Homeowners</div>
