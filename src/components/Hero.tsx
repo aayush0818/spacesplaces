@@ -64,11 +64,6 @@ const Hero = () => {
       <div className="relative z-20 container-luxury">
         <div className="max-w-5xl">
           <div className="fade-in slide-up text-center">
-            {/* Luxury Badge */}
-            <div className="inline-flex items-center px-4 py-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full text-white/90 text-sm font-medium mb-6 hover-lift">
-              ✨ Award-Winning Interior Design Studio
-            </div>
-            
             <h1 className="text-hero font-playfair text-white drop-shadow-2xl mb-6 animate-in">
               Transform Your
               <span className="block bg-gradient-to-r from-primary-glow to-primary bg-clip-text text-transparent drop-shadow-lg">Space & Place</span>
