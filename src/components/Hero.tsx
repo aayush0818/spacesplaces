@@ -1,54 +1,28 @@
 import { ArrowRight, Quote } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from '@/components/ui/carousel';
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
 import Autoplay from 'embla-carousel-autoplay';
 import heroImage from '@/assets/hero-interior.jpg';
 import bedroomImage from '@/assets/bedroom-project.jpg';
 import kitchenImage from '@/assets/kitchen-project.jpg';
 import officeImage from '@/assets/office-project.jpg';
-
 const Hero = () => {
-  const carouselImages = [
-    heroImage,
-    bedroomImage,
-    kitchenImage,
-    officeImage
-  ];
-
-  return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+  const carouselImages = [heroImage, bedroomImage, kitchenImage, officeImage];
+  return <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Full-Width Luxury Interior Carousel */}
-      <Carousel
-        className="absolute inset-0 w-full h-full"
-        opts={{
-          align: "start",
-          loop: true,
-        }}
-        plugins={[
-          Autoplay({
-            delay: 6000,
-          }),
-        ]}
-      >
+      <Carousel className="absolute inset-0 w-full h-full" opts={{
+      align: "start",
+      loop: true
+    }} plugins={[Autoplay({
+      delay: 6000
+    })]}>
         <CarouselContent className="h-full">
-          {carouselImages.map((image, index) => (
-            <CarouselItem key={index} className="h-full">
+          {carouselImages.map((image, index) => <CarouselItem key={index} className="h-full">
               <div className="relative w-full h-full overflow-hidden">
-                <img 
-                  src={image}
-                  alt={`Luxury Interior Design ${index + 1}`}
-                  className="w-full h-full object-cover transition-transform duration-[8000ms] ease-out hover:scale-105"
-                />
+                <img src={image} alt={`Luxury Interior Design ${index + 1}`} className="w-full h-full object-cover transition-transform duration-[8000ms] ease-out hover:scale-105" />
               </div>
-            </CarouselItem>
-          ))}
+            </CarouselItem>)}
         </CarouselContent>
         
         {/* Elegant Navigation */}
@@ -66,7 +40,7 @@ const Hero = () => {
           <div className="fade-in slide-up text-center">
             <h1 className="text-hero font-playfair text-white drop-shadow-2xl mb-6 animate-in">
               Transform Your
-              <span className="block bg-gradient-to-r from-primary-glow to-primary bg-clip-text text-transparent drop-shadow-lg">Space & Place</span>
+              <span className="block bg-gradient-to-r from-primary-glow to-primary bg-clip-text text-transparent drop-shadow-lg">Spaces & Places</span>
             </h1>
             
             <p className="text-xl md:text-2xl text-white/90 leading-relaxed max-w-3xl mx-auto mb-12 drop-shadow-lg">
@@ -91,7 +65,9 @@ const Hero = () => {
           </div>
 
           {/* Enhanced Luxury Stats with Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto fade-in" style={{ animationDelay: "0.6s" }}>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto fade-in" style={{
+          animationDelay: "0.6s"
+        }}>
             <div className="text-center group hover-lift bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-6 transition-all duration-300 hover:bg-white/20">
               <div className="text-4xl font-playfair font-bold text-primary-glow drop-shadow-lg mb-2 transition-transform group-hover:scale-110">150+</div>
               <div className="text-white/90 font-medium">Projects Completed</div>
@@ -117,8 +93,6 @@ const Hero = () => {
           <Link to="/contact">Free Consultation</Link>
         </Button>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Hero;
