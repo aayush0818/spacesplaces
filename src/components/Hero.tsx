@@ -46,7 +46,7 @@ const Hero = () => {
         <div className="max-w-6xl mx-auto">
           <div className="fade-in slide-up text-center">
             {/* Hero Title with Better Contrast */}
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-playfair font-bold text-white mb-6 animate-in leading-tight">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-montserrat font-bold text-white mb-6 animate-in leading-tight">
               Transform Your
               <span className="block bg-gradient-to-r from-primary-glow to-primary bg-clip-text text-transparent mt-2 filter drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
                 Spaces & Places
@@ -85,17 +85,17 @@ const Hero = () => {
           {/* Enhanced Stats Section with Better Visibility */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto fade-in" style={{ animationDelay: "0.6s" }}>
             <div className="text-center group hover-lift bg-black/25 backdrop-blur-md border border-white/30 rounded-xl p-6 transition-all duration-300 hover:bg-black/35 hover:border-primary/50">
-              <div className="text-4xl lg:text-5xl font-playfair font-bold text-primary-glow mb-2 transition-transform group-hover:scale-110 filter drop-shadow-lg">150+</div>
+              <div className="text-4xl lg:text-5xl font-montserrat font-bold text-primary-glow mb-2 transition-transform group-hover:scale-110 filter drop-shadow-lg">150+</div>
               <div className="text-white font-medium text-lg">Projects Completed</div>
               <div className="text-white/70 text-sm mt-1">Luxury Spaces Crafted</div>
             </div>
             <div className="text-center group hover-lift bg-black/25 backdrop-blur-md border border-white/30 rounded-xl p-6 transition-all duration-300 hover:bg-black/35 hover:border-primary/50">
-              <div className="text-4xl lg:text-5xl font-playfair font-bold text-primary-glow mb-2 transition-transform group-hover:scale-110 filter drop-shadow-lg">12+</div>
+              <div className="text-4xl lg:text-5xl font-montserrat font-bold text-primary-glow mb-2 transition-transform group-hover:scale-110 filter drop-shadow-lg">12+</div>
               <div className="text-white font-medium text-lg">Years Experience</div>
               <div className="text-white/70 text-sm mt-1">Design Excellence</div>
             </div>
             <div className="text-center group hover-lift bg-black/25 backdrop-blur-md border border-white/30 rounded-xl p-6 transition-all duration-300 hover:bg-black/35 hover:border-primary/50">
-              <div className="text-4xl lg:text-5xl font-playfair font-bold text-primary-glow mb-2 transition-transform group-hover:scale-110 filter drop-shadow-lg">98%</div>
+              <div className="text-4xl lg:text-5xl font-montserrat font-bold text-primary-glow mb-2 transition-transform group-hover:scale-110 filter drop-shadow-lg">98%</div>
               <div className="text-white font-medium text-lg">Client Satisfaction</div>
               <div className="text-white/70 text-sm mt-1">Happy Homeowners</div>
             </div>
