@@ -54,7 +54,7 @@ const Hero = () => {
             </h1>
             
             {/* Description with Enhanced Readability */}
-            <div className="bg-black/25 backdrop-blur-sm rounded-2xl p-6 md:p-8 max-w-4xl mx-auto mb-12 border border-white/20">
+            <div className="max-w-4xl mx-auto mb-12">
               <p className="text-lg md:text-xl lg:text-2xl text-white leading-relaxed font-medium filter drop-shadow-lg">
                 We create extraordinary interior experiences that blend luxury with functionality. From concept to completion, every space tells your unique story through thoughtful design and unparalleled craftsmanship.
               </p>
