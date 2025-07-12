@@ -26,7 +26,7 @@ const Hero = () => {
                 <LazyImage
                   src={image} 
                   alt={`Luxury Interior Design ${index + 1}`} 
-                  className="w-full h-full object-cover transition-transform duration-[8000ms] ease-out hover:scale-105"
+                  className="w-full h-full object-cover transition-transform duration-[8s] ease-out hover:scale-105"
                   priority={index === 0}
                   sizes="100vw"
                   quality={95}
