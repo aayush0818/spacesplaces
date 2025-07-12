@@ -1,4 +1,4 @@
-import { Home, Building, Sofa, Ruler, CheckCircle, Users, Layout, Lightbulb } from 'lucide-react';
+import { Home, Building, Sofa, Ruler, CheckCircle, Users, Layout, Lightbulb, ChefHat, Shirt, Tv, Layers, Paintbrush, BookOpen } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
@@ -36,6 +36,54 @@ const Services = () => {
       description: "We provide professional floor plans, moodboards, and immersive 3D renders that help you make informed decisions and see the final result before execution begins.",
       includes: ["2D floor planning", "3D renders & walkthroughs", "Moodboards & style guides", "Space zoning and layout optimization"],
       perfectFor: "Planning, presentations, builder coordination"
+    },
+    {
+      icon: ChefHat,
+      title: "Modular Kitchen",
+      subtitle: "Cook in style with smart storage solutions.",
+      description: "Transform your cooking space with our premium modular kitchen designs featuring smart storage, durable materials, and ergonomic layouts. From compact galley kitchens to spacious island designs, we create kitchens that balance functionality with aesthetic appeal.",
+      includes: ["Custom cabinet designs", "Counter & backsplash selection", "Appliance integration", "Storage optimization", "Lighting & ventilation planning"],
+      perfectFor: "New homes, kitchen renovations, space optimization"
+    },
+    {
+      icon: Shirt,
+      title: "Wardrobes",
+      subtitle: "Organized storage that fits your lifestyle.",
+      description: "Custom wardrobe solutions designed to maximize storage while complementing your bedroom aesthetics. Our wardrobes feature smart compartments, premium finishes, and thoughtful organization systems tailored to your clothing and accessory needs.",
+      includes: ["Walk-in & built-in wardrobes", "Custom compartment design", "Sliding & hinged door options", "Mirror & lighting integration", "Shoe racks & accessory storage"],
+      perfectFor: "Bedrooms, dressing rooms, compact spaces"
+    },
+    {
+      icon: Tv,
+      title: "TV Unit",
+      subtitle: "Entertainment centers that make a statement.",
+      description: "Stylish TV units and entertainment centers that seamlessly blend technology with design. Our custom TV units feature cable management, storage for media devices, and elegant finishes that enhance your living space.",
+      includes: ["Wall-mounted & floor units", "Cable management systems", "Media storage solutions", "Integrated lighting", "Floating & traditional designs"],
+      perfectFor: "Living rooms, bedrooms, entertainment areas"
+    },
+    {
+      icon: Layers,
+      title: "False Ceilings",
+      subtitle: "Add depth and character to your interiors.",
+      description: "Elegant false ceiling designs that enhance your space with layered lighting, improved acoustics, and architectural interest. From simple gypsum boards to intricate coffered designs, we create ceilings that are both functional and beautiful.",
+      includes: ["Gypsum & POP ceiling designs", "Recessed lighting integration", "Acoustic treatment options", "Decorative moldings", "Multi-level ceiling designs"],
+      perfectFor: "Living rooms, bedrooms, offices, restaurants"
+    },
+    {
+      icon: Paintbrush,
+      title: "Wall Treatment",
+      subtitle: "Walls that tell your story.",
+      description: "Transform blank walls into stunning focal points with our diverse wall treatment options. From textured paints and wallpapers to stone cladding and wood paneling, we create surfaces that add personality and sophistication to your space.",
+      includes: ["Textured paint finishes", "Wallpaper & wall decals", "Stone & brick cladding", "Wood paneling & wainscoting", "Accent wall designs"],
+      perfectFor: "Feature walls, commercial spaces, luxury interiors"
+    },
+    {
+      icon: BookOpen,
+      title: "Study Unit",
+      subtitle: "Productive spaces for learning and work.",
+      description: "Custom study units and home office solutions designed to boost productivity and organization. Our designs feature ergonomic workstations, ample storage, and inspiring environments that make work and study enjoyable.",
+      includes: ["Built-in desks & workstations", "Bookshelf & file storage", "Ergonomic seating integration", "Lighting & power management", "Multi-functional designs"],
+      perfectFor: "Home offices, student rooms, professional spaces"
     }
   ];
 
