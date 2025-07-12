@@ -3,6 +3,7 @@ import { ArrowRight, ExternalLink } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { useEffect, useRef } from 'react';
+import LazyImage from '@/components/LazyImage';
 
 const FeaturedProjects = () => {
   const sectionRef = useRef<HTMLElement>(null);
@@ -87,10 +88,13 @@ const FeaturedProjects = () => {
                      }
                    }}
               >
-                <img 
+                <LazyImage
                   src={project.image} 
                   alt={project.title}
                   className="w-full h-full object-cover transition-all duration-700 ease-out"
+                  priority={index === 0}
+                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  quality={90}
                 />
                 <div className="absolute inset-0 bg-gradient-overlay opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-center justify-center">
                   <div className="transform translate-y-8 group-hover:translate-y-0 transition-transform duration-500">

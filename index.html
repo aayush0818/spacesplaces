@@ -3,22 +3,34 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Spaces & Places Interior | Luxury Interior Design & Modular Solutions</title>
-    <meta name="description" content="Transform your space with Spaces & Places Interior. Expert interior design, modular kitchens, custom furniture, and turnkey solutions. Creating beautiful, functional spaces." />
+    
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="/src/assets/hero-interior.jpg" as="image" type="image/jpeg" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Source+Sans+Pro:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <meta name="author" content="Lovable" />
-
-    <meta property="og:title" content="Spaces & Places Interior | Luxury Interior Design & Modular Solutions" />
-    <meta property="og:description" content="Transform your space with Spaces & Places Interior. Expert interior design, modular kitchens, custom furniture, and turnkey solutions. Creating beautiful, functional spaces." />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="/lovable-uploads/hero-interior.jpg" />
-
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Spaces & Places Interior | Luxury Interior Design" />
-    <meta name="twitter:description" content="Transform your space with expert interior design, modular kitchens, and custom furniture solutions." />
-    <meta name="twitter:image" content="/lovable-uploads/hero-interior.jpg" />
+    
+    <!-- DNS Prefetch for External Resources -->
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+    
+    <!-- Resource Hints -->
+    <link rel="prefetch" href="/src/assets/bedroom-project.jpg" />
+    <link rel="prefetch" href="/src/assets/kitchen-project.jpg" />
+    
+    <!-- Critical CSS for Initial Render -->
+    <style>
+      .critical-loading { 
+        background: linear-gradient(135deg, hsl(0 0% 100%), hsl(0 0% 97%)); 
+        min-height: 100vh; 
+        display: flex; 
+        align-items: center; 
+        justify-content: center; 
+      }
+      /* Prevent layout shift */
+      html { scroll-behavior: smooth; }
+      body { margin: 0; font-family: system-ui, sans-serif; }
+    </style>
   </head>
 
   <body>

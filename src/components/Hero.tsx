@@ -3,6 +3,7 @@ import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
 import Autoplay from 'embla-carousel-autoplay';
+import LazyImage from '@/components/LazyImage';
 import heroImage from '@/assets/hero-interior.jpg';
 import bedroomImage from '@/assets/bedroom-project.jpg';
 import kitchenImage from '@/assets/kitchen-project.jpg';
@@ -22,10 +23,13 @@ const Hero = () => {
           {carouselImages.map((image, index) => (
             <CarouselItem key={index} className="h-full">
               <div className="relative w-full h-full overflow-hidden">
-                <img 
+                <LazyImage
                   src={image} 
                   alt={`Luxury Interior Design ${index + 1}`} 
-                  className="w-full h-full object-cover transition-transform duration-[8000ms] ease-out hover:scale-105" 
+                  className="w-full h-full object-cover transition-transform duration-[8000ms] ease-out hover:scale-105"
+                  priority={index === 0}
+                  sizes="100vw"
+                  quality={95}
                 />
               </div>
             </CarouselItem>
