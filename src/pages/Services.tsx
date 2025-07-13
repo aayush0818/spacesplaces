@@ -176,109 +176,135 @@ const ServicesPage = () => {
       {/* Detailed Services Section */}
       <section className="section-padding bg-background">
         <div className="container-luxury">
-          <div className="grid gap-12 lg:gap-16">
-            {detailedServices.map((service, index) => {
-              const IconComponent = service.icon;
-              
-              return (
-                <Card key={service.title} className="group hover-lift border-0 shadow-soft hover:shadow-elegant transition-all duration-500">
-                  <CardContent className="p-8 lg:p-12">
-                    <div className="grid lg:grid-cols-3 gap-8 items-start">
-                      {/* Service Icon & Title */}
-                      <div className="lg:col-span-1">
-                        <div className="inline-flex items-center justify-center w-20 h-20 bg-primary/10 rounded-2xl mb-6">
-                          <IconComponent className="h-10 w-10 text-primary" />
+          {/* Main Services Grid */}
+          <div className="mb-24">
+            <h2 className="text-3xl md:text-4xl font-playfair text-center text-foreground mb-16">
+              Core Design Services
+            </h2>
+            <div className="grid lg:grid-cols-2 gap-12">
+              {detailedServices.slice(0, 4).map((service, index) => {
+                const IconComponent = service.icon;
+                
+                return (
+                  <Card key={service.title} className="group hover-lift border-0 shadow-soft hover:shadow-elegant transition-all duration-500">
+                    <CardContent className="p-8">
+                      <div className="flex items-start gap-6">
+                        <div className="flex-shrink-0">
+                          <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-xl">
+                            <IconComponent className="h-8 w-8 text-primary" />
+                          </div>
                         </div>
-                        <h3 className="text-2xl lg:text-3xl font-playfair font-medium text-foreground mb-4">
-                          {service.title}
-                        </h3>
-                        <p className="text-primary font-medium text-lg mb-4">
-                          {service.subtitle}
-                        </p>
-                        <p className="text-muted-foreground leading-relaxed mb-6">
-                          {service.description}
-                        </p>
-                        <div className="inline-flex items-center px-4 py-2 bg-muted/50 rounded-full border border-muted">
-                          <span className="text-muted-foreground text-sm">
-                            <strong>Ideal for:</strong> {service.idealFor}
-                          </span>
+                        <div className="flex-1">
+                          <h3 className="text-xl font-playfair font-medium text-foreground mb-2">
+                            {service.title}
+                          </h3>
+                          <p className="text-primary font-medium text-sm mb-3">
+                            {service.subtitle}
+                          </p>
+                          <p className="text-muted-foreground text-sm leading-relaxed mb-4">
+                            {service.description}
+                          </p>
+                          <div className="flex flex-wrap gap-2">
+                            {service.features.slice(0, 3).map((feature, featureIndex) => (
+                              <span key={featureIndex} className="inline-flex items-center gap-1 px-3 py-1 bg-muted/50 rounded-full text-xs text-muted-foreground">
+                                <CheckCircle className="h-3 w-3 text-primary" />
+                                {feature}
+                              </span>
+                            ))}
+                          </div>
                         </div>
                       </div>
+                    </CardContent>
+                  </Card>
+                );
+              })}
+            </div>
+          </div>
 
-                      {/* Service Features */}
-                      <div className="lg:col-span-2">
-                        <h4 className="text-xl font-medium text-foreground mb-6">Services Include:</h4>
-                        <div className="grid md:grid-cols-2 gap-4">
-                          {service.features.map((feature, featureIndex) => (
-                            <div key={featureIndex} className="flex items-start gap-3">
-                              <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                              <span className="text-muted-foreground">{feature}</span>
-                            </div>
-                          ))}
-                        </div>
+          {/* Specialized Services */}
+          <div className="mb-24">
+            <h2 className="text-3xl md:text-4xl font-playfair text-center text-foreground mb-16">
+              Specialized Solutions
+            </h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {detailedServices.slice(4).map((service, index) => {
+                const IconComponent = service.icon;
+                
+                return (
+                  <Card key={service.title} className="group hover-lift border-0 shadow-soft hover:shadow-elegant transition-all duration-500 text-center">
+                    <CardContent className="p-6">
+                      <div className="inline-flex items-center justify-center w-14 h-14 bg-primary/10 rounded-xl mb-4">
+                        <IconComponent className="h-7 w-7 text-primary" />
                       </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              );
-            })}
+                      <h3 className="text-lg font-playfair font-medium text-foreground mb-2">
+                        {service.title}
+                      </h3>
+                      <p className="text-primary font-medium text-sm mb-3">
+                        {service.subtitle}
+                      </p>
+                      <p className="text-muted-foreground text-sm leading-relaxed mb-4">
+                        {service.description}
+                      </p>
+                      <div className="text-xs text-muted-foreground">
+                        <strong>Ideal for:</strong> {service.idealFor}
+                      </div>
+                    </CardContent>
+                  </Card>
+                );
+              })}
+            </div>
           </div>
         </div>
       </section>
 
       {/* Turnkey Execution Section */}
-      <section className="section-padding bg-gradient-to-r from-primary/5 to-primary-glow/5">
+      <section className="section-padding bg-muted/30">
         <div className="container-luxury">
-          <Card className="bg-background/50 backdrop-blur border-primary/20">
-            <CardContent className="p-12 text-center">
-              <div className="max-w-4xl mx-auto">
-                <div className="inline-flex items-center justify-center w-24 h-24 bg-primary/10 rounded-2xl mb-8">
-                  <CheckCircle className="h-12 w-12 text-primary" />
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="inline-flex items-center justify-center w-20 h-20 bg-primary/10 rounded-2xl mb-8">
+              <CheckCircle className="h-10 w-10 text-primary" />
+            </div>
+            <h3 className="text-3xl md:text-4xl font-playfair font-medium text-foreground mb-6">
+              Complete Turnkey Execution
+            </h3>
+            <p className="text-lg text-muted-foreground mb-10 leading-relaxed">
+              We handle everything from concept to completion — civil work, vendor coordination, material procurement, and final handover.
+            </p>
+            <div className="grid md:grid-cols-2 gap-6 mb-10">
+              {[
+                "Complete project management",
+                "Quality control & supervision", 
+                "Material procurement",
+                "Timely delivery guarantee"
+              ].map((feature, index) => (
+                <div key={index} className="flex items-center gap-3 justify-center">
+                  <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
+                  <span className="text-muted-foreground">{feature}</span>
                 </div>
-                <h3 className="text-3xl md:text-4xl font-playfair font-medium text-foreground mb-6">
-                  Optional Add-On: Turnkey Execution
-                </h3>
-                <p className="text-lg lg:text-xl text-muted-foreground mb-8 leading-relaxed max-w-3xl mx-auto">
-                  We take care of everything — from civil work to decor — so you enjoy a seamless, stress-free design journey. 
-                  Site visits, vendor management, installation, and handover: all handled by us.
-                </p>
-                <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
-                  {[
-                    "Civil & electrical work coordination",
-                    "Material procurement & quality control", 
-                    "Vendor management & supervision",
-                    "Installation & final handover"
-                  ].map((feature, index) => (
-                    <div key={index} className="flex items-center gap-3 justify-center md:justify-start">
-                      <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
-                      <span className="text-muted-foreground text-sm">{feature}</span>
-                    </div>
-                  ))}
-                </div>
-                <div className="inline-flex items-center px-6 py-3 bg-primary/10 rounded-full border border-primary/20">
-                  <span className="text-primary font-medium">🚀 Complete Project Management</span>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
+              ))}
+            </div>
+            <div className="inline-flex items-center px-6 py-3 bg-primary/10 rounded-full border border-primary/20">
+              <span className="text-primary font-medium">🚀 End-to-End Service</span>
+            </div>
+          </div>
         </div>
       </section>
 
       {/* Final CTA Section */}
       <section className="section-padding bg-gradient-accent">
         <div className="container-luxury text-center">
-          <h3 className="text-3xl md:text-4xl lg:text-5xl font-playfair font-medium text-primary-foreground mb-6">
-            No matter your vision — we will bring it to life.
+          <h3 className="text-3xl md:text-4xl font-playfair font-medium text-primary-foreground mb-6">
+            Ready to Transform Your Space?
           </h3>
-          <p className="text-xl text-primary-foreground/80 mb-10 max-w-3xl mx-auto leading-relaxed">
-            Let us turn your space into something truly special. Every project starts with understanding your unique needs and aspirations.
+          <p className="text-lg text-primary-foreground/80 mb-8 max-w-2xl mx-auto leading-relaxed">
+            Let us create something extraordinary together. Every great design starts with a conversation.
           </p>
-          <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <Button className="bg-background text-foreground hover:bg-background/90 px-8 py-6 text-lg font-medium" asChild>
-              <Link to="/portfolio">View Portfolio</Link>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button className="bg-background text-foreground hover:bg-background/90 px-8 py-3" asChild>
+              <Link to="/portfolio">View Our Work</Link>
             </Button>
-            <Button variant="outline" className="border-primary-foreground/20 text-primary-foreground hover:bg-primary-foreground/10 px-8 py-6 text-lg font-medium" asChild>
-              <Link to="/contact">Book a Free Design Consultation</Link>
+            <Button variant="outline" className="border-primary-foreground/20 text-primary-foreground hover:bg-primary-foreground/10 px-8 py-3" asChild>
+              <Link to="/contact">Start Your Project</Link>
             </Button>
           </div>
         </div>
