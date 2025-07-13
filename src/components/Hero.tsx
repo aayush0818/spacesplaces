@@ -4,12 +4,18 @@ import { Link } from 'react-router-dom';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
 import Autoplay from 'embla-carousel-autoplay';
 import LazyImage from '@/components/LazyImage';
+import { useCountUp } from '@/hooks/useCountUp';
 import heroImage from '@/assets/hero-interior.jpg';
 import bedroomImage from '@/assets/bedroom-project.jpg';
 import kitchenImage from '@/assets/kitchen-project.jpg';
 import officeImage from '@/assets/office-project.jpg';
 const Hero = () => {
   const carouselImages = [heroImage, bedroomImage, kitchenImage, officeImage];
+  
+  // Count up animations for stats
+  const { count: projectsCount, elementRef: projectsRef } = useCountUp({ end: 150, duration: 2500 });
+  const { count: yearsCount, elementRef: yearsRef } = useCountUp({ end: 5, duration: 2000 });
+  const { count: satisfactionCount, elementRef: satisfactionRef } = useCountUp({ end: 98, duration: 2300 });
   return <section id="home" className="relative w-full h-screen overflow-hidden">
       {/* Background Carousel */}
       <Carousel className="absolute inset-0 w-full h-full" opts={{
@@ -74,18 +80,18 @@ const Hero = () => {
 
           {/* Stats Section */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-3xl mx-auto">
-            <div className="text-center group hover-lift bg-black/30 backdrop-blur-md border border-white/30 rounded-xl p-4 transition-all duration-300 hover:bg-black/40 hover:border-primary/50">
-              <div className="text-2xl md:text-3xl font-montserrat font-bold text-primary-glow mb-2 transition-transform group-hover:scale-110 drop-shadow-lg">150+</div>
+            <div ref={projectsRef} className="text-center group hover-lift bg-black/30 backdrop-blur-md border border-white/30 rounded-xl p-4 transition-all duration-300 hover:bg-black/40 hover:border-primary/50">
+              <div className="text-2xl md:text-3xl font-montserrat font-bold text-primary-glow mb-2 transition-transform group-hover:scale-110 drop-shadow-lg">{projectsCount}+</div>
               <div className="text-white font-semibold text-sm mb-1">Projects Completed</div>
               <div className="text-white/80 text-xs">Luxury Spaces Crafted</div>
             </div>
-            <div className="text-center group hover-lift bg-black/30 backdrop-blur-md border border-white/30 rounded-xl p-4 transition-all duration-300 hover:bg-black/40 hover:border-primary/50">
-              <div className="text-2xl md:text-3xl font-montserrat font-bold text-primary-glow mb-2 transition-transform group-hover:scale-110 drop-shadow-lg">5+</div>
+            <div ref={yearsRef} className="text-center group hover-lift bg-black/30 backdrop-blur-md border border-white/30 rounded-xl p-4 transition-all duration-300 hover:bg-black/40 hover:border-primary/50">
+              <div className="text-2xl md:text-3xl font-montserrat font-bold text-primary-glow mb-2 transition-transform group-hover:scale-110 drop-shadow-lg">{yearsCount}+</div>
               <div className="text-white font-semibold text-sm mb-1">Years Experience</div>
               <div className="text-white/80 text-xs">Design Excellence</div>
             </div>
-            <div className="text-center group hover-lift bg-black/30 backdrop-blur-md border border-white/30 rounded-xl p-4 transition-all duration-300 hover:bg-black/40 hover:border-primary/50">
-              <div className="text-2xl md:text-3xl font-montserrat font-bold text-primary-glow mb-2 transition-transform group-hover:scale-110 drop-shadow-lg">98%</div>
+            <div ref={satisfactionRef} className="text-center group hover-lift bg-black/30 backdrop-blur-md border border-white/30 rounded-xl p-4 transition-all duration-300 hover:bg-black/40 hover:border-primary/50">
+              <div className="text-2xl md:text-3xl font-montserrat font-bold text-primary-glow mb-2 transition-transform group-hover:scale-110 drop-shadow-lg">{satisfactionCount}%</div>
               <div className="text-white font-semibold text-sm mb-1">Client Satisfaction</div>
               <div className="text-white/80 text-xs">Happy Homeowners</div>
             </div>
