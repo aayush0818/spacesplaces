@@ -1,4 +1,3 @@
-
 import Navigation from '@/components/Navigation';
 import Hero from '@/components/Hero';
 import FeaturedProjects from '@/components/FeaturedProjects';
@@ -18,46 +17,32 @@ const Index = () => {
         keywords="interior design mumbai, residential interior design, commercial interior design, custom furniture, 3D layouts, home renovation, office design"
         url="https://spacesandplaces.com"
       />
-      <div className="w-full overflow-x-hidden">
+      <div className="w-full">
         <Navigation />
         
         {/* Hero Section - Full Screen */}
-        <section className="relative">
-          <Hero />
-        </section>
+        <Hero />
 
         {/* Main Content Sections */}
-        <main className="relative z-10">
+        <main>
           {/* Featured Projects Section */}
-          <section className="relative">
-            <FeaturedProjects />
-          </section>
+          <FeaturedProjects />
 
           {/* Services Section */}
-          <section className="relative">
-            <Services />
-          </section>
+          <Services />
 
           {/* Clients Section */}
-          <section className="relative">
-            <Clients />
-          </section>
+          <Clients />
 
           {/* Testimonials Section */}
-          <section className="relative">
-            <Testimonials />
-          </section>
+          <Testimonials />
 
           {/* Contact CTA Section */}
-          <section className="relative">
-            <ContactCTA />
-          </section>
+          <ContactCTA />
         </main>
 
         {/* Footer */}
-        <footer className="relative">
-          <Footer />
-        </footer>
+        <Footer />
       </div>
     </>
   );
