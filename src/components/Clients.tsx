@@ -1,3 +1,4 @@
+
 import {
   Carousel,
   CarouselContent,
@@ -32,14 +33,14 @@ const Clients = () => {
   ];
 
   return (
-    <section className="section-padding bg-secondary/30">
-      <div className="container-luxury">
+    <section className="py-16 lg:py-24 bg-secondary/30">
+      <div className="container mx-auto px-4 max-w-7xl">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-section-title font-playfair text-foreground mb-6">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-playfair text-foreground mb-6">
             Our Trusted Clients
           </h2>
-          <p className="text-luxury max-w-3xl mx-auto">
+          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
             We're proud to have worked with some of India's most prestigious real estate developers, 
             creating exceptional interior experiences for their premium projects.
           </p>
@@ -60,7 +61,7 @@ const Clients = () => {
             ]}
           >
             <CarouselContent className="-ml-4">
-              {clients.map((client, index) => (
+              {clients.map((client) => (
                 <CarouselItem key={client.name} className="pl-4 md:basis-1/2 lg:basis-1/4">
                   <div className="bg-background rounded-2xl p-8 shadow-soft hover:shadow-elegant transition-all duration-300 hover-lift group">
                     <div className="flex items-center justify-center h-20 mb-4">

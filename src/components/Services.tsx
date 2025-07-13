@@ -1,3 +1,4 @@
+
 import { Home, Building, Sofa, ChefHat, Paintbrush, BookOpen, CheckCircle } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -14,19 +15,19 @@ const Services = () => {
     {
       icon: Building,
       title: "Commercial Spaces", 
-      subtitle: "Designs that work for your business — and your brand",
+      subtitle: "Designs that work for your business",
       description: "Professional environments that boost productivity while expressing your company's identity and values."
     },
     {
       icon: Sofa,
       title: "Custom Furniture",
-      subtitle: "Tailor-made pieces that elevate your space and purpose",
+      subtitle: "Tailor-made pieces that elevate your space",
       description: "Bespoke furniture designed specifically for your space, lifestyle, and functional requirements."
     },
     {
       icon: ChefHat,
       title: "Modular Kitchens",
-      subtitle: "Ergonomic layouts with beautiful finishes built to last",
+      subtitle: "Ergonomic layouts with beautiful finishes",
       description: "Smart kitchen solutions that blend functionality with style for the heart of your home."
     },
     {
@@ -44,14 +45,14 @@ const Services = () => {
   ];
 
   return (
-    <section id="services" className="section-padding">
-      <div className="container-luxury">
+    <section id="services" className="py-16 lg:py-24">
+      <div className="container mx-auto px-4 max-w-7xl">
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-playfair text-foreground mb-6">
             Our Expertise, Tailored to You
           </h2>
-          <p className="text-lg lg:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             Design solutions for homes, workspaces, and everything in between.
           </p>
         </div>
@@ -82,7 +83,7 @@ const Services = () => {
           })}
         </div>
 
-        {/* Additional Services Call-out */}
+        {/* Additional Services */}
         <div className="text-center mb-12">
           <p className="text-muted-foreground mb-6">
             We also specialize in <span className="text-primary font-medium">Wardrobes, TV Units, False Ceilings, 2D & 3D Layouts</span> and comprehensive design solutions.
@@ -92,7 +93,7 @@ const Services = () => {
           </Button>
         </div>
 
-        {/* Turnkey Execution Add-on */}
+        {/* Turnkey Execution */}
         <div className="mt-20">
           <Card className="bg-gradient-to-r from-primary/5 to-primary-glow/5 border-primary/20">
             <CardContent className="p-12 text-center">

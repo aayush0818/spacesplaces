@@ -1,3 +1,4 @@
+
 import Navigation from '@/components/Navigation';
 import Hero from '@/components/Hero';
 import FeaturedProjects from '@/components/FeaturedProjects';
@@ -20,11 +21,11 @@ const Index = () => {
       <div className="w-full">
         <Navigation />
         
-        {/* Hero Section - Full Screen */}
+        {/* Hero Section */}
         <Hero />
 
         {/* Main Content Sections */}
-        <main>
+        <main className="overflow-hidden">
           {/* Featured Projects Section */}
           <FeaturedProjects />
 

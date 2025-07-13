@@ -1,3 +1,4 @@
+
 import { Phone, Mail, MapPin, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
@@ -6,17 +7,17 @@ import { Textarea } from '@/components/ui/textarea';
 
 const ContactCTA = () => {
   return (
-    <section id="contact" className="section-padding">
-      <div className="container-luxury">
+    <section id="contact" className="py-16 lg:py-24">
+      <div className="container mx-auto px-4 max-w-7xl">
         <div className="grid lg:grid-cols-2 gap-16 items-start">
           {/* Contact Information */}
           <div>
-            <h2 className="text-section-title font-playfair text-foreground mb-6">
+            <h2 className="text-3xl md:text-4xl font-playfair text-foreground mb-6">
               Let's Create Something
               <span className="block text-primary">Beautiful Together</span>
             </h2>
             
-            <p className="text-luxury mb-8">
+            <p className="text-lg text-muted-foreground mb-8">
               Ready to transform your space? Get in touch with us for a free consultation. 
               We'll discuss your vision, requirements, and how we can bring your dream interior to life.
             </p>
