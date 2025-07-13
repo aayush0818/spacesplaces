@@ -1,4 +1,4 @@
-import { Home, Building, Sofa, Ruler, CheckCircle, Users, Layout, Lightbulb, ChefHat, Shirt, Tv, Layers, Paintbrush, BookOpen } from 'lucide-react';
+import { Home, Building, Sofa, ChefHat, Paintbrush, BookOpen, CheckCircle } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
@@ -7,27 +7,39 @@ const Services = () => {
   const mainServices = [
     {
       icon: Home,
-      title: "Residential Interior Design",
-      subtitle: "Create a home that feels like you.",
-      description: "From cozy 1BHK apartments to luxurious villas, we design spaces that reflect your personality and maximize comfort."
+      title: "Residential Interiors",
+      subtitle: "Create a space that feels like you",
+      description: "Transform your home into a sanctuary that reflects your personality and lifestyle with thoughtful design."
     },
     {
       icon: Building,
-      title: "Commercial Interior Design", 
-      subtitle: "Design that boosts productivity and brand identity.",
-      description: "We craft dynamic office spaces, showrooms, studios, and retail interiors that align with your business goals."
+      title: "Commercial Spaces", 
+      subtitle: "Designs that work for your business — and your brand",
+      description: "Professional environments that boost productivity while expressing your company's identity and values."
     },
     {
       icon: Sofa,
-      title: "Custom Furniture Design",
-      subtitle: "Furniture made for you, not off the shelf.",
-      description: "We design and produce custom furniture that fits your space perfectly — in style, size, and function."
+      title: "Custom Furniture",
+      subtitle: "Tailor-made pieces that elevate your space and purpose",
+      description: "Bespoke furniture designed specifically for your space, lifestyle, and functional requirements."
     },
     {
-      icon: Ruler,
-      title: "2D & 3D Layouts",
-      subtitle: "Visualize your dream space before we build it.",
-      description: "Professional floor plans, moodboards, and immersive 3D renders to help you make informed decisions."
+      icon: ChefHat,
+      title: "Modular Kitchens",
+      subtitle: "Ergonomic layouts with beautiful finishes built to last",
+      description: "Smart kitchen solutions that blend functionality with style for the heart of your home."
+    },
+    {
+      icon: Paintbrush,
+      title: "Wall Treatments",
+      subtitle: "Add texture, mood, and design depth",
+      description: "Transform walls into focal points with textures, colors, and materials that speak your style."
+    },
+    {
+      icon: BookOpen,
+      title: "Study Units",
+      subtitle: "Ergonomic, elegant workspaces",
+      description: "Focused environments designed to boost productivity and creativity in compact, organized spaces."
     }
   ];
 
@@ -37,17 +49,15 @@ const Services = () => {
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-playfair text-foreground mb-6">
-            Our Expertise, Tailored to Your Space
+            Our Expertise, Tailored to You
           </h2>
-          <p className="text-lg lg:text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-            At Spaces & Places, every design begins with one goal — to create environments that enhance how you live, work, and feel. 
-            Whether you're building from scratch, renovating, or reimagining, we offer a full suite of interior design services 
-            backed by creativity, precision, and care.
+          <p className="text-lg lg:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+            Design solutions for homes, workspaces, and everything in between.
           </p>
         </div>
 
         {/* Services Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {mainServices.map((service) => {
             const IconComponent = service.icon;
             
@@ -75,10 +85,10 @@ const Services = () => {
         {/* Additional Services Call-out */}
         <div className="text-center mb-12">
           <p className="text-muted-foreground mb-6">
-            We also specialize in <span className="text-primary font-medium">Modular Kitchens, Wardrobes, TV Units, False Ceilings, Wall Treatments, Study Units</span> and more.
+            We also specialize in <span className="text-primary font-medium">Wardrobes, TV Units, False Ceilings, 2D & 3D Layouts</span> and comprehensive design solutions.
           </p>
           <Button className="px-8 py-3" asChild>
-            <Link to="/services">View All Our Services</Link>
+            <Link to="/services">Explore Our Services</Link>
           </Button>
         </div>
 
