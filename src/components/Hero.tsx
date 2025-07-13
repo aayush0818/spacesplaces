@@ -11,7 +11,7 @@ import officeImage from '@/assets/office-project.jpg';
 const Hero = () => {
   const carouselImages = [heroImage, bedroomImage, kitchenImage, officeImage];
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+    <section id="home" className="relative h-screen flex items-center justify-center overflow-hidden">
       {/* Full-Width Luxury Interior Carousel */}
       <Carousel className="absolute inset-0 w-full h-full" opts={{
         align: "start",

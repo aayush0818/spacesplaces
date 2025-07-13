@@ -34,7 +34,7 @@ const Navigation = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3 flex-shrink-0">
             <img 
-              src="/lovable-uploads/13b534ba-169c-42a2-81b2-db4a755ccb88.png" 
+              src="/lovable-uploads/6758e494-f0c1-4824-89b5-b93e2eda51f3.png" 
               alt="Spaces & Places Logo" 
               className="h-12 w-auto"
               style={{ filter: 'drop-shadow(0 0 0 transparent)' }}

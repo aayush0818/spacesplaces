@@ -53,11 +53,13 @@ const LoadingScreen = ({ onComplete }: { onComplete: () => void }) => {
           }`}
         >
           <div className="relative">
-            {/* Logo Background Circle */}
-            <div className="w-24 h-24 mx-auto mb-4 rounded-full bg-gradient-to-br from-primary to-primary-glow flex items-center justify-center shadow-elegant animate-pulse-glow">
-              <div className="text-2xl font-playfair font-bold text-primary-foreground">
-                S&P
-              </div>
+            {/* Logo Image */}
+            <div className="w-24 h-24 mx-auto mb-4 flex items-center justify-center">
+              <img 
+                src="/lovable-uploads/6758e494-f0c1-4824-89b5-b93e2eda51f3.png" 
+                alt="Spaces & Places Logo" 
+                className="w-20 h-20 object-contain animate-pulse-glow"
+              />
             </div>
             
             {/* Rotating Ring */}

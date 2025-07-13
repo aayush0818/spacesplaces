@@ -17,7 +17,7 @@ const Index = () => {
         keywords="interior design mumbai, residential interior design, commercial interior design, custom furniture, 3D layouts, home renovation, office design"
         url="https://spacesandplaces.com"
       />
-      <div className="min-h-screen">
+      <div>
         <Navigation />
         <Hero />
         <FeaturedProjects />
