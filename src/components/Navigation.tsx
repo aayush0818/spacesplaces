@@ -29,31 +29,32 @@ const Navigation = () => {
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled ? 'bg-background/95 backdrop-blur-md shadow-soft' : 'bg-transparent'
     }`}>
-      <div className="container-luxury">
-        <div className="flex items-center justify-between h-20">
-          {/* Logo */}
-          <Link to="/" className="flex items-center space-x-3 flex-shrink-0">
-            <img 
-              src="/lovable-uploads/6758e494-f0c1-4824-89b5-b93e2eda51f3.png" 
-              alt="Spaces & Places Logo" 
-              className="h-12 w-auto"
-              style={{ filter: 'drop-shadow(0 0 0 transparent)' }}
-            />
+      <div className="container mx-auto px-4 lg:px-8">
+        <div className="flex items-center justify-between h-24">
+          {/* Logo - Much Larger */}
+          <Link to="/" className="flex items-center space-x-4 flex-shrink-0">
+            <div className="relative">
+              <img 
+                src="/lovable-uploads/6758e494-f0c1-4824-89b5-b93e2eda51f3.png" 
+                alt="Spaces & Places Logo" 
+                className="h-16 w-16 object-contain"
+              />
+            </div>
             <div>
-              <h1 className="text-xl font-playfair font-bold text-foreground">
+              <h1 className="text-2xl lg:text-3xl font-playfair font-bold text-foreground">
                 Spaces & Places
               </h1>
-              <p className="text-xs text-muted-foreground -mt-1">Interior Design</p>
+              <p className="text-sm text-primary font-medium">Premium Interior Design</p>
             </div>
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden lg:flex items-center space-x-8">
             {navItems.map((item) => (
               <Link
                 key={item.name}
                 to={item.href}
-                className={`transition-smooth font-medium hover-lift relative group ${
+                className={`transition-smooth font-medium hover-lift relative group text-lg ${
                   location.pathname === item.href
                     ? 'text-primary'
                     : 'text-foreground hover:text-primary'
@@ -66,9 +67,9 @@ const Navigation = () => {
           </div>
 
           {/* Contact Info & CTA */}
-          <div className="hidden lg:flex items-center space-x-4">
+          <div className="hidden xl:flex items-center space-x-4">
             <div className="flex flex-col text-right text-sm">
-              <a href="tel:9699578902" className="flex items-center text-muted-foreground hover:text-primary transition-colors">
+              <a href="tel:9699578902" className="flex items-center text-muted-foreground hover:text-primary transition-colors mb-1">
                 <Phone className="h-4 w-4 mr-2" />
                 9699578902
               </a>
@@ -77,13 +78,13 @@ const Navigation = () => {
                 info@spacesplacesinterior.com
               </a>
             </div>
-            <Button className="btn-luxury ml-4" asChild>
+            <Button className="btn-luxury ml-4 px-6 py-3" asChild>
               <Link to="/contact">Get Free Quote</Link>
             </Button>
           </div>
 
           {/* Mobile menu button */}
-          <div className="md:hidden">
+          <div className="lg:hidden">
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className="text-foreground hover:text-primary transition-colors"
@@ -95,24 +96,24 @@ const Navigation = () => {
 
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
-          <div className="md:hidden absolute top-full left-0 right-0 bg-background/95 backdrop-blur-md border-t shadow-elegant">
+          <div className="lg:hidden absolute top-full left-0 right-0 bg-background/95 backdrop-blur-md border-t shadow-elegant">
             <div className="px-4 py-6 space-y-4">
               {navItems.map((item) => (
                 <Link
                   key={item.name}
                   to={item.href}
-                  className="block text-foreground hover:text-primary transition-smooth font-medium hover-lift"
+                  className="block text-foreground hover:text-primary transition-smooth font-medium hover-lift text-lg py-2"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {item.name}
                 </Link>
               ))}
-              <div className="pt-4 border-t space-y-2">
-                <a href="tel:9699578902" className="flex items-center text-muted-foreground">
+              <div className="pt-4 border-t space-y-3">
+                <a href="tel:9699578902" className="flex items-center text-muted-foreground py-2">
                   <Phone className="h-4 w-4 mr-2" />
                   9699578902
                 </a>
-                <a href="mailto:info@spacesplacesinterior.com" className="flex items-center text-muted-foreground">
+                <a href="mailto:info@spacesplacesinterior.com" className="flex items-center text-muted-foreground py-2">
                   <Mail className="h-4 w-4 mr-2" />
                   info@spacesplacesinterior.com
                 </a>
