@@ -1,51 +1,40 @@
-
 import { Home, Building, Sofa, ChefHat, Paintbrush, BookOpen, CheckCircle } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
-
 const Services = () => {
-  const mainServices = [
-    {
-      icon: Home,
-      title: "Residential Interiors",
-      subtitle: "Create a space that feels like you",
-      description: "Transform your home into a sanctuary that reflects your personality and lifestyle with thoughtful design."
-    },
-    {
-      icon: Building,
-      title: "Commercial Spaces", 
-      subtitle: "Designs that work for your business",
-      description: "Professional environments that boost productivity while expressing your company's identity and values."
-    },
-    {
-      icon: Sofa,
-      title: "Custom Furniture",
-      subtitle: "Tailor-made pieces that elevate your space",
-      description: "Bespoke furniture designed specifically for your space, lifestyle, and functional requirements."
-    },
-    {
-      icon: ChefHat,
-      title: "Modular Kitchens",
-      subtitle: "Ergonomic layouts with beautiful finishes",
-      description: "Smart kitchen solutions that blend functionality with style for the heart of your home."
-    },
-    {
-      icon: Paintbrush,
-      title: "Wall Treatments",
-      subtitle: "Add texture, mood, and design depth",
-      description: "Transform walls into focal points with textures, colors, and materials that speak your style."
-    },
-    {
-      icon: BookOpen,
-      title: "Study Units",
-      subtitle: "Ergonomic, elegant workspaces",
-      description: "Focused environments designed to boost productivity and creativity in compact, organized spaces."
-    }
-  ];
-
-  return (
-    <section id="services" className="py-16 lg:py-24">
+  const mainServices = [{
+    icon: Home,
+    title: "Residential Interiors",
+    subtitle: "Create a space that feels like you",
+    description: "Transform your home into a sanctuary that reflects your personality and lifestyle with thoughtful design."
+  }, {
+    icon: Building,
+    title: "Commercial Spaces",
+    subtitle: "Designs that work for your business",
+    description: "Professional environments that boost productivity while expressing your company's identity and values."
+  }, {
+    icon: Sofa,
+    title: "Custom Furniture",
+    subtitle: "Tailor-made pieces that elevate your space",
+    description: "Bespoke furniture designed specifically for your space, lifestyle, and functional requirements."
+  }, {
+    icon: ChefHat,
+    title: "Modular Kitchens",
+    subtitle: "Ergonomic layouts with beautiful finishes",
+    description: "Smart kitchen solutions that blend functionality with style for the heart of your home."
+  }, {
+    icon: Paintbrush,
+    title: "Wall Treatments",
+    subtitle: "Add texture, mood, and design depth",
+    description: "Transform walls into focal points with textures, colors, and materials that speak your style."
+  }, {
+    icon: BookOpen,
+    title: "Study Units",
+    subtitle: "Ergonomic, elegant workspaces",
+    description: "Focused environments designed to boost productivity and creativity in compact, organized spaces."
+  }];
+  return <section id="services" className="py-16 lg:py-24">
       <div className="container mx-auto px-4 max-w-7xl">
         {/* Section Header */}
         <div className="text-center mb-16">
@@ -59,11 +48,9 @@ const Services = () => {
 
         {/* Services Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {mainServices.map((service) => {
-            const IconComponent = service.icon;
-            
-            return (
-              <Card key={service.title} className="group hover-lift border-0 shadow-soft hover:shadow-elegant transition-all duration-500">
+          {mainServices.map(service => {
+          const IconComponent = service.icon;
+          return <Card key={service.title} className="group hover-lift border-0 shadow-soft hover:shadow-elegant transition-all duration-500">
                 <CardContent className="p-6 text-center">
                   <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-2xl mb-4">
                     <IconComponent className="h-8 w-8 text-primary" />
@@ -78,9 +65,8 @@ const Services = () => {
                     {service.description}
                   </p>
                 </CardContent>
-              </Card>
-            );
-          })}
+              </Card>;
+        })}
         </div>
 
         {/* Additional Services */}
@@ -117,25 +103,8 @@ const Services = () => {
         </div>
 
         {/* CTA Section */}
-        <div className="mt-20 text-center bg-gradient-accent rounded-3xl p-12">
-          <h3 className="text-2xl md:text-3xl font-playfair font-medium text-primary-foreground mb-4">
-            Let's build a space that reflects your purpose
-          </h3>
-          <p className="text-primary-foreground/80 mb-8 max-w-2xl mx-auto text-lg">
-            Ready to transform your space with our expert interior design services? Let's discuss your vision and create something extraordinary together.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button className="bg-background text-foreground hover:bg-background/90 px-8 py-6 text-lg" asChild>
-              <Link to="/portfolio">View Our Projects</Link>
-            </Button>
-            <Button variant="outline" className="border-primary-foreground/20 text-primary-foreground hover:bg-primary-foreground/10 px-8 py-6 text-lg" asChild>
-              <Link to="/contact">Contact Our Design Team</Link>
-            </Button>
-          </div>
-        </div>
+        
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Services;
