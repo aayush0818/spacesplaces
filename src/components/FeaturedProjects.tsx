@@ -2,6 +2,7 @@
 import { ArrowRight, ExternalLink } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
+import { Link } from 'react-router-dom';
 import LazyImage from '@/components/LazyImage';
 
 const FeaturedProjects = () => {
@@ -102,9 +103,11 @@ const FeaturedProjects = () => {
 
         {/* View All CTA */}
         <div className="text-center">
-          <Button className="btn-outline-luxury group hover:shadow-glow">
-            View All Projects
-            <ArrowRight className="ml-2 h-5 w-5 transition-all duration-300 group-hover:translate-x-2" />
+          <Button className="btn-outline-luxury group hover:shadow-glow" asChild>
+            <Link to="/portfolio">
+              View All Projects
+              <ArrowRight className="ml-2 h-5 w-5 transition-all duration-300 group-hover:translate-x-2" />
+            </Link>
           </Button>
         </div>
       </div>

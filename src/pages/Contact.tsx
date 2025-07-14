@@ -25,11 +25,6 @@ const Contact = () => {
       title: "Email Address",
       details: ["info@spacesplacesinterior.com"]
     },
-    {
-      icon: Clock,
-      title: "Business Hours",
-      details: ["Mon - Sat: 09:00 AM - 05:00 PM", "Sunday: Closed"]
-    }
   ];
 
   return (
@@ -140,13 +135,26 @@ const Contact = () => {
       <section className="py-16">
         <div className="container-luxury">
           <Card className="overflow-hidden">
-            <div className="h-96 bg-secondary/20 flex items-center justify-center">
-              <div className="text-center">
-                <MapPin className="w-12 h-12 text-primary mx-auto mb-4" />
-                <h3 className="font-playfair font-medium text-foreground mb-2">
-                  Visit Our Studio
-                </h3>
-                <p className="text-muted-foreground">
+            <div className="h-96 relative">
+              <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3768.8505673825147!2d72.9120712!3d19.1198!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c9c676ff4641%3A0x6f3a0f0b6b4a6f3a!2sPowai%20Plaza%2C%20Hiranandani%20Gardens%2C%20Powai%2C%20Mumbai%2C%20Maharashtra%20400076!5e0!3m2!1sen!2sin!4v1642678901234!5m2!1sen!2sin"
+                width="100%" 
+                height="100%" 
+                style={{ border: 0 }}
+                allowFullScreen={true}
+                loading="lazy" 
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Spaces & Places Location"
+                className="w-full h-full"
+              />
+              <div className="absolute top-4 left-4 bg-background/95 backdrop-blur-sm rounded-lg p-4 shadow-lg max-w-xs">
+                <div className="flex items-center gap-3 mb-2">
+                  <MapPin className="w-5 h-5 text-primary flex-shrink-0" />
+                  <h3 className="font-playfair font-medium text-foreground">
+                    Visit Our Studio
+                  </h3>
+                </div>
+                <p className="text-muted-foreground text-sm">
                   348, Powai Plaza, Hiranandani Gardens, Powai, Mumbai 400076
                 </p>
               </div>

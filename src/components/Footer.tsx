@@ -32,11 +32,7 @@ const Footer = () => {
       title: "Support",
       links: [
         { name: "Contact Us", href: "/contact" },
-        { name: "Free Consultation", href: "/contact" },
-        { name: "FAQ", href: "/contact" },
-        { name: "Privacy Policy", href: "#" },
-        { name: "Terms of Service", href: "#" },
-        { name: "Warranty", href: "/contact" }
+        { name: "Free Consultation", href: "/contact" }
       ]
     }
   ];
@@ -51,9 +47,9 @@ const Footer = () => {
             <div className="lg:col-span-1">
               <div className="flex items-center space-x-3 mb-4">
                 <img 
-                  src="/lovable-uploads/13b534ba-169c-42a2-81b2-db4a755ccb88.png" 
+                  src="/lovable-uploads/6758e494-f0c1-4824-89b5-b93e2eda51f3.png" 
                   alt="Spaces & Places Logo" 
-                  className="h-10 w-auto brightness-0 invert"
+                  className="h-10 w-auto"
                 />
                 <div>
                   <h3 className="text-xl font-playfair font-bold">
@@ -77,11 +73,6 @@ const Footer = () => {
                 <a href="https://youtube.com/@spacesplaces-r3p?si=yJG_LM2HYahAevHq" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-background/10 rounded-full flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors hover-lift">
                   <svg className="h-5 w-5" viewBox="0 0 24 24" fill="currentColor">
                     <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
-                  </svg>
-                </a>
-                <a href="https://spacesplacesinterior.com/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-background/10 rounded-full flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors hover-lift">
-                  <svg className="h-5 w-5" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
                   </svg>
                 </a>
               </div>
