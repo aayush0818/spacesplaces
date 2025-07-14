@@ -7,7 +7,7 @@ const Testimonials = () => {
     {
       id: 1,
       name: "Priya Sharma",
-      location: "Mumbai",
+      location: "Powai",
       project: "Complete Home Interior",
       rating: 5,
       text: "Spaces & Places transformed our home beyond our wildest dreams. Their attention to detail and understanding of our lifestyle made the entire process seamless. The quality of work is exceptional, and we couldn't be happier with the results.",
@@ -16,7 +16,7 @@ const Testimonials = () => {
     {
       id: 2,
       name: "Rajesh Kumar",
-      location: "Delhi",
+      location: "Thane",
       project: "Modular Kitchen",
       rating: 5,
       text: "The modular kitchen they designed for us is not just beautiful but incredibly functional. Every inch of space is utilized perfectly, and the quality of materials is top-notch. Highly recommended for anyone looking for premium interior solutions.",
@@ -25,7 +25,7 @@ const Testimonials = () => {
     {
       id: 3,
       name: "Anita Patel",
-      location: "Bangalore",
+      location: "Parel",
       project: "Office Interior",
       rating: 5,
       text: "Our office transformation has significantly improved our team's productivity and morale. The modern design aesthetic combined with practical solutions has created an inspiring work environment. Professional service from start to finish.",
