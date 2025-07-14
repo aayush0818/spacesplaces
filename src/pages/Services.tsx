@@ -33,7 +33,7 @@ const ServicesPage = () => {
       idealFor: "Homeowners, families, investors",
       highlight: "Most Popular",
       
-      timeline: "8-12 weeks"
+      
     },
     {
       icon: Building,
@@ -50,7 +50,7 @@ const ServicesPage = () => {
       ],
       idealFor: "Businesses, startups, retail chains",
       
-      timeline: "10-16 weeks"
+      
     }
   ];
 
@@ -155,53 +155,53 @@ const ServicesPage = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 bg-gradient-to-br from-background via-background to-muted/30 overflow-hidden">
+      <section className="relative pt-24 sm:pt-28 md:pt-32 pb-16 sm:pb-20 bg-gradient-to-br from-background via-background to-muted/30 overflow-hidden">
         <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
         
-        <div className="container mx-auto px-6 relative">
+        <div className="container mx-auto px-4 sm:px-6 relative">
           <div className="text-center max-w-4xl mx-auto">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full border border-primary/20 mb-6 animate-fade-in">
-              <Sparkles className="h-4 w-4 text-primary" />
-              <span className="text-primary font-medium text-sm">Complete Interior Design Solutions</span>
+            <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 bg-primary/10 rounded-full border border-primary/20 mb-4 sm:mb-6 animate-fade-in">
+              <Sparkles className="h-3 w-3 sm:h-4 sm:w-4 text-primary" />
+              <span className="text-primary font-medium text-xs sm:text-sm">Complete Interior Design Solutions</span>
             </div>
             
-            <h1 className="text-4xl md:text-6xl font-playfair text-foreground mb-6 leading-tight animate-fade-in" style={{ animationDelay: "0.1s" }}>
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-playfair text-foreground mb-4 sm:mb-6 leading-tight animate-fade-in" style={{ animationDelay: "0.1s" }}>
               Design Services That
               <span className="block bg-gradient-to-r from-primary to-primary-glow bg-clip-text text-transparent">
                 Transform Lives
               </span>
             </h1>
             
-            <p className="text-lg md:text-xl text-muted-foreground mb-8 leading-relaxed animate-fade-in" style={{ animationDelay: "0.2s" }}>
+            <p className="text-base sm:text-lg md:text-xl text-muted-foreground mb-6 sm:mb-8 leading-relaxed animate-fade-in px-4" style={{ animationDelay: "0.2s" }}>
               From concept to completion, we create extraordinary spaces that enhance how you live, work, and feel. 
               Every design is crafted with passion, precision, and purpose.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12 animate-fade-in" style={{ animationDelay: "0.3s" }}>
-              <Button size="lg" className="px-8 py-6 text-lg shadow-lg hover:shadow-xl transition-all duration-300" asChild>
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center mb-8 sm:mb-12 animate-fade-in px-4" style={{ animationDelay: "0.3s" }}>
+              <Button size="lg" className="px-6 sm:px-8 py-4 sm:py-6 text-base sm:text-lg shadow-lg hover:shadow-xl transition-all duration-300" asChild>
                 <Link to="/contact">Start Your Project</Link>
               </Button>
-              <Button variant="outline" size="lg" className="px-8 py-6 text-lg border-2 hover:bg-muted/50" asChild>
+              <Button variant="outline" size="lg" className="px-6 sm:px-8 py-4 sm:py-6 text-base sm:text-lg border-2 hover:bg-muted/50" asChild>
                 <Link to="/portfolio">View Our Portfolio</Link>
               </Button>
             </div>
 
             {/* Stats Grid */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto animate-fade-in" style={{ animationDelay: "0.4s" }}>
-              <div ref={projectsRef} className="text-center p-4 bg-card/50 backdrop-blur rounded-xl border border-border/50">
-                <div className="text-2xl md:text-3xl font-bold text-primary mb-1">{projectsCount}+</div>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-6 max-w-3xl mx-auto animate-fade-in px-4" style={{ animationDelay: "0.4s" }}>
+              <div ref={projectsRef} className="text-center p-3 sm:p-4 bg-card/50 backdrop-blur rounded-xl border border-border/50">
+                <div className="text-xl sm:text-2xl md:text-3xl font-bold text-primary mb-1">{projectsCount}+</div>
                 <div className="text-xs text-muted-foreground">Projects Completed</div>
               </div>
-              <div ref={yearsRef} className="text-center p-4 bg-card/50 backdrop-blur rounded-xl border border-border/50">
-                <div className="text-2xl md:text-3xl font-bold text-primary mb-1">{yearsCount}+</div>
+              <div ref={yearsRef} className="text-center p-3 sm:p-4 bg-card/50 backdrop-blur rounded-xl border border-border/50">
+                <div className="text-xl sm:text-2xl md:text-3xl font-bold text-primary mb-1">{yearsCount}+</div>
                 <div className="text-xs text-muted-foreground">Years Experience</div>
               </div>
-              <div ref={clientsRef} className="text-center p-4 bg-card/50 backdrop-blur rounded-xl border border-border/50">
-                <div className="text-2xl md:text-3xl font-bold text-primary mb-1">{clientsCount}%</div>
+              <div ref={clientsRef} className="text-center p-3 sm:p-4 bg-card/50 backdrop-blur rounded-xl border border-border/50">
+                <div className="text-xl sm:text-2xl md:text-3xl font-bold text-primary mb-1">{clientsCount}%</div>
                 <div className="text-xs text-muted-foreground">Client Satisfaction</div>
               </div>
-              <div ref={sqftRef} className="text-center p-4 bg-card/50 backdrop-blur rounded-xl border border-border/50">
-                <div className="text-2xl md:text-3xl font-bold text-primary mb-1">{Math.floor(sqftCount/1000)}K+</div>
+              <div ref={sqftRef} className="text-center p-3 sm:p-4 bg-card/50 backdrop-blur rounded-xl border border-border/50">
+                <div className="text-xl sm:text-2xl md:text-3xl font-bold text-primary mb-1">{Math.floor(sqftCount/1000)}K+</div>
                 <div className="text-xs text-muted-foreground">Sq Ft Designed</div>
               </div>
             </div>
@@ -210,69 +210,60 @@ const ServicesPage = () => {
       </section>
 
       {/* Core Services Section */}
-      <section className="py-20 bg-background">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-playfair text-foreground mb-4">
+      <section className="py-16 sm:py-20 bg-background">
+        <div className="container mx-auto px-4 sm:px-6">
+          <div className="text-center mb-12 sm:mb-16">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-playfair text-foreground mb-4">
               Our Core Services
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto px-4">
               Comprehensive design solutions tailored to your unique vision and lifestyle
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+          <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 max-w-6xl mx-auto">
             {coreServices.map((service, index) => {
               const IconComponent = service.icon;
               
               return (
                 <Card key={service.title} className="group hover:shadow-2xl transition-all duration-500 border-0 shadow-lg bg-gradient-to-br from-card to-card/50 overflow-hidden">
                   {service.highlight && (
-                    <div className="absolute top-6 right-6 px-3 py-1 bg-primary text-primary-foreground text-xs font-medium rounded-full z-10">
+                    <div className="absolute top-4 sm:top-6 right-4 sm:right-6 px-2 sm:px-3 py-1 bg-primary text-primary-foreground text-xs font-medium rounded-full z-10">
                       {service.highlight}
                     </div>
                   )}
                   
-                  <CardContent className="p-8 relative">
-                    <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-primary/5 to-transparent rounded-bl-full"></div>
+                  <CardContent className="p-6 sm:p-8 relative">
+                    <div className="absolute top-0 right-0 w-24 sm:w-32 h-24 sm:h-32 bg-gradient-to-br from-primary/5 to-transparent rounded-bl-full"></div>
                     
-                    <div className="flex items-start gap-6 mb-6">
+                    <div className="flex flex-col sm:flex-row items-start gap-4 sm:gap-6 mb-6">
                       <div className="flex-shrink-0">
-                        <div className="w-16 h-16 bg-gradient-to-br from-primary/20 to-primary/10 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                          <IconComponent className="h-8 w-8 text-primary" />
+                        <div className="w-12 sm:w-16 h-12 sm:h-16 bg-gradient-to-br from-primary/20 to-primary/10 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                          <IconComponent className="h-6 sm:h-8 w-6 sm:w-8 text-primary" />
                         </div>
                       </div>
                       <div className="flex-1">
-                        <h3 className="text-2xl font-playfair font-semibold text-foreground mb-2">
+                        <h3 className="text-xl sm:text-2xl font-playfair font-semibold text-foreground mb-2">
                           {service.title}
                         </h3>
                         <p className="text-primary font-medium mb-3">
                           {service.subtitle}
                         </p>
-                        <p className="text-muted-foreground leading-relaxed">
+                        <p className="text-muted-foreground leading-relaxed text-sm sm:text-base">
                           {service.description}
                         </p>
                       </div>
                     </div>
                     
-                    <div className="grid md:grid-cols-2 gap-6 mb-6">
-                      <div>
-                        <h4 className="font-semibold text-foreground mb-3 text-sm">What's Included:</h4>
-                        <div className="space-y-2">
-                          {service.features.map((feature, featureIndex) => (
-                            <div key={featureIndex} className="flex items-center gap-2">
-                              <CheckCircle className="h-4 w-4 text-primary flex-shrink-0" />
-                              <span className="text-sm text-muted-foreground">{feature}</span>
-                            </div>
-                          ))}
-                        </div>
-                      </div>
-                      
-                      <div className="space-y-4">
-                        <div className="bg-muted/50 rounded-lg p-4">
-                          <div className="text-xs text-muted-foreground mb-1">Timeline</div>
-                          <div className="font-bold text-foreground">{service.timeline}</div>
-                        </div>
+                    <div className="mb-6">
+                      <h4 className="font-semibold text-foreground mb-3 text-sm">What's Included:</h4>
+                      <div className="space-y-2">
+                        {service.features.map((feature, featureIndex) => (
+                          <div key={featureIndex} className="flex items-center gap-2">
+                            <CheckCircle className="h-4 w-4 text-primary flex-shrink-0" />
+                            <span className="text-sm text-muted-foreground">{feature}</span>
+                          </div>
+                        ))}
                       </div>
                     </div>
                     
@@ -290,35 +281,35 @@ const ServicesPage = () => {
       </section>
 
       {/* Specialized Services Section */}
-      <section className="py-20 bg-muted/30">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-playfair text-foreground mb-4">
+      <section className="py-16 sm:py-20 bg-muted/30">
+        <div className="container mx-auto px-4 sm:px-6">
+          <div className="text-center mb-12 sm:mb-16">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-playfair text-foreground mb-4">
               Specialized Services
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto px-4">
               Expert craftsmanship for specific design needs
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 max-w-6xl mx-auto">
             {specializedServices.map((service, index) => {
               const IconComponent = service.icon;
               
               return (
                 <Card key={service.title} className="group hover:shadow-xl transition-all duration-500 border-0 shadow-md bg-card overflow-hidden">
                   {service.badge && (
-                    <div className="absolute top-4 right-4 px-2 py-1 bg-gradient-to-r from-primary to-primary-glow text-white text-xs font-medium rounded-full">
+                    <div className="absolute top-3 sm:top-4 right-3 sm:right-4 px-2 py-1 bg-gradient-to-r from-primary to-primary-glow text-white text-xs font-medium rounded-full">
                       {service.badge}
                     </div>
                   )}
                   
-                  <CardContent className="p-6 text-center">
-                    <div className="w-14 h-14 bg-gradient-to-br from-primary/20 to-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                      <IconComponent className="h-7 w-7 text-primary" />
+                  <CardContent className="p-5 sm:p-6 text-center">
+                    <div className="w-12 sm:w-14 h-12 sm:h-14 bg-gradient-to-br from-primary/20 to-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                      <IconComponent className="h-6 sm:h-7 w-6 sm:w-7 text-primary" />
                     </div>
                     
-                    <h3 className="text-xl font-playfair font-semibold text-foreground mb-2">
+                    <h3 className="text-lg sm:text-xl font-playfair font-semibold text-foreground mb-2">
                       {service.title}
                     </h3>
                     <p className="text-primary font-medium text-sm mb-3">
@@ -428,22 +419,22 @@ const ServicesPage = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-primary to-primary-glow">
-        <div className="container mx-auto px-6 text-center">
-          <h3 className="text-3xl md:text-4xl font-playfair font-bold text-white mb-6">
+      <section className="py-16 sm:py-20 bg-gradient-to-r from-primary to-primary-glow">
+        <div className="container mx-auto px-4 sm:px-6 text-center">
+          <h3 className="text-2xl sm:text-3xl md:text-4xl font-playfair font-bold text-white mb-4 sm:mb-6">
             Ready to Transform Your Space?
           </h3>
-          <p className="text-lg text-white/90 mb-8 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-base sm:text-lg text-white/90 mb-6 sm:mb-8 max-w-2xl mx-auto leading-relaxed px-4">
             Let's create something extraordinary together. Every great design starts with a conversation.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-white text-primary hover:bg-white/90 px-8 py-6 text-lg shadow-lg hover:shadow-xl transition-all duration-300 group" asChild>
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
+            <Button size="lg" className="bg-white text-primary hover:bg-white/90 px-6 sm:px-8 py-4 sm:py-6 text-base sm:text-lg shadow-lg hover:shadow-xl transition-all duration-300 group" asChild>
               <Link to="/contact">
                 Get Free Consultation
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </Link>
             </Button>
-            <Button variant="outline" size="lg" className="border-white/30 text-white hover:bg-white/10 px-8 py-6 text-lg backdrop-blur" asChild>
+            <Button variant="outline" size="lg" className="border-white/30 text-white hover:bg-white/10 px-6 sm:px-8 py-4 sm:py-6 text-base sm:text-lg backdrop-blur" asChild>
               <Link to="/portfolio">View Our Portfolio</Link>
             </Button>
           </div>

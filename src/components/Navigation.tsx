@@ -40,11 +40,11 @@ const Navigation = () => {
                 className="h-12 w-12 object-contain"
               />
             </div>
-            <div>
-              <h1 className="text-xl lg:text-2xl font-playfair font-bold text-foreground">
+            <div className="hidden sm:block">
+              <h1 className="text-lg sm:text-xl lg:text-2xl font-playfair font-bold text-foreground">
                 Spaces & Places
               </h1>
-              <p className="text-xs text-primary font-medium">Premium Interior Design</p>
+              <p className="text-xs text-primary font-medium hidden lg:block">Premium Interior Design</p>
             </div>
           </Link>
 

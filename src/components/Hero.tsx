@@ -62,15 +62,15 @@ const Hero = () => {
           </div>
 
           {/* Action Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 mb-12 justify-center">
-            <Button className="btn-luxury group hover-lift shadow-glow text-base px-6 py-3" asChild>
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-8 sm:mb-12 justify-center">
+            <Button className="btn-luxury group hover-lift shadow-glow text-sm sm:text-base px-4 sm:px-6 py-2.5 sm:py-3" asChild>
               <Link to="/portfolio">
                 Explore Our Work
                 <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
               </Link>
             </Button>
             
-            <Button variant="outline" className="group hover-lift bg-white/15 border-white/40 text-white hover:bg-white hover:text-primary backdrop-blur-md text-base px-6 py-3 font-medium" asChild>
+            <Button variant="outline" className="group hover-lift bg-white/15 border-white/40 text-white hover:bg-white hover:text-primary backdrop-blur-md text-sm sm:text-base px-4 sm:px-6 py-2.5 sm:py-3 font-medium" asChild>
               <Link to="/contact">
                 <Quote className="mr-2 h-4 w-4" />
                 Get Free Quote
@@ -79,21 +79,21 @@ const Hero = () => {
           </div>
 
           {/* Stats Section */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-3xl mx-auto">
-            <div ref={projectsRef} className="text-center group hover-lift bg-black/30 backdrop-blur-md border border-white/30 rounded-xl p-4 transition-all duration-300 hover:bg-black/40 hover:border-primary/50">
-              <div className="text-2xl md:text-3xl font-montserrat font-bold text-primary-glow mb-2 transition-transform group-hover:scale-110 drop-shadow-lg">{projectsCount}+</div>
-              <div className="text-white font-semibold text-sm mb-1">Projects Completed</div>
-              <div className="text-white/80 text-xs">Luxury Spaces Crafted</div>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 max-w-3xl mx-auto">
+            <div ref={projectsRef} className="text-center group hover-lift bg-black/30 backdrop-blur-md border border-white/30 rounded-xl p-3 sm:p-4 transition-all duration-300 hover:bg-black/40 hover:border-primary/50">
+              <div className="text-xl sm:text-2xl md:text-3xl font-montserrat font-bold text-primary-glow mb-1 sm:mb-2 transition-transform group-hover:scale-110 drop-shadow-lg">{projectsCount}+</div>
+              <div className="text-white font-semibold text-xs sm:text-sm mb-1">Projects Completed</div>
+              <div className="text-white/80 text-xs hidden sm:block">Luxury Spaces Crafted</div>
             </div>
-            <div ref={yearsRef} className="text-center group hover-lift bg-black/30 backdrop-blur-md border border-white/30 rounded-xl p-4 transition-all duration-300 hover:bg-black/40 hover:border-primary/50">
-              <div className="text-2xl md:text-3xl font-montserrat font-bold text-primary-glow mb-2 transition-transform group-hover:scale-110 drop-shadow-lg">{yearsCount}+</div>
-              <div className="text-white font-semibold text-sm mb-1">Years Experience</div>
-              <div className="text-white/80 text-xs">Design Excellence</div>
+            <div ref={yearsRef} className="text-center group hover-lift bg-black/30 backdrop-blur-md border border-white/30 rounded-xl p-3 sm:p-4 transition-all duration-300 hover:bg-black/40 hover:border-primary/50">
+              <div className="text-xl sm:text-2xl md:text-3xl font-montserrat font-bold text-primary-glow mb-1 sm:mb-2 transition-transform group-hover:scale-110 drop-shadow-lg">{yearsCount}+</div>
+              <div className="text-white font-semibold text-xs sm:text-sm mb-1">Years Experience</div>
+              <div className="text-white/80 text-xs hidden sm:block">Design Excellence</div>
             </div>
-            <div ref={satisfactionRef} className="text-center group hover-lift bg-black/30 backdrop-blur-md border border-white/30 rounded-xl p-4 transition-all duration-300 hover:bg-black/40 hover:border-primary/50">
-              <div className="text-2xl md:text-3xl font-montserrat font-bold text-primary-glow mb-2 transition-transform group-hover:scale-110 drop-shadow-lg">{satisfactionCount}%</div>
-              <div className="text-white font-semibold text-sm mb-1">Client Satisfaction</div>
-              <div className="text-white/80 text-xs">Happy Homeowners</div>
+            <div ref={satisfactionRef} className="text-center group hover-lift bg-black/30 backdrop-blur-md border border-white/30 rounded-xl p-3 sm:p-4 transition-all duration-300 hover:bg-black/40 hover:border-primary/50">
+              <div className="text-xl sm:text-2xl md:text-3xl font-montserrat font-bold text-primary-glow mb-1 sm:mb-2 transition-transform group-hover:scale-110 drop-shadow-lg">{satisfactionCount}%</div>
+              <div className="text-white font-semibold text-xs sm:text-sm mb-1">Client Satisfaction</div>
+              <div className="text-white/80 text-xs hidden sm:block">Happy Homeowners</div>
             </div>
           </div>
         </div>
