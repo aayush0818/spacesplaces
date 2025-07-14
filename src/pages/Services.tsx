@@ -32,7 +32,7 @@ const ServicesPage = () => {
       ],
       idealFor: "Homeowners, families, investors",
       highlight: "Most Popular",
-      price: "Starting from ₹8 Lakhs",
+      
       timeline: "8-12 weeks"
     },
     {
@@ -49,7 +49,7 @@ const ServicesPage = () => {
         "Brand experience centers"
       ],
       idealFor: "Businesses, startups, retail chains",
-      price: "Starting from ₹15 Lakhs",
+      
       timeline: "10-16 weeks"
     }
   ];
@@ -67,7 +67,7 @@ const ServicesPage = () => {
         "Multi-functional pieces"
       ],
       idealFor: "Luxury homes, unique spaces",
-      price: "₹50K - ₹5L per piece",
+      
       badge: "Premium"
     },
     {
@@ -82,7 +82,7 @@ const ServicesPage = () => {
         "Italian & German hardware"
       ],
       idealFor: "Modern homes, cooking enthusiasts",
-      price: "₹2L - ₹12L",
+      
       badge: "Bestseller"
     },
     {
@@ -97,7 +97,7 @@ const ServicesPage = () => {
         "Premium accessories"
       ],
       idealFor: "Bedrooms, dressing rooms",
-      price: "₹80K - ₹4L",
+      
       badge: "Space-Saver"
     }
   ];
@@ -130,12 +130,6 @@ const ServicesPage = () => {
   ];
 
   const whyChooseUs = [
-    {
-      icon: Award,
-      title: "Award-Winning Designs",
-      description: "Recognized for excellence in interior design",
-      stat: "15+ Awards"
-    },
     {
       icon: Users,
       title: "Expert Team",
@@ -276,10 +270,6 @@ const ServicesPage = () => {
                       
                       <div className="space-y-4">
                         <div className="bg-muted/50 rounded-lg p-4">
-                          <div className="text-xs text-muted-foreground mb-1">Starting Price</div>
-                          <div className="font-bold text-foreground">{service.price}</div>
-                        </div>
-                        <div className="bg-muted/50 rounded-lg p-4">
                           <div className="text-xs text-muted-foreground mb-1">Timeline</div>
                           <div className="font-bold text-foreground">{service.timeline}</div>
                         </div>
@@ -345,11 +335,6 @@ const ServicesPage = () => {
                           <span className="text-xs text-muted-foreground">{feature}</span>
                         </div>
                       ))}
-                    </div>
-                    
-                    <div className="bg-muted/50 rounded-lg p-3 mb-4">
-                      <div className="text-xs text-muted-foreground mb-1">Price Range</div>
-                      <div className="font-bold text-foreground text-sm">{service.price}</div>
                     </div>
                     
                     <p className="text-xs text-muted-foreground">
