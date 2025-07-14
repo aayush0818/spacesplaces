@@ -1,4 +1,3 @@
-
 import Navigation from '@/components/Navigation';
 import ContactCTA from '@/components/ContactCTA';
 import Footer from '@/components/Footer';
@@ -8,150 +7,115 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Link } from 'react-router-dom';
 import { Home, Building, Sofa, ChefHat, Shirt, Tv, Layers, Paintbrush, BookOpen, Ruler, CheckCircle, ArrowRight, Sparkles, Star, Clock, Award, Users, Target, Zap } from 'lucide-react';
 import { useCountUp } from '@/hooks/useCountUp';
-
 const ServicesPage = () => {
   // Count up animations for stats
-  const { count: projectsCount, elementRef: projectsRef } = useCountUp({ end: 150, duration: 2500 });
-  const { count: yearsCount, elementRef: yearsRef } = useCountUp({ end: 5, duration: 2000 });
-  const { count: clientsCount, elementRef: clientsRef } = useCountUp({ end: 98, duration: 2300 });
-  const { count: sqftCount, elementRef: sqftRef } = useCountUp({ end: 250000, duration: 3000 });
-
-  const coreServices = [
-    {
-      icon: Home,
-      title: "Residential Interior Design",
-      subtitle: "Transform your house into a home",
-      description: "From cozy apartments to luxury villas, we create living spaces that reflect your personality and lifestyle. Our residential designs blend comfort, functionality, and aesthetics to create environments where memories are made.",
-      features: [
-        "Complete home makeovers",
-        "Living & dining room design",
-        "Master bedroom suites", 
-        "Kitchen & bathroom renovations",
-        "Smart home integration",
-        "Sustainable design solutions"
-      ],
-      idealFor: "Homeowners, families, investors",
-      highlight: "Most Popular",
-      
-      
-    },
-    {
-      icon: Building,
-      title: "Commercial Interior Design",
-      subtitle: "Spaces that drive business success",
-      description: "Create productive, brand-aligned commercial environments that enhance employee satisfaction and customer experience. From corporate offices to retail spaces, we design for success.",
-      features: [
-        "Corporate office design",
-        "Retail store planning",
-        "Restaurant & hospitality design",
-        "Co-working spaces",
-        "Healthcare facilities",
-        "Brand experience centers"
-      ],
-      idealFor: "Businesses, startups, retail chains",
-      
-      
-    }
-  ];
-
-  const specializedServices = [
-    {
-      icon: Sofa,
-      title: "Custom Furniture Design",
-      subtitle: "Bespoke pieces for unique spaces",
-      description: "Every piece is crafted to perfection, designed specifically for your space and needs. From concept to creation, we bring your furniture dreams to life.",
-      features: [
-        "Modular furniture systems",
-        "Luxury seating solutions",
-        "Storage-integrated designs",
-        "Multi-functional pieces"
-      ],
-      idealFor: "Luxury homes, unique spaces",
-      
-      badge: "Premium"
-    },
-    {
-      icon: ChefHat,
-      title: "Modular Kitchens",
-      subtitle: "The heart of modern homes",
-      description: "Ergonomic, stylish kitchens that make cooking a joy. Smart storage, premium finishes, and cutting-edge appliances integrated seamlessly.",
-      features: [
-        "All layout configurations",
-        "Premium appliance integration",
-        "Smart storage solutions",
-        "Italian & German hardware"
-      ],
-      idealFor: "Modern homes, cooking enthusiasts",
-      
-      badge: "Bestseller"
-    },
-    {
-      icon: Shirt,
-      title: "Designer Wardrobes",
-      subtitle: "Organized luxury storage",
-      description: "Custom wardrobes that maximize space while maintaining elegance. From walk-ins to sliding door solutions, every inch is optimized.",
-      features: [
-        "Walk-in closets",
-        "Sliding door systems",
-        "Smart organization",
-        "Premium accessories"
-      ],
-      idealFor: "Bedrooms, dressing rooms",
-      
-      badge: "Space-Saver"
-    }
-  ];
-
-  const processSteps = [
-    {
-      icon: Target,
-      title: "Consultation",
-      description: "We understand your vision, requirements, and budget",
-      duration: "1-2 days"
-    },
-    {
-      icon: Ruler,
-      title: "Design Development",
-      description: "Create detailed 2D & 3D designs with material selection",
-      duration: "1-2 weeks"
-    },
-    {
-      icon: CheckCircle,
-      title: "Approval & Planning",
-      description: "Finalize designs, timeline, and procurement planning",
-      duration: "3-5 days"
-    },
-    {
-      icon: Zap,
-      title: "Execution",
-      description: "Professional installation with quality monitoring",
-      duration: "6-12 weeks"
-    }
-  ];
-
-  const whyChooseUs = [
-    {
-      icon: Users,
-      title: "Expert Team",
-      description: "Experienced designers and skilled craftsmen",
-      stat: "25+ Experts"
-    },
-    {
-      icon: Star,
-      title: "Premium Quality",
-      description: "Only the finest materials and finishes",
-      stat: "5-Star Rating"
-    },
-    {
-      icon: Clock,
-      title: "On-Time Delivery",
-      description: "Guaranteed project completion within timeline",
-      stat: "98% On-Time"
-    }
-  ];
-
-  return (
-    <div className="min-h-screen bg-background">
+  const {
+    count: projectsCount,
+    elementRef: projectsRef
+  } = useCountUp({
+    end: 150,
+    duration: 2500
+  });
+  const {
+    count: yearsCount,
+    elementRef: yearsRef
+  } = useCountUp({
+    end: 5,
+    duration: 2000
+  });
+  const {
+    count: clientsCount,
+    elementRef: clientsRef
+  } = useCountUp({
+    end: 98,
+    duration: 2300
+  });
+  const {
+    count: sqftCount,
+    elementRef: sqftRef
+  } = useCountUp({
+    end: 250000,
+    duration: 3000
+  });
+  const coreServices = [{
+    icon: Home,
+    title: "Residential Interior Design",
+    subtitle: "Transform your house into a home",
+    description: "From cozy apartments to luxury villas, we create living spaces that reflect your personality and lifestyle. Our residential designs blend comfort, functionality, and aesthetics to create environments where memories are made.",
+    features: ["Complete home makeovers", "Living & dining room design", "Master bedroom suites", "Kitchen & bathroom renovations", "Smart home integration", "Sustainable design solutions"],
+    idealFor: "Homeowners, families, investors",
+    highlight: "Most Popular"
+  }, {
+    icon: Building,
+    title: "Commercial Interior Design",
+    subtitle: "Spaces that drive business success",
+    description: "Create productive, brand-aligned commercial environments that enhance employee satisfaction and customer experience. From corporate offices to retail spaces, we design for success.",
+    features: ["Corporate office design", "Retail store planning", "Restaurant & hospitality design", "Co-working spaces", "Healthcare facilities", "Brand experience centers"],
+    idealFor: "Businesses, startups, retail chains"
+  }];
+  const specializedServices = [{
+    icon: Sofa,
+    title: "Custom Furniture Design",
+    subtitle: "Bespoke pieces for unique spaces",
+    description: "Every piece is crafted to perfection, designed specifically for your space and needs. From concept to creation, we bring your furniture dreams to life.",
+    features: ["Modular furniture systems", "Luxury seating solutions", "Storage-integrated designs", "Multi-functional pieces"],
+    idealFor: "Luxury homes, unique spaces",
+    badge: "Premium"
+  }, {
+    icon: ChefHat,
+    title: "Modular Kitchens",
+    subtitle: "The heart of modern homes",
+    description: "Ergonomic, stylish kitchens that make cooking a joy. Smart storage, premium finishes, and cutting-edge appliances integrated seamlessly.",
+    features: ["All layout configurations", "Premium appliance integration", "Smart storage solutions", "Italian & German hardware"],
+    idealFor: "Modern homes, cooking enthusiasts",
+    badge: "Bestseller"
+  }, {
+    icon: Shirt,
+    title: "Designer Wardrobes",
+    subtitle: "Organized luxury storage",
+    description: "Custom wardrobes that maximize space while maintaining elegance. From walk-ins to sliding door solutions, every inch is optimized.",
+    features: ["Walk-in closets", "Sliding door systems", "Smart organization", "Premium accessories"],
+    idealFor: "Bedrooms, dressing rooms",
+    badge: "Space-Saver"
+  }];
+  const processSteps = [{
+    icon: Target,
+    title: "Consultation",
+    description: "We understand your vision, requirements, and budget",
+    duration: "1-2 days"
+  }, {
+    icon: Ruler,
+    title: "Design Development",
+    description: "Create detailed 2D & 3D designs with material selection",
+    duration: "1-2 weeks"
+  }, {
+    icon: CheckCircle,
+    title: "Approval & Planning",
+    description: "Finalize designs, timeline, and procurement planning",
+    duration: "3-5 days"
+  }, {
+    icon: Zap,
+    title: "Execution",
+    description: "Professional installation with quality monitoring",
+    duration: "6-12 weeks"
+  }];
+  const whyChooseUs = [{
+    icon: Users,
+    title: "Expert Team",
+    description: "Experienced designers and skilled craftsmen",
+    stat: "25+ Experts"
+  }, {
+    icon: Star,
+    title: "Premium Quality",
+    description: "Only the finest materials and finishes",
+    stat: "5-Star Rating"
+  }, {
+    icon: Clock,
+    title: "On-Time Delivery",
+    description: "Guaranteed project completion within timeline",
+    stat: "98% On-Time"
+  }];
+  return <div className="min-h-screen bg-background">
       <Navigation />
       
       {/* Hero Section */}
@@ -160,24 +124,27 @@ const ServicesPage = () => {
         
         <div className="container mx-auto px-4 sm:px-6 relative">
           <div className="text-center max-w-4xl mx-auto">
-            <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 bg-primary/10 rounded-full border border-primary/20 mb-4 sm:mb-6 animate-fade-in">
-              <Sparkles className="h-3 w-3 sm:h-4 sm:w-4 text-primary" />
-              <span className="text-primary font-medium text-xs sm:text-sm">Complete Interior Design Solutions</span>
-            </div>
             
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-playfair text-foreground mb-4 sm:mb-6 leading-tight animate-fade-in" style={{ animationDelay: "0.1s" }}>
+            
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-playfair text-foreground mb-4 sm:mb-6 leading-tight animate-fade-in" style={{
+            animationDelay: "0.1s"
+          }}>
               Design Services That
               <span className="block bg-gradient-to-r from-primary to-primary-glow bg-clip-text text-transparent">
                 Transform Lives
               </span>
             </h1>
             
-            <p className="text-base sm:text-lg md:text-xl text-muted-foreground mb-6 sm:mb-8 leading-relaxed animate-fade-in px-4" style={{ animationDelay: "0.2s" }}>
+            <p className="text-base sm:text-lg md:text-xl text-muted-foreground mb-6 sm:mb-8 leading-relaxed animate-fade-in px-4" style={{
+            animationDelay: "0.2s"
+          }}>
               From concept to completion, we create extraordinary spaces that enhance how you live, work, and feel. 
               Every design is crafted with passion, precision, and purpose.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center mb-8 sm:mb-12 animate-fade-in px-4" style={{ animationDelay: "0.3s" }}>
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center mb-8 sm:mb-12 animate-fade-in px-4" style={{
+            animationDelay: "0.3s"
+          }}>
               <Button size="lg" className="px-6 sm:px-8 py-4 sm:py-6 text-base sm:text-lg shadow-lg hover:shadow-xl transition-all duration-300" asChild>
                 <Link to="/contact">Start Your Project</Link>
               </Button>
@@ -187,7 +154,9 @@ const ServicesPage = () => {
             </div>
 
             {/* Stats Grid */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-6 max-w-3xl mx-auto animate-fade-in px-4" style={{ animationDelay: "0.4s" }}>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-6 max-w-3xl mx-auto animate-fade-in px-4" style={{
+            animationDelay: "0.4s"
+          }}>
               <div ref={projectsRef} className="text-center p-3 sm:p-4 bg-card/50 backdrop-blur rounded-xl border border-border/50">
                 <div className="text-xl sm:text-2xl md:text-3xl font-bold text-primary mb-1">{projectsCount}+</div>
                 <div className="text-xs text-muted-foreground">Projects Completed</div>
@@ -201,7 +170,7 @@ const ServicesPage = () => {
                 <div className="text-xs text-muted-foreground">Client Satisfaction</div>
               </div>
               <div ref={sqftRef} className="text-center p-3 sm:p-4 bg-card/50 backdrop-blur rounded-xl border border-border/50">
-                <div className="text-xl sm:text-2xl md:text-3xl font-bold text-primary mb-1">{Math.floor(sqftCount/1000)}K+</div>
+                <div className="text-xl sm:text-2xl md:text-3xl font-bold text-primary mb-1">{Math.floor(sqftCount / 1000)}K+</div>
                 <div className="text-xs text-muted-foreground">Sq Ft Designed</div>
               </div>
             </div>
@@ -223,15 +192,11 @@ const ServicesPage = () => {
 
           <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 max-w-6xl mx-auto">
             {coreServices.map((service, index) => {
-              const IconComponent = service.icon;
-              
-              return (
-                <Card key={service.title} className="group hover:shadow-2xl transition-all duration-500 border-0 shadow-lg bg-gradient-to-br from-card to-card/50 overflow-hidden">
-                  {service.highlight && (
-                    <div className="absolute top-4 sm:top-6 right-4 sm:right-6 px-2 sm:px-3 py-1 bg-primary text-primary-foreground text-xs font-medium rounded-full z-10">
+            const IconComponent = service.icon;
+            return <Card key={service.title} className="group hover:shadow-2xl transition-all duration-500 border-0 shadow-lg bg-gradient-to-br from-card to-card/50 overflow-hidden">
+                  {service.highlight && <div className="absolute top-4 sm:top-6 right-4 sm:right-6 px-2 sm:px-3 py-1 bg-primary text-primary-foreground text-xs font-medium rounded-full z-10">
                       {service.highlight}
-                    </div>
-                  )}
+                    </div>}
                   
                   <CardContent className="p-6 sm:p-8 relative">
                     <div className="absolute top-0 right-0 w-24 sm:w-32 h-24 sm:h-32 bg-gradient-to-br from-primary/5 to-transparent rounded-bl-full"></div>
@@ -258,12 +223,10 @@ const ServicesPage = () => {
                     <div className="mb-6">
                       <h4 className="font-semibold text-foreground mb-3 text-sm">What's Included:</h4>
                       <div className="space-y-2">
-                        {service.features.map((feature, featureIndex) => (
-                          <div key={featureIndex} className="flex items-center gap-2">
+                        {service.features.map((feature, featureIndex) => <div key={featureIndex} className="flex items-center gap-2">
                             <CheckCircle className="h-4 w-4 text-primary flex-shrink-0" />
                             <span className="text-sm text-muted-foreground">{feature}</span>
-                          </div>
-                        ))}
+                          </div>)}
                       </div>
                     </div>
                     
@@ -273,9 +236,8 @@ const ServicesPage = () => {
                       </p>
                     </div>
                   </CardContent>
-                </Card>
-              );
-            })}
+                </Card>;
+          })}
           </div>
         </div>
       </section>
@@ -294,15 +256,11 @@ const ServicesPage = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 max-w-6xl mx-auto">
             {specializedServices.map((service, index) => {
-              const IconComponent = service.icon;
-              
-              return (
-                <Card key={service.title} className="group hover:shadow-xl transition-all duration-500 border-0 shadow-md bg-card overflow-hidden">
-                  {service.badge && (
-                    <div className="absolute top-3 sm:top-4 right-3 sm:right-4 px-2 py-1 bg-gradient-to-r from-primary to-primary-glow text-white text-xs font-medium rounded-full">
+            const IconComponent = service.icon;
+            return <Card key={service.title} className="group hover:shadow-xl transition-all duration-500 border-0 shadow-md bg-card overflow-hidden">
+                  {service.badge && <div className="absolute top-3 sm:top-4 right-3 sm:right-4 px-2 py-1 bg-gradient-to-r from-primary to-primary-glow text-white text-xs font-medium rounded-full">
                       {service.badge}
-                    </div>
-                  )}
+                    </div>}
                   
                   <CardContent className="p-5 sm:p-6 text-center">
                     <div className="w-12 sm:w-14 h-12 sm:h-14 bg-gradient-to-br from-primary/20 to-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
@@ -320,21 +278,18 @@ const ServicesPage = () => {
                     </p>
                     
                     <div className="space-y-2 mb-4">
-                      {service.features.map((feature, featureIndex) => (
-                        <div key={featureIndex} className="flex items-center gap-2 justify-center">
+                      {service.features.map((feature, featureIndex) => <div key={featureIndex} className="flex items-center gap-2 justify-center">
                           <CheckCircle className="h-3 w-3 text-primary flex-shrink-0" />
                           <span className="text-xs text-muted-foreground">{feature}</span>
-                        </div>
-                      ))}
+                        </div>)}
                     </div>
                     
                     <p className="text-xs text-muted-foreground">
                       <strong>Ideal for:</strong> {service.idealFor}
                     </p>
                   </CardContent>
-                </Card>
-              );
-            })}
+                </Card>;
+          })}
           </div>
         </div>
       </section>
@@ -354,10 +309,8 @@ const ServicesPage = () => {
           <div className="max-w-4xl mx-auto">
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {processSteps.map((step, index) => {
-                const IconComponent = step.icon;
-                
-                return (
-                  <div key={index} className="text-center group">
+              const IconComponent = step.icon;
+              return <div key={index} className="text-center group">
                     <div className="relative mb-6">
                       <div className="w-16 h-16 bg-gradient-to-br from-primary to-primary-glow rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg">
                         <IconComponent className="h-8 w-8 text-white" />
@@ -373,13 +326,9 @@ const ServicesPage = () => {
                     <p className="text-sm text-muted-foreground mb-3 leading-relaxed">
                       {step.description}
                     </p>
-                    <div className="inline-flex items-center px-3 py-1 bg-primary/10 rounded-full">
-                      <Clock className="h-3 w-3 text-primary mr-1" />
-                      <span className="text-xs text-primary font-medium">{step.duration}</span>
-                    </div>
-                  </div>
-                );
-              })}
+                    
+                  </div>;
+            })}
             </div>
           </div>
         </div>
@@ -399,10 +348,8 @@ const ServicesPage = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
             {whyChooseUs.map((item, index) => {
-              const IconComponent = item.icon;
-              
-              return (
-                <Card key={index} className="text-center border-0 shadow-lg bg-card/50 backdrop-blur hover:shadow-xl transition-all duration-300 group">
+            const IconComponent = item.icon;
+            return <Card key={index} className="text-center border-0 shadow-lg bg-card/50 backdrop-blur hover:shadow-xl transition-all duration-300 group">
                   <CardContent className="p-6">
                     <div className="w-12 h-12 bg-gradient-to-br from-primary/20 to-primary/10 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                       <IconComponent className="h-6 w-6 text-primary" />
@@ -411,9 +358,8 @@ const ServicesPage = () => {
                     <h3 className="font-semibold text-foreground mb-2">{item.title}</h3>
                     <p className="text-sm text-muted-foreground">{item.description}</p>
                   </CardContent>
-                </Card>
-              );
-            })}
+                </Card>;
+          })}
           </div>
         </div>
       </section>
@@ -442,8 +388,6 @@ const ServicesPage = () => {
       </section>
 
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default ServicesPage;
