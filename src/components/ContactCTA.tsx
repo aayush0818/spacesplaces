@@ -115,25 +115,10 @@ const ContactCTA = () => {
 
                 <div>
                   <label className="block text-sm font-medium text-foreground mb-2">
-                    Service Interested In
-                  </label>
-                  <select className="w-full p-3 border border-border rounded-lg focus:border-primary focus:outline-none bg-background">
-                    <option>Select a service</option>
-                    <option>Complete Interior Design</option>
-                    <option>Modular Kitchen</option>
-                    <option>Bedroom Interior</option>
-                    <option>Office Interior</option>
-                    <option>Furniture Customization</option>
-                    <option>Consultation Only</option>
-                  </select>
-                </div>
-
-                <div>
-                  <label className="block text-sm font-medium text-foreground mb-2">
                     Project Details
                   </label>
                   <Textarea 
-                    placeholder="Tell us about your project requirements, budget, timeline, etc."
+                    placeholder="Tell us about your project requirements, timeline, etc."
                     rows={4}
                     className="border-border focus:border-primary resize-none"
                   />

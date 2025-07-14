@@ -238,7 +238,7 @@ const About = () => {
       {/* Stats Section */}
       <section className="section-padding">
         <div className="container-luxury">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 text-center">
             <div className="space-y-2">
               <div className="text-4xl lg:text-6xl font-playfair font-bold text-primary">150+</div>
               <div className="text-muted-foreground">Projects Completed</div>
@@ -250,10 +250,6 @@ const About = () => {
             <div className="space-y-2">
               <div className="text-4xl lg:text-6xl font-playfair font-bold text-primary">98%</div>
               <div className="text-muted-foreground">Client Satisfaction</div>
-            </div>
-            <div className="space-y-2">
-              <div className="text-4xl lg:text-6xl font-playfair font-bold text-primary">25+</div>
-              <div className="text-muted-foreground">Awards Won</div>
             </div>
           </div>
         </div>

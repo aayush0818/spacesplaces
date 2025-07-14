@@ -117,38 +117,6 @@ const Contact = () => {
                   </div>
 
                   <div className="space-y-2">
-                    <Label htmlFor="projectType">Project Type</Label>
-                    <Select>
-                      <SelectTrigger>
-                        <SelectValue placeholder="Select your project type" />
-                      </SelectTrigger>
-                      <SelectContent>
-                        <SelectItem value="residential">Residential Design</SelectItem>
-                        <SelectItem value="commercial">Commercial Space</SelectItem>
-                        <SelectItem value="hospitality">Hospitality Design</SelectItem>
-                        <SelectItem value="renovation">Renovation Project</SelectItem>
-                        <SelectItem value="consultation">Design Consultation</SelectItem>
-                      </SelectContent>
-                    </Select>
-                  </div>
-
-                  <div className="space-y-2">
-                    <Label htmlFor="budget">Budget Range</Label>
-                    <Select>
-                      <SelectTrigger>
-                        <SelectValue placeholder="Select your budget range" />
-                      </SelectTrigger>
-                      <SelectContent>
-                        <SelectItem value="under-50k">Under $50,000</SelectItem>
-                        <SelectItem value="50k-100k">$50,000 - $100,000</SelectItem>
-                        <SelectItem value="100k-250k">$100,000 - $250,000</SelectItem>
-                        <SelectItem value="250k-500k">$250,000 - $500,000</SelectItem>
-                        <SelectItem value="over-500k">Over $500,000</SelectItem>
-                      </SelectContent>
-                    </Select>
-                  </div>
-
-                  <div className="space-y-2">
                     <Label htmlFor="message">Project Details</Label>
                     <Textarea 
                       id="message" 
