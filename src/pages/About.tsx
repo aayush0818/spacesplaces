@@ -5,84 +5,63 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Home, Building, Sofa, Ruler, CheckCircle, Users, Clock, Heart, Lightbulb } from 'lucide-react';
 import designerImage from '@/assets/designer-portrait.jpg';
 import { Link } from 'react-router-dom';
-
 const About = () => {
-  const services = [
-    {
-      icon: Home,
-      title: "Residential Interior Design",
-      description: "Create a home that feels like you"
-    },
-    {
-      icon: Building,
-      title: "Commercial Interior Design", 
-      description: "Design that boosts productivity and brand identity"
-    },
-    {
-      icon: Sofa,
-      title: "Custom Furniture Design",
-      description: "Furniture made for you, not off the shelf"
-    },
-    {
-      icon: Ruler,
-      title: "2D & 3D Layout Planning",
-      description: "Visualize your dream space before we build it"
-    },
-    {
-      icon: CheckCircle,
-      title: "Turnkey Interior Solutions",
-      description: "Complete transformation from consultation to installation"
-    }
-  ];
-
-  const approach = [
-    {
-      step: "01",
-      title: "Discovery",
-      description: "We listen and learn. Every project begins with a deep dive into your lifestyle, goals, and taste."
-    },
-    {
-      step: "02", 
-      title: "Design",
-      description: "Moodboards, layout planning, 3D models, and curated material palettes come together to shape your dream space."
-    },
-    {
-      step: "03",
-      title: "Execution", 
-      description: "We manage timelines, vendors, and quality checks, ensuring flawless on-site execution."
-    },
-    {
-      step: "04",
-      title: "Delivery",
-      description: "You walk into a space that feels like home — or like the next chapter in your brand's journey."
-    }
-  ];
-
-  const promises = [
-    {
-      icon: Heart,
-      title: "Personalization in every inch",
-      description: "Every design element is carefully chosen to reflect your unique style and needs."
-    },
-    {
-      icon: Clock,
-      title: "Honest timelines and transparent pricing",
-      description: "No hidden costs or unrealistic deadlines - we believe in clear communication."
-    },
-    {
-      icon: Lightbulb,
-      title: "Function-first, emotion-led design",
-      description: "Beautiful spaces that work perfectly for how you live and work."
-    },
-    {
-      icon: Users,
-      title: "End-to-end service",
-      description: "From consultation to installation, we handle every detail of your transformation."
-    }
-  ];
-
-  return (
-    <div className="min-h-screen">
+  const services = [{
+    icon: Home,
+    title: "Residential Interior Design",
+    description: "Create a home that feels like you"
+  }, {
+    icon: Building,
+    title: "Commercial Interior Design",
+    description: "Design that boosts productivity and brand identity"
+  }, {
+    icon: Sofa,
+    title: "Custom Furniture Design",
+    description: "Furniture made for you, not off the shelf"
+  }, {
+    icon: Ruler,
+    title: "2D & 3D Layout Planning",
+    description: "Visualize your dream space before we build it"
+  }, {
+    icon: CheckCircle,
+    title: "Turnkey Interior Solutions",
+    description: "Complete transformation from consultation to installation"
+  }];
+  const approach = [{
+    step: "01",
+    title: "Discovery",
+    description: "We listen and learn. Every project begins with a deep dive into your lifestyle, goals, and taste."
+  }, {
+    step: "02",
+    title: "Design",
+    description: "Moodboards, layout planning, 3D models, and curated material palettes come together to shape your dream space."
+  }, {
+    step: "03",
+    title: "Execution",
+    description: "We manage timelines, vendors, and quality checks, ensuring flawless on-site execution."
+  }, {
+    step: "04",
+    title: "Delivery",
+    description: "You walk into a space that feels like home — or like the next chapter in your brand's journey."
+  }];
+  const promises = [{
+    icon: Heart,
+    title: "Personalization in every inch",
+    description: "Every design element is carefully chosen to reflect your unique style and needs."
+  }, {
+    icon: Clock,
+    title: "Honest timelines and transparent pricing",
+    description: "No hidden costs or unrealistic deadlines - we believe in clear communication."
+  }, {
+    icon: Lightbulb,
+    title: "Function-first, emotion-led design",
+    description: "Beautiful spaces that work perfectly for how you live and work."
+  }, {
+    icon: Users,
+    title: "End-to-end service",
+    description: "From consultation to installation, we handle every detail of your transformation."
+  }];
+  return <div className="min-h-screen">
       <Navigation />
       
       {/* Hero Section */}
@@ -96,7 +75,9 @@ const About = () => {
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-playfair text-foreground mb-6 animate-in leading-tight">
               We Design Spaces That <span className="text-primary">Tell Your Story</span>
             </h1>
-            <p className="text-lg md:text-xl lg:text-2xl text-muted-foreground mb-8 slide-up max-w-3xl mx-auto leading-relaxed" style={{ animationDelay: "0.2s" }}>
+            <p className="text-lg md:text-xl lg:text-2xl text-muted-foreground mb-8 slide-up max-w-3xl mx-auto leading-relaxed" style={{
+            animationDelay: "0.2s"
+          }}>
               At Spaces & Places, interior design is not just about how a space looks — it's about how it makes you feel. 
               Every room we create is a reflection of your identity, aspirations, and lifestyle.
             </p>
@@ -137,12 +118,8 @@ const About = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => {
-              const IconComponent = service.icon;
-              return (
-                <Card 
-                  key={service.title}
-                  className="group hover-lift hover-shimmer border-0 shadow-soft transition-all duration-500 hover:shadow-elegant hover:border-primary/20"
-                >
+            const IconComponent = service.icon;
+            return <Card key={service.title} className="group hover-lift hover-shimmer border-0 shadow-soft transition-all duration-500 hover:shadow-elegant hover:border-primary/20">
                   <CardContent className="p-8 text-center">
                     <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-2xl mb-6 group-hover:bg-primary/20 group-hover:scale-110 transition-all duration-300">
                       <IconComponent className="h-8 w-8 text-primary transition-all duration-300 group-hover:text-primary-glow" />
@@ -154,9 +131,8 @@ const About = () => {
                       {service.description}
                     </p>
                   </CardContent>
-                </Card>
-              );
-            })}
+                </Card>;
+          })}
           </div>
         </div>
       </section>
@@ -174,8 +150,7 @@ const About = () => {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {approach.map((step, index) => (
-              <div key={step.step} className="relative group">
+            {approach.map((step, index) => <div key={step.step} className="relative group">
                 <div className="text-center">
                   <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full mb-6 group-hover:bg-primary/20 transition-all duration-300">
                     <span className="text-2xl font-bold text-primary">{step.step}</span>
@@ -189,11 +164,8 @@ const About = () => {
                 </div>
                 
                 {/* Connection line for desktop */}
-                {index < approach.length - 1 && (
-                  <div className="hidden lg:block absolute top-8 left-full w-8 h-0.5 bg-primary/30 transform -translate-y-1/2"></div>
-                )}
-              </div>
-            ))}
+                {index < approach.length - 1 && <div className="hidden lg:block absolute top-8 left-full w-8 h-0.5 bg-primary/30 transform -translate-y-1/2"></div>}
+              </div>)}
           </div>
         </div>
       </section>
@@ -212,9 +184,8 @@ const About = () => {
 
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {promises.map((promise, index) => {
-              const IconComponent = promise.icon;
-              return (
-                <div key={index} className="flex items-start space-x-6 p-6 bg-background/50 rounded-xl hover:bg-background/80 transition-all duration-300">
+            const IconComponent = promise.icon;
+            return <div key={index} className="flex items-start space-x-6 p-6 bg-background/50 rounded-xl hover:bg-background/80 transition-all duration-300">
                   <div className="flex-shrink-0">
                     <div className="inline-flex items-center justify-center w-12 h-12 bg-primary/10 rounded-lg">
                       <IconComponent className="h-6 w-6 text-primary" />
@@ -228,9 +199,8 @@ const About = () => {
                       {promise.description}
                     </p>
                   </div>
-                </div>
-              );
-            })}
+                </div>;
+          })}
           </div>
         </div>
       </section>
@@ -244,11 +214,11 @@ const About = () => {
               <div className="text-muted-foreground">Projects Completed</div>
             </div>
             <div className="space-y-2">
-              <div className="text-4xl lg:text-6xl font-playfair font-bold text-primary">12+</div>
+              <div className="text-4xl lg:text-6xl font-playfair font-bold text-primary">5+</div>
               <div className="text-muted-foreground">Years Experience</div>
             </div>
             <div className="space-y-2">
-              <div className="text-4xl lg:text-6xl font-playfair font-bold text-primary">98%</div>
+              <div className="text-4xl lg:text-6xl font-playfair font-bold text-primary">100%</div>
               <div className="text-muted-foreground">Client Satisfaction</div>
             </div>
           </div>
@@ -278,8 +248,6 @@ const About = () => {
       </section>
 
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default About;
