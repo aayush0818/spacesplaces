@@ -15,7 +15,7 @@ const Hero = () => {
   // Count up animations for stats
   const { count: projectsCount, elementRef: projectsRef } = useCountUp({ end: 150, duration: 2500 });
   const { count: yearsCount, elementRef: yearsRef } = useCountUp({ end: 5, duration: 2000 });
-  const { count: satisfactionCount, elementRef: satisfactionRef } = useCountUp({ end: 98, duration: 2300 });
+  const { count: satisfactionCount, elementRef: satisfactionRef } = useCountUp({ end: 100, duration: 2300 });
   return <section id="home" className="relative w-full h-screen overflow-hidden">
       {/* Background Carousel */}
       <Carousel className="absolute inset-0 w-full h-full" opts={{

@@ -74,7 +74,7 @@ const Services = () => {
           <p className="text-muted-foreground mb-6">
             We also specialize in <span className="text-primary font-medium">Wardrobes, TV Units, False Ceilings, 2D & 3D Layouts</span> and comprehensive design solutions.
           </p>
-          <Button className="px-8 py-3" asChild>
+          <Button variant="default" className="btn-luxury px-8 py-3" asChild>
             <Link to="/services">Explore Our Services</Link>
           </Button>
         </div>
