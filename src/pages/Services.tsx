@@ -27,7 +27,7 @@ const ServicesPage = () => {
     count: clientsCount,
     elementRef: clientsRef
   } = useCountUp({
-    end: 98,
+    end: 100,
     duration: 2300
   });
   const {
