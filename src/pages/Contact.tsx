@@ -1,3 +1,4 @@
+
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import { Button } from '@/components/ui/button';
@@ -18,12 +19,12 @@ const Contact = () => {
     {
       icon: Phone,
       title: "Phone Number",
-      details: ["9699578902"]
+      details: ["+91 9082169969"]
     },
     {
       icon: Mail,
       title: "Email Address",
-      details: ["info@spacesplacesinterior.com"]
+      details: ["info@spacesplaces.in"]
     },
   ];
 
@@ -107,7 +108,7 @@ const Contact = () => {
                     </div>
                     <div className="space-y-2">
                       <Label htmlFor="phone">Phone</Label>
-                      <Input id="phone" placeholder="(555) 123-4567" />
+                      <Input id="phone" placeholder="+91 9082169969" />
                     </div>
                   </div>
 

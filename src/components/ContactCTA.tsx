@@ -1,3 +1,4 @@
+
 import { Phone, Mail, MapPin, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
@@ -27,7 +28,7 @@ const ContactCTA = () => {
                 </div>
                 <div>
                   <h4 className="font-medium text-foreground">Phone</h4>
-                  <a href="tel:9699578902" className="text-muted-foreground hover:text-primary transition-colors">90821699969</a>
+                  <a href="tel:+919082169969" className="text-muted-foreground hover:text-primary transition-colors">+91 9082169969</a>
                 </div>
               </div>
 
@@ -37,7 +38,7 @@ const ContactCTA = () => {
                 </div>
                 <div>
                   <h4 className="font-medium text-foreground">Email</h4>
-                  <a href="mailto:info@spacesplacesinterior.com" className="text-muted-foreground hover:text-primary transition-colors">info@spacesplacesinterior.in</a>
+                  <a href="mailto:info@spacesplaces.in" className="text-muted-foreground hover:text-primary transition-colors">info@spacesplaces.in</a>
                 </div>
               </div>
 
@@ -48,7 +49,7 @@ const ContactCTA = () => {
                 <div>
                   <h4 className="font-medium text-foreground">Location</h4>
                   <p className="text-muted-foreground">
-                    Design Studio, Mumbai, India
+                    348, Powai Plaza, Hiranandani Gardens, Powai, Mumbai 400076
                   </p>
                 </div>
               </div>
