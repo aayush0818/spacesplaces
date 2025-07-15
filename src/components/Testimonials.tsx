@@ -1,6 +1,7 @@
 
 import { Star, Quote } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
+import { useCountUp } from '@/hooks/useCountUp';
 
 const Testimonials = () => {
   const testimonials = [
@@ -32,6 +33,11 @@ const Testimonials = () => {
       image: "/placeholder.svg"
     }
   ];
+
+  const { count: happyClients, elementRef: clientsRef } = useCountUp({ end: 150 });
+  const { count: projectsDelivered, elementRef: projectsRef } = useCountUp({ end: 200 });
+  const { count: yearsExperience, elementRef: yearsRef } = useCountUp({ end: 12 });
+  const { count: satisfactionRate, elementRef: satisfactionRef } = useCountUp({ end: 100 });
 
   return (
     <section className="py-16 lg:py-24 bg-secondary/30">
@@ -92,20 +98,20 @@ const Testimonials = () => {
 
         {/* Trust Indicators */}
         <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-          <div className="hover-lift group cursor-pointer">
-            <div className="text-3xl font-playfair font-bold text-primary mb-2 transition-all duration-300 group-hover:scale-110">150+</div>
+          <div className="hover-lift group cursor-pointer" ref={clientsRef}>
+            <div className="text-3xl font-playfair font-bold text-primary mb-2 transition-all duration-300 group-hover:scale-110">{happyClients}+</div>
             <div className="text-sm text-muted-foreground transition-colors group-hover:text-foreground">Happy Clients</div>
           </div>
-          <div className="hover-lift group cursor-pointer">
-            <div className="text-3xl font-playfair font-bold text-primary mb-2 transition-all duration-300 group-hover:scale-110">200+</div>
+          <div className="hover-lift group cursor-pointer" ref={projectsRef}>
+            <div className="text-3xl font-playfair font-bold text-primary mb-2 transition-all duration-300 group-hover:scale-110">{projectsDelivered}+</div>
             <div className="text-sm text-muted-foreground transition-colors group-hover:text-foreground">Projects Delivered</div>
           </div>
-          <div className="hover-lift group cursor-pointer">
-            <div className="text-3xl font-playfair font-bold text-primary mb-2 transition-all duration-300 group-hover:scale-110">12+</div>
+          <div className="hover-lift group cursor-pointer" ref={yearsRef}>
+            <div className="text-3xl font-playfair font-bold text-primary mb-2 transition-all duration-300 group-hover:scale-110">{yearsExperience}+</div>
             <div className="text-sm text-muted-foreground transition-colors group-hover:text-foreground">Years Experience</div>
           </div>
-          <div className="hover-lift group cursor-pointer">
-            <div className="text-3xl font-playfair font-bold text-primary mb-2 transition-all duration-300 group-hover:scale-110">98%</div>
+          <div className="hover-lift group cursor-pointer" ref={satisfactionRef}>
+            <div className="text-3xl font-playfair font-bold text-primary mb-2 transition-all duration-300 group-hover:scale-110">{satisfactionRate}%</div>
             <div className="text-sm text-muted-foreground transition-colors group-hover:text-foreground">Satisfaction Rate</div>
           </div>
         </div>

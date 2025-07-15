@@ -108,10 +108,8 @@ const Footer = () => {
             <div className="flex items-center justify-center md:justify-start">
               <Phone className="h-5 w-5 text-primary mr-3" />
               <div>
-                <div className="text-sm text-background/80">Call Us</div>
-                <a href="tel:9699578902" className="font-medium hover:text-primary transition-colors">
-                  9699578902
-                </a>
+                <div className="text-sm text-background/80">Primary: <a href="tel:+919082169969" className="font-medium hover:text-primary transition-colors">+91 9082169969</a></div>
+                <div className="text-sm text-background/80">Secondary: <a href="tel:9699578902" className="font-medium hover:text-primary transition-colors">9699578902</a></div>
               </div>
             </div>
 
@@ -119,8 +117,8 @@ const Footer = () => {
               <Mail className="h-5 w-5 text-primary mr-3" />
               <div>
                 <div className="text-sm text-background/80">Email Us</div>
-                <a href="mailto:info@spacesplacesinterior.com" className="font-medium hover:text-primary transition-colors">
-                  info@spacesplacesinterior.com
+                <a href="mailto:info@spacesplaces.in" className="font-medium hover:text-primary transition-colors">
+                  info@spacesplaces.in
                 </a>
               </div>
             </div>
