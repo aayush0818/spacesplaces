@@ -380,7 +380,7 @@ const ServicesPage = () => {
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </Link>
             </Button>
-            <Button variant="outline" size="lg" className="border-white/30 text-white hover:bg-white/10 px-6 sm:px-8 py-4 sm:py-6 text-base sm:text-lg backdrop-blur" asChild>
+            <Button variant="outline" size="lg" className="border-white/30 text-white hover:bg-white/10 hover:text-white px-6 sm:px-8 py-4 sm:py-6 text-base sm:text-lg backdrop-blur" asChild>
               <Link to="/portfolio">View Our Portfolio</Link>
             </Button>
           </div>
