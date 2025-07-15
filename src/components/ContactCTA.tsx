@@ -1,13 +1,10 @@
-
 import { Phone, Mail, MapPin, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-
 const ContactCTA = () => {
-  return (
-    <section id="contact" className="py-16 lg:py-24">
+  return <section id="contact" className="py-16 lg:py-24">
       <div className="container mx-auto px-4 max-w-7xl">
         <div className="grid lg:grid-cols-2 gap-16 items-start">
           {/* Contact Information */}
@@ -30,9 +27,7 @@ const ContactCTA = () => {
                 </div>
                 <div>
                   <h4 className="font-medium text-foreground">Phone</h4>
-                  <a href="tel:9699578902" className="text-muted-foreground hover:text-primary transition-colors">
-                    9699578902
-                  </a>
+                  <a href="tel:9699578902" className="text-muted-foreground hover:text-primary transition-colors">90821699969</a>
                 </div>
               </div>
 
@@ -42,9 +37,7 @@ const ContactCTA = () => {
                 </div>
                 <div>
                   <h4 className="font-medium text-foreground">Email</h4>
-                  <a href="mailto:info@spacesplacesinterior.com" className="text-muted-foreground hover:text-primary transition-colors">
-                    info@spacesplacesinterior.com
-                  </a>
+                  <a href="mailto:info@spacesplacesinterior.com" className="text-muted-foreground hover:text-primary transition-colors">info@spacesplacesinterior.in</a>
                 </div>
               </div>
 
@@ -85,20 +78,13 @@ const ContactCTA = () => {
                     <label className="block text-sm font-medium text-foreground mb-2">
                       Full Name *
                     </label>
-                    <Input 
-                      placeholder="Enter your name"
-                      className="border-border focus:border-primary"
-                    />
+                    <Input placeholder="Enter your name" className="border-border focus:border-primary" />
                   </div>
                   <div>
                     <label className="block text-sm font-medium text-foreground mb-2">
                       Phone Number *
                     </label>
-                    <Input 
-                      placeholder="Enter your phone"
-                      type="tel"
-                      className="border-border focus:border-primary"
-                    />
+                    <Input placeholder="Enter your phone" type="tel" className="border-border focus:border-primary" />
                   </div>
                 </div>
 
@@ -106,22 +92,14 @@ const ContactCTA = () => {
                   <label className="block text-sm font-medium text-foreground mb-2">
                     Email Address *
                   </label>
-                  <Input 
-                    placeholder="Enter your email"
-                    type="email"
-                    className="border-border focus:border-primary"
-                  />
+                  <Input placeholder="Enter your email" type="email" className="border-border focus:border-primary" />
                 </div>
 
                 <div>
                   <label className="block text-sm font-medium text-foreground mb-2">
                     Project Details
                   </label>
-                  <Textarea 
-                    placeholder="Tell us about your project requirements, timeline, etc."
-                    rows={4}
-                    className="border-border focus:border-primary resize-none"
-                  />
+                  <Textarea placeholder="Tell us about your project requirements, timeline, etc." rows={4} className="border-border focus:border-primary resize-none" />
                 </div>
 
                 <Button className="btn-luxury w-full group">
@@ -138,8 +116,6 @@ const ContactCTA = () => {
           </Card>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default ContactCTA;
