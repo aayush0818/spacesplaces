@@ -35,8 +35,8 @@ const Testimonials = () => {
   ];
 
   const { count: happyClients, elementRef: clientsRef } = useCountUp({ end: 150 });
-  const { count: projectsDelivered, elementRef: projectsRef } = useCountUp({ end: 200 });
-  const { count: yearsExperience, elementRef: yearsRef } = useCountUp({ end: 12 });
+  const { count: projectsDelivered, elementRef: projectsRef } = useCountUp({ end: 150 });
+  const { count: yearsExperience, elementRef: yearsRef } = useCountUp({ end: 5 });
   const { count: satisfactionRate, elementRef: satisfactionRef } = useCountUp({ end: 100 });
 
   return (
