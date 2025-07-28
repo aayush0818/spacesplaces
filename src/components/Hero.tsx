@@ -80,17 +80,30 @@ const Hero = () => {
 
           {/* Stats Section */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 max-w-3xl mx-auto">
-            <div ref={projectsRef} className="text-center group hover-lift bg-black/30 backdrop-blur-md border border-white/30 rounded-xl p-3 sm:p-4 transition-all duration-300 hover:bg-black/40 hover:border-primary/50">
-              <div className="text-xl sm:text-2xl md:text-3xl font-montserrat font-bold text-primary-glow mb-1 sm:mb-2 transition-transform group-hover:scale-110 drop-shadow-lg">{projectsCount}+</div>
-              <div className="text-white font-semibold text-xs sm:text-sm mb-1">Projects Completed</div>
-              <div className="text-white/80 text-xs hidden sm:block">Luxury Spaces Crafted</div>
+            <div ref={projectsRef}>
+              <Link to="/portfolio" className="text-center group hover-lift bg-black/30 backdrop-blur-md border border-white/30 rounded-xl p-3 sm:p-4 transition-all duration-300 hover:bg-black/40 hover:border-primary/50 cursor-pointer block">
+                <div className="text-xl sm:text-2xl md:text-3xl font-montserrat font-bold text-primary-glow mb-1 sm:mb-2 transition-transform group-hover:scale-110 drop-shadow-lg">{projectsCount}+</div>
+                <div className="text-white font-semibold text-xs sm:text-sm mb-1">Projects Completed</div>
+                <div className="text-white/80 text-xs hidden sm:block">Luxury Spaces Crafted</div>
+              </Link>
             </div>
-            <div ref={yearsRef} className="text-center group hover-lift bg-black/30 backdrop-blur-md border border-white/30 rounded-xl p-3 sm:p-4 transition-all duration-300 hover:bg-black/40 hover:border-primary/50">
-              <div className="text-xl sm:text-2xl md:text-3xl font-montserrat font-bold text-primary-glow mb-1 sm:mb-2 transition-transform group-hover:scale-110 drop-shadow-lg">{yearsCount}+</div>
-              <div className="text-white font-semibold text-xs sm:text-sm mb-1">Years Experience</div>
-              <div className="text-white/80 text-xs hidden sm:block">Design Excellence</div>
+            <div ref={yearsRef}>
+              <Link to="/about" className="text-center group hover-lift bg-black/30 backdrop-blur-md border border-white/30 rounded-xl p-3 sm:p-4 transition-all duration-300 hover:bg-black/40 hover:border-primary/50 cursor-pointer block">
+                <div className="text-xl sm:text-2xl md:text-3xl font-montserrat font-bold text-primary-glow mb-1 sm:mb-2 transition-transform group-hover:scale-110 drop-shadow-lg">{yearsCount}+</div>
+                <div className="text-white font-semibold text-xs sm:text-sm mb-1">Years Experience</div>
+                <div className="text-white/80 text-xs hidden sm:block">Design Excellence</div>
+              </Link>
             </div>
-            <div ref={satisfactionRef} className="text-center group hover-lift bg-black/30 backdrop-blur-md border border-white/30 rounded-xl p-3 sm:p-4 transition-all duration-300 hover:bg-black/40 hover:border-primary/50">
+            <div 
+              ref={satisfactionRef} 
+              className="text-center group hover-lift bg-black/30 backdrop-blur-md border border-white/30 rounded-xl p-3 sm:p-4 transition-all duration-300 hover:bg-black/40 hover:border-primary/50 cursor-pointer"
+              onClick={() => {
+                const testimonialsSection = document.getElementById('testimonials');
+                if (testimonialsSection) {
+                  testimonialsSection.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}
+            >
               <div className="text-xl sm:text-2xl md:text-3xl font-montserrat font-bold text-primary-glow mb-1 sm:mb-2 transition-transform group-hover:scale-110 drop-shadow-lg">{satisfactionCount}%</div>
               <div className="text-white font-semibold text-xs sm:text-sm mb-1">Client Satisfaction</div>
               <div className="text-white/80 text-xs hidden sm:block">Happy Homeowners</div>
