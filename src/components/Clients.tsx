@@ -1,30 +1,26 @@
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
 import Autoplay from 'embla-carousel-autoplay';
-import rustomjeeLogo from '@/assets/rustomjee-logo.jpg';
-import lodhaLogo from '@/assets/lodha-logo.jpg';
-import godrejLogo from '@/assets/godrej-logo.jpg';
-import kalpataruLogo from '@/assets/kalpataru-logo.jpg';
 const Clients = () => {
   const clients = [{
-    name: "Rustomjee",
-    logo: rustomjeeLogo
+    name: "Hafele",
+    logo: "/lovable-uploads/2ff1727d-23f1-413e-b38f-5e0194c0934a.png"
   }, {
-    name: "Lodha Group",
-    logo: lodhaLogo
+    name: "Hettich",
+    logo: "/lovable-uploads/137993d4-4736-473d-a2b1-b81fab964aeb.png"
   }, {
-    name: "Godrej Properties",
-    logo: godrejLogo
+    name: "Gyproc",
+    logo: "/lovable-uploads/451df624-589e-4d35-8bfa-479a52a84aa8.png"
   }, {
-    name: "Kalpataru",
-    logo: kalpataruLogo
+    name: "Century",
+    logo: "/lovable-uploads/5f6bb806-a4d1-4138-89a1-de25a4c6b816.png"
   }];
   return (
     <section className="py-16 bg-secondary/20">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-foreground mb-4">Trusted by Leading Brands</h2>
+          <h2 className="text-3xl font-bold text-foreground mb-4">Our Brand Partners</h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            We've had the privilege to work with some of Mumbai's most prestigious real estate developers
+            We work with industry-leading brands to deliver exceptional quality and innovation
           </p>
         </div>
         

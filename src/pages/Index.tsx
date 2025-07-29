@@ -3,7 +3,7 @@ import Navigation from '@/components/Navigation';
 import Hero from '@/components/Hero';
 import FeaturedProjects from '@/components/FeaturedProjects';
 import Services from '@/components/Services';
-
+import Clients from '@/components/Clients';
 import Testimonials from '@/components/Testimonials';
 import ContactCTA from '@/components/ContactCTA';
 import Footer from '@/components/Footer';
@@ -32,6 +32,8 @@ const Index = () => {
           {/* Services Section */}
           <Services />
 
+          {/* Clients Section */}
+          <Clients />
 
           {/* Testimonials Section */}
           <Testimonials />
