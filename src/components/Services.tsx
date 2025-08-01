@@ -1,7 +1,8 @@
-import { Home, Building, Sofa, ChefHat, Paintbrush, BookOpen, CheckCircle } from 'lucide-react';
+import { Home, Building, Sofa, ChefHat, BookOpen, CheckCircle } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
+
 const Services = () => {
   const mainServices = [{
     icon: Home,
@@ -24,16 +25,12 @@ const Services = () => {
     subtitle: "Ergonomic layouts with beautiful finishes",
     description: "Smart kitchen solutions that blend functionality with style for the heart of your home."
   }, {
-    icon: Paintbrush,
-    title: "Wall Treatments",
-    subtitle: "Add texture, mood, and design depth",
-    description: "Transform walls into focal points with textures, colors, and materials that speak your style."
-  }, {
     icon: BookOpen,
     title: "Study Units",
     subtitle: "Ergonomic, elegant workspaces",
     description: "Focused environments designed to boost productivity and creativity in compact, organized spaces."
   }];
+
   return <section id="services" className="py-16 lg:py-24">
       <div className="container mx-auto px-4 max-w-7xl">
         {/* Section Header */}
@@ -107,4 +104,5 @@ const Services = () => {
       </div>
     </section>;
 };
+
 export default Services;
