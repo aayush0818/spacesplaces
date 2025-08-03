@@ -1,4 +1,3 @@
-
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import ImageViewer from '@/components/ImageViewer';
@@ -6,12 +5,21 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Filter, Grid, List } from 'lucide-react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { useSearchParams } from 'react-router-dom';
 
 const Portfolio = () => {
-  const [filter, setFilter] = useState('all');
+  const [searchParams] = useSearchParams();
+  const categoryFromUrl = searchParams.get('category') || 'all';
+  
+  const [filter, setFilter] = useState(categoryFromUrl);
   const [viewMode, setViewMode] = useState('grid');
   const [selectedImage, setSelectedImage] = useState<{ src: string; alt: string } | null>(null);
+
+  // Update filter when URL params change
+  useEffect(() => {
+    setFilter(categoryFromUrl);
+  }, [categoryFromUrl]);
 
   const projects = [
     // Commercial Projects
