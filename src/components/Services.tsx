@@ -1,3 +1,4 @@
+
 import { Home, Building, Sofa, ChefHat, BookOpen, CheckCircle } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -8,27 +9,32 @@ const Services = () => {
     icon: Home,
     title: "Residential Interiors",
     subtitle: "Create a space that feels like you",
-    description: "Transform your home into a sanctuary that reflects your personality and lifestyle with thoughtful design."
+    description: "Transform your home into a sanctuary that reflects your personality and lifestyle with thoughtful design.",
+    portfolioCategory: "residential"
   }, {
     icon: Building,
     title: "Commercial Spaces",
     subtitle: "Designs that work for your business",
-    description: "Professional environments that boost productivity while expressing your company's identity and values."
+    description: "Professional environments that boost productivity while expressing your company's identity and values.",
+    portfolioCategory: "commercial"
   }, {
     icon: Sofa,
     title: "Custom Furniture",
     subtitle: "Tailor-made pieces that elevate your space",
-    description: "Bespoke furniture designed specifically for your space, lifestyle, and functional requirements."
+    description: "Bespoke furniture designed specifically for your space, lifestyle, and functional requirements.",
+    portfolioCategory: "custom-furniture"
   }, {
     icon: ChefHat,
     title: "Modular Kitchens",
     subtitle: "Ergonomic layouts with beautiful finishes",
-    description: "Smart kitchen solutions that blend functionality with style for the heart of your home."
+    description: "Smart kitchen solutions that blend functionality with style for the heart of your home.",
+    portfolioCategory: "modular-kitchen"
   }, {
     icon: BookOpen,
     title: "Study Units",
     subtitle: "Ergonomic, elegant workspaces",
-    description: "Focused environments designed to boost productivity and creativity in compact, organized spaces."
+    description: "Focused environments designed to boost productivity and creativity in compact, organized spaces.",
+    portfolioCategory: "study-units"
   }];
 
   return <section id="services" className="py-16 lg:py-24">
@@ -47,7 +53,8 @@ const Services = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {mainServices.map(service => {
           const IconComponent = service.icon;
-          return <Card key={service.title} className="group hover-lift border-0 shadow-soft hover:shadow-elegant transition-all duration-500">
+          return <Link key={service.title} to={`/portfolio?category=${service.portfolioCategory}`}>
+              <Card className="group hover-lift border-0 shadow-soft hover:shadow-elegant transition-all duration-500 cursor-pointer h-full">
                 <CardContent className="p-6 text-center">
                   <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-2xl mb-4">
                     <IconComponent className="h-8 w-8 text-primary" />
@@ -62,7 +69,8 @@ const Services = () => {
                     {service.description}
                   </p>
                 </CardContent>
-              </Card>;
+              </Card>
+            </Link>;
         })}
         </div>
 
