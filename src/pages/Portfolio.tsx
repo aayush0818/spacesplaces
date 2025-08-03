@@ -31,6 +31,30 @@ const Portfolio = () => {
       image: "/lovable-uploads/fde04e11-8a8d-483a-a9e6-6b88fc880c23.png",
       tags: ["Sports Store", "Commercial", "Display Systems", "Retail Design"]
     },
+    {
+      id: 32,
+      title: "Vibrant Retail Store with Geometric Design",
+      category: "commercial",
+      year: "2024",
+      image: "/lovable-uploads/11d9766c-e1d1-46bc-8f07-dbab1a04409e.png",
+      tags: ["Retail", "Geometric Design", "Vibrant", "Commercial Display"]
+    },
+    {
+      id: 33,
+      title: "Modern Office Workspace Design",
+      category: "commercial",
+      year: "2024",
+      image: "/lovable-uploads/862a58fc-43aa-49ec-b26f-a361b509d77d.png",
+      tags: ["Office", "Workspace", "Modern", "Commercial Interior"]
+    },
+    {
+      id: 34,
+      title: "Contemporary Restaurant Interior",
+      category: "commercial",
+      year: "2024",
+      image: "/lovable-uploads/755bad57-4a45-4088-ba3a-74988367d642.png",
+      tags: ["Restaurant", "Dining", "Contemporary", "Commercial"]
+    },
     
     // Residential Projects
     {
@@ -40,22 +64,6 @@ const Portfolio = () => {
       year: "2024",
       image: "/lovable-uploads/33079f5b-2cb1-4a9c-8b2b-576ebb30018a.png",
       tags: ["Luxury", "Chandelier", "Living Room"]
-    },
-    {
-      id: 4,
-      title: "Modern Home Office Design",
-      category: "residential",
-      year: "2024",
-      image: "/lovable-uploads/6cacc49f-0656-415e-9433-7e2b3933a288.png",
-      tags: ["Modern", "Office", "Workspace"]
-    },
-    {
-      id: 5,
-      title: "Contemporary Storage Solutions",
-      category: "residential",
-      year: "2024",
-      image: "/lovable-uploads/89dc1d00-3dca-43e9-ac8b-07c431cc05cf.png",
-      tags: ["Storage", "Contemporary", "Functional"]
     },
     {
       id: 6,
@@ -74,22 +82,6 @@ const Portfolio = () => {
       tags: ["Bedroom", "Serene", "Ambient Lighting"]
     },
     {
-      id: 8,
-      title: "Contemporary Kitchen Design",
-      category: "residential",
-      year: "2024",
-      image: "/lovable-uploads/301e6616-bd72-46d7-af39-cbd2af69e499.png",
-      tags: ["Kitchen", "Contemporary", "Functional"]
-    },
-    {
-      id: 9,
-      title: "Modern Kitchen with Island",
-      category: "residential",
-      year: "2024",
-      image: "/lovable-uploads/a2d52684-ade1-4bff-ab46-9d063164e91b.png",
-      tags: ["Kitchen", "Island", "Modern"]
-    },
-    {
       id: 10,
       title: "Traditional Pooja Room Design",
       category: "residential",
@@ -98,44 +90,12 @@ const Portfolio = () => {
       tags: ["Traditional", "Pooja Room", "Sacred Space"]
     },
     {
-      id: 11,
-      title: "Modern Wardrobe Solutions",
-      category: "residential",
-      year: "2024",
-      image: "/lovable-uploads/37c89905-d8f3-4a2b-b2aa-2eda3505ce72.png",
-      tags: ["Wardrobe", "Modern", "Storage"]
-    },
-    {
-      id: 12,
-      title: "Luxury Kitchen with Decorative Elements",
-      category: "residential",
-      year: "2024",
-      image: "/lovable-uploads/7f3f75de-9ac6-43df-8e17-73616d407665.png",
-      tags: ["Kitchen", "Luxury", "Decorative"]
-    },
-    {
       id: 13,
       title: "Elegant Arched Doorway Design",
       category: "residential",
       year: "2024",
       image: "/lovable-uploads/1064d50e-b7d4-4aac-ba16-ae02dddae5e3.png",
       tags: ["Doorway", "Elegant", "Architectural Detail"]
-    },
-    {
-      id: 14,
-      title: "Modern Bar and Entertainment Unit",
-      category: "residential",
-      year: "2024",
-      image: "/lovable-uploads/bc80cd73-b042-4e91-8405-c935b69c7f7c.png",
-      tags: ["Bar", "Entertainment", "Modern"]
-    },
-    {
-      id: 15,
-      title: "Kids Study Room with Creative Storage",
-      category: "residential",
-      year: "2024",
-      image: "/lovable-uploads/8de7986c-e31c-46be-8b10-f00c0dfa73e6.png",
-      tags: ["Kids Room", "Study", "Storage"]
     },
     {
       id: 16,
@@ -152,14 +112,6 @@ const Portfolio = () => {
       year: "2024",
       image: "/lovable-uploads/08fd3178-62b5-40ac-8be1-0ed0f3c658a9.png",
       tags: ["Bedroom", "Murphy Bed", "Space Saving"]
-    },
-    {
-      id: 18,
-      title: "Compact Home Office Nook",
-      category: "residential",
-      year: "2024",
-      image: "/lovable-uploads/48a21fec-c60b-456b-a0be-8c2c4b9e1e3a.png",
-      tags: ["Home Office", "Compact", "Efficient"]
     },
     {
       id: 19,
@@ -186,7 +138,31 @@ const Portfolio = () => {
       tags: ["Wall Art", "Modern", "Statement Piece"]
     },
 
-    // Study Units Category
+    // Study Units Category (moved and added from office/workspace images)
+    {
+      id: 4,
+      title: "Modern Home Office Design",
+      category: "study-units",
+      year: "2024",
+      image: "/lovable-uploads/6cacc49f-0656-415e-9433-7e2b3933a288.png",
+      tags: ["Modern", "Office", "Workspace", "Study Units"]
+    },
+    {
+      id: 15,
+      title: "Kids Study Room with Creative Storage",
+      category: "study-units",
+      year: "2024",
+      image: "/lovable-uploads/8de7986c-e31c-46be-8b10-f00c0dfa73e6.png",
+      tags: ["Kids Room", "Study", "Storage", "Study Units"]
+    },
+    {
+      id: 18,
+      title: "Compact Home Office Nook",
+      category: "study-units",
+      year: "2024",
+      image: "/lovable-uploads/48a21fec-c60b-456b-a0be-8c2c4b9e1e3a.png",
+      tags: ["Home Office", "Compact", "Efficient", "Study Units"]
+    },
     {
       id: 22,
       title: "Integrated Study & Entertainment Unit",
@@ -204,7 +180,31 @@ const Portfolio = () => {
       tags: ["Study Units", "Dual Workstation", "Kids Study", "Storage"]
     },
 
-    // Modular Kitchen Category
+    // Modular Kitchen Category (all kitchen images now properly categorized)
+    {
+      id: 8,
+      title: "Contemporary Kitchen Design",
+      category: "modular-kitchen",
+      year: "2024",
+      image: "/lovable-uploads/301e6616-bd72-46d7-af39-cbd2af69e499.png",
+      tags: ["Kitchen", "Contemporary", "Functional", "Modular Kitchen"]
+    },
+    {
+      id: 9,
+      title: "Modern Kitchen with Island",
+      category: "modular-kitchen",
+      year: "2024",
+      image: "/lovable-uploads/a2d52684-ade1-4bff-ab46-9d063164e91b.png",
+      tags: ["Kitchen", "Island", "Modern", "Modular Kitchen"]
+    },
+    {
+      id: 12,
+      title: "Luxury Kitchen with Decorative Elements",
+      category: "modular-kitchen",
+      year: "2024",
+      image: "/lovable-uploads/7f3f75de-9ac6-43df-8e17-73616d407665.png",
+      tags: ["Kitchen", "Luxury", "Decorative", "Modular Kitchen"]
+    },
     {
       id: 24,
       title: "Contemporary L-Shaped Kitchen",
@@ -246,7 +246,31 @@ const Portfolio = () => {
       tags: ["Modular Kitchen", "Galley Design", "Dark Countertops", "Efficient"]
     },
 
-    // Custom Furniture Category
+    // Custom Furniture Category (moved and added furniture images)
+    {
+      id: 5,
+      title: "Contemporary Storage Solutions",
+      category: "custom-furniture",
+      year: "2024",
+      image: "/lovable-uploads/89dc1d00-3dca-43e9-ac8b-07c431cc05cf.png",
+      tags: ["Storage", "Contemporary", "Functional", "Custom Furniture"]
+    },
+    {
+      id: 11,
+      title: "Modern Wardrobe Solutions",
+      category: "custom-furniture",
+      year: "2024",
+      image: "/lovable-uploads/37c89905-d8f3-4a2b-b2aa-2eda3505ce72.png",
+      tags: ["Wardrobe", "Modern", "Storage", "Custom Furniture"]
+    },
+    {
+      id: 14,
+      title: "Modern Bar and Entertainment Unit",
+      category: "custom-furniture",
+      year: "2024",
+      image: "/lovable-uploads/bc80cd73-b042-4e91-8405-c935b69c7f7c.png",
+      tags: ["Bar", "Entertainment", "Modern", "Custom Furniture"]
+    },
     {
       id: 29,
       title: "Custom Bedside Table Design",
