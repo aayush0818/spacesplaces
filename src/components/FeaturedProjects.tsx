@@ -21,7 +21,7 @@ const FeaturedProjects = () => {
       title: "Elegant Living Space",
       category: "Residential",
       description: "Luxurious living room featuring crystal chandelier and premium ambient lighting.",
-      image: "/lovable-uploads/33079f5b-2cb1-4a9c-8b2b-576ebb30018a.png",
+      image: "/lovable-uploads/382c0b5b-f081-4cec-bce9-e4122ae28d96.png",
     },
     {
       id: 2,
@@ -35,7 +35,7 @@ const FeaturedProjects = () => {
       title: "Luxury Bedroom Suite",
       category: "Residential",
       description: "Sophisticated bedroom design with custom wardrobes and ambient lighting.",
-      image: "/lovable-uploads/137993d4-4736-473d-a2b1-b81fab964aeb.png",
+      image: "/lovable-uploads/5427d652-158b-44f6-b446-46b0921e71e3.png",
     },
     {
       id: 4,
