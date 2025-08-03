@@ -1,3 +1,4 @@
+
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
 import Autoplay from 'embla-carousel-autoplay';
 
@@ -12,8 +13,8 @@ const Clients = () => {
     name: "Gyproc",
     logo: "/lovable-uploads/c6aa735f-68ef-4ca7-b766-4c5eaa71aba9.png"
   }, {
-    name: "Century 21",
-    logo: "/lovable-uploads/5b1a5a20-0d10-4637-9aa9-181e4ee3065d.png"
+    name: "Century",
+    logo: "/lovable-uploads/aa503818-30d8-4560-a5aa-caae42424872.png"
   }];
 
   return (
@@ -42,11 +43,11 @@ const Clients = () => {
             {clients.map((client, index) => (
               <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/4">
                 <div className="p-4">
-                  <div className="bg-background rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow duration-300 flex items-center justify-center h-24">
+                  <div className="bg-background rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center h-32 border border-border/50 hover:border-primary/20 group">
                     <img
                       src={client.logo}
                       alt={`${client.name} logo`}
-                      className="max-h-16 max-w-full object-contain filter grayscale hover:grayscale-0 transition-all duration-300"
+                      className="max-h-20 max-w-full object-contain transition-all duration-300 group-hover:scale-105"
                     />
                   </div>
                 </div>
