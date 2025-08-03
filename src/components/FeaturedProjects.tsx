@@ -25,31 +25,38 @@ const FeaturedProjects = () => {
     },
     {
       id: 2,
-      title: "Modern Study Unit Design",
-      category: "Study Units",
-      description: "Ergonomic workspace with integrated storage and contemporary TV unit design.",
-      image: "/lovable-uploads/892cf518-b06c-442a-8434-972b53f07077.png",
-    },
-    {
-      id: 3,
       title: "Contemporary Modular Kitchen",
       category: "Modular Kitchen",
-      description: "Sleek kitchen design with modern finishes and efficient storage solutions.",
+      description: "Sleek L-shaped kitchen design with marble backsplash and modern finishes.",
       image: "/lovable-uploads/642a6353-6879-44e8-8701-3d609e3c800e.png",
     },
     {
-      id: 4,
+      id: 3,
       title: "Luxury Bedroom Suite",
       category: "Residential",
       description: "Sophisticated bedroom design with custom wardrobes and ambient lighting.",
       image: "/lovable-uploads/137993d4-4736-473d-a2b1-b81fab964aeb.png",
     },
     {
+      id: 4,
+      title: "Modern Study & TV Unit Design",
+      category: "Study Units",
+      description: "Ergonomic workspace with integrated storage and contemporary TV unit design.",
+      image: "/lovable-uploads/892cf518-b06c-442a-8434-972b53f07077.png",
+    },
+    {
       id: 5,
-      title: "Executive Office Space",
+      title: "Executive Office Interior",
       category: "Commercial",
-      description: "Professional workspace with premium finishes and ergonomic design.",
-      image: "/lovable-uploads/301e6616-bd72-46d7-af39-cbd2af69e499.png",
+      description: "Professional workspace with premium finishes and modern design elements.",
+      image: "/lovable-uploads/862a58fc-43aa-49ec-b26f-a361b509d77d.png",
+    },
+    {
+      id: 6,
+      title: "Premium Modular Kitchen",
+      category: "Modular Kitchen",
+      description: "Modern kitchen with wood accents, island design, and premium appliances.",
+      image: "/lovable-uploads/83ce39cf-6c94-44c4-9be2-eb35ee35728b.png",
     }
   ];
 
