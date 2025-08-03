@@ -21,19 +21,19 @@ const FeaturedProjects = () => {
     },
     {
       id: 2,
-      title: "Contemporary Kitchen Design",
-      category: "Residential",
-      description: "Modern kitchen with sleek finishes and functional layout for everyday living.",
-      image: "/lovable-uploads/301e6616-bd72-46d7-af39-cbd2af69e499.png",
-      tags: ["Modern Kitchen", "Functional Design", "Contemporary"]
+      title: "Modern Study Unit Design",
+      category: "Study Units",
+      description: "Ergonomic workspace with integrated storage and contemporary TV unit design.",
+      image: "/lovable-uploads/892cf518-b06c-442a-8434-972b53f07077.png",
+      tags: ["Study Units", "Workspace", "Modern Design"]
     },
     {
       id: 3,
-      title: "Home Office Setup",
-      category: "Residential",
-      description: "Efficient workspace design promoting productivity and comfort.",
-      image: "/lovable-uploads/6cacc49f-0656-415e-9433-7e2b3933a288.png",
-      tags: ["Home Office", "Workspace", "Productivity"]
+      title: "Contemporary Modular Kitchen",
+      category: "Modular Kitchen",
+      description: "Sleek kitchen design with modern finishes and efficient storage solutions.",
+      image: "/lovable-uploads/642a6353-6879-44e8-8701-3d609e3c800e.png",
+      tags: ["Modular Kitchen", "Contemporary", "Functional Design"]
     }
   ];
 

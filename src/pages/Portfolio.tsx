@@ -14,6 +14,7 @@ const Portfolio = () => {
   const [selectedImage, setSelectedImage] = useState<{ src: string; alt: string } | null>(null);
 
   const projects = [
+    // Commercial Projects
     {
       id: 1,
       title: "Modern Retail Store Design",
@@ -30,6 +31,8 @@ const Portfolio = () => {
       image: "/lovable-uploads/fde04e11-8a8d-483a-a9e6-6b88fc880c23.png",
       tags: ["Sports Store", "Commercial", "Display Systems", "Retail Design"]
     },
+    
+    // Residential Projects
     {
       id: 3,
       title: "Elegant Living Room with Crystal Chandelier",
@@ -181,13 +184,102 @@ const Portfolio = () => {
       year: "2024",
       image: "/lovable-uploads/b48b3b85-2acc-46fb-9f43-8f68a117b7cf.png",
       tags: ["Wall Art", "Modern", "Statement Piece"]
+    },
+
+    // Study Units Category
+    {
+      id: 22,
+      title: "Integrated Study & Entertainment Unit",
+      category: "study-units",
+      year: "2024",
+      image: "/lovable-uploads/892cf518-b06c-442a-8434-972b53f07077.png",
+      tags: ["Study Units", "TV Unit", "Workspace", "Modern"]
+    },
+    {
+      id: 23,
+      title: "Dual Study Station Design",
+      category: "study-units",
+      year: "2024",
+      image: "/lovable-uploads/65e20ced-14a9-4097-9c33-f15e02fb5260.png",
+      tags: ["Study Units", "Dual Workstation", "Kids Study", "Storage"]
+    },
+
+    // Modular Kitchen Category
+    {
+      id: 24,
+      title: "Contemporary L-Shaped Kitchen",
+      category: "modular-kitchen",
+      year: "2024",
+      image: "/lovable-uploads/642a6353-6879-44e8-8701-3d609e3c800e.png",
+      tags: ["Modular Kitchen", "L-Shaped", "Contemporary", "Marble Backsplash"]
+    },
+    {
+      id: 25,
+      title: "Modern Mint Green Kitchen",
+      category: "modular-kitchen",
+      year: "2024",
+      image: "/lovable-uploads/b4b788e4-2e39-4d3f-9a69-7c5bf08b32d1.png",
+      tags: ["Modular Kitchen", "Mint Green", "Modern", "Granite Countertops"]
+    },
+    {
+      id: 26,
+      title: "Luxury Kitchen with Wood Accents",
+      category: "modular-kitchen",
+      year: "2024",
+      image: "/lovable-uploads/83ce39cf-6c94-44c4-9be2-eb35ee35728b.png",
+      tags: ["Modular Kitchen", "Wood Accents", "Island", "Premium"]
+    },
+    {
+      id: 27,
+      title: "Compact Kitchen with Glass Cabinets",
+      category: "modular-kitchen",
+      year: "2024",
+      image: "/lovable-uploads/4d9dca5b-3460-42f0-af3a-ab950dc46065.png",
+      tags: ["Modular Kitchen", "Glass Cabinets", "LED Lighting", "Compact"]
+    },
+    {
+      id: 28,
+      title: "Sleek Galley Kitchen Design",
+      category: "modular-kitchen",
+      year: "2024",
+      image: "/lovable-uploads/73a45d79-e709-477a-9874-17af6b2f5a12.png",
+      tags: ["Modular Kitchen", "Galley Design", "Dark Countertops", "Efficient"]
+    },
+
+    // Custom Furniture Category
+    {
+      id: 29,
+      title: "Custom Bedside Table Design",
+      category: "custom-furniture",
+      year: "2024",
+      image: "/lovable-uploads/9e05084e-c902-4702-af80-1eb33523484f.png",
+      tags: ["Custom Furniture", "Bedside Table", "Elegant", "Drawers"]
+    },
+    {
+      id: 30,
+      title: "Multi-Functional Coffee Table",
+      category: "custom-furniture",
+      year: "2024",
+      image: "/lovable-uploads/48377d5b-523e-4073-8573-8418254da1f7.png",
+      tags: ["Custom Furniture", "Coffee Table", "Storage", "Multi-Functional"]
+    },
+    {
+      id: 31,
+      title: "Modern Geometric Side Table",
+      category: "custom-furniture",
+      year: "2024",
+      image: "/lovable-uploads/16d7d39c-4ddd-4855-a264-121bc08f9721.png",
+      tags: ["Custom Furniture", "Side Table", "Geometric", "Modern"]
     }
   ];
 
   const categories = [
     { value: 'all', label: 'All Projects' },
     { value: 'residential', label: 'Residential' },
-    { value: 'commercial', label: 'Commercial' }
+    { value: 'commercial', label: 'Commercial' },
+    { value: 'modular-kitchen', label: 'Modular Kitchen' },
+    { value: 'study-units', label: 'Study Units' },
+    { value: 'custom-furniture', label: 'Custom Furniture' }
   ];
 
   const filteredProjects = filter === 'all' 
