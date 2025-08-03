@@ -1,11 +1,16 @@
 
-import { ArrowRight, ExternalLink } from 'lucide-react';
-import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import { Link } from 'react-router-dom';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import LazyImage from '@/components/LazyImage';
 import ImageViewer from '@/components/ImageViewer';
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel"
+import Autoplay from "embla-carousel-autoplay"
 
 const FeaturedProjects = () => {
   const [selectedImage, setSelectedImage] = useState<{ src: string; alt: string } | null>(null);
@@ -17,7 +22,6 @@ const FeaturedProjects = () => {
       category: "Residential",
       description: "Luxurious living room featuring crystal chandelier and premium ambient lighting.",
       image: "/lovable-uploads/33079f5b-2cb1-4a9c-8b2b-576ebb30018a.png",
-      tags: ["Luxury Living", "Crystal Lighting", "Premium Design"]
     },
     {
       id: 2,
@@ -25,7 +29,6 @@ const FeaturedProjects = () => {
       category: "Study Units",
       description: "Ergonomic workspace with integrated storage and contemporary TV unit design.",
       image: "/lovable-uploads/892cf518-b06c-442a-8434-972b53f07077.png",
-      tags: ["Study Units", "Workspace", "Modern Design"]
     },
     {
       id: 3,
@@ -33,7 +36,20 @@ const FeaturedProjects = () => {
       category: "Modular Kitchen",
       description: "Sleek kitchen design with modern finishes and efficient storage solutions.",
       image: "/lovable-uploads/642a6353-6879-44e8-8701-3d609e3c800e.png",
-      tags: ["Modular Kitchen", "Contemporary", "Functional Design"]
+    },
+    {
+      id: 4,
+      title: "Luxury Bedroom Suite",
+      category: "Residential",
+      description: "Sophisticated bedroom design with custom wardrobes and ambient lighting.",
+      image: "/lovable-uploads/137993d4-4736-473d-a2b1-b81fab964aeb.png",
+    },
+    {
+      id: 5,
+      title: "Executive Office Space",
+      category: "Commercial",
+      description: "Professional workspace with premium finishes and ergonomic design.",
+      image: "/lovable-uploads/301e6616-bd72-46d7-af39-cbd2af69e499.png",
     }
   ];
 
@@ -60,68 +76,67 @@ const FeaturedProjects = () => {
             </p>
           </div>
 
-          {/* Projects Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-            {projects.map((project, index) => (
-              <Card 
-                key={project.id} 
-                className="group project-card hover-lift hover-shimmer border-0 shadow-soft overflow-hidden cursor-pointer"
-              >
-                <div className="relative overflow-hidden aspect-[4/3]" onClick={() => handleImageClick(project.image, project.title)}>
-                  <LazyImage
-                    src={project.image} 
-                    alt={project.title}
-                    className="w-full h-full object-cover transition-all duration-700 ease-out group-hover:scale-110"
-                    priority={index === 0}
-                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                    quality={90}
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-center justify-center">
-                    <div className="transform translate-y-8 group-hover:translate-y-0 transition-transform duration-500">
-                      <Button variant="outline" className="bg-background/95 hover:bg-background backdrop-blur-sm shadow-lg">
-                        <ExternalLink className="h-4 w-4 mr-2" />
-                        View Project
-                      </Button>
-                    </div>
-                  </div>
-                  <div className="absolute top-4 left-4">
-                    <span className="bg-primary/90 text-primary-foreground px-3 py-1 rounded-full text-sm font-medium shadow-md">
-                      {project.category}
-                    </span>
-                  </div>
-                </div>
-                
-                <CardContent className="p-6">
-                  <h3 className="text-xl font-playfair font-medium text-foreground mb-2 group-hover:text-primary transition-colors duration-300">
-                    {project.title}
-                  </h3>
-                  <p className="text-muted-foreground mb-4 leading-relaxed">
-                    {project.description}
-                  </p>
-                  
-                  <div className="flex flex-wrap gap-2">
-                    {project.tags.map((tag) => (
-                      <span 
-                        key={tag}
-                        className="bg-secondary text-secondary-foreground px-2 py-1 rounded text-xs font-medium"
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-
-          {/* View All CTA */}
-          <div className="text-center">
-            <Button className="btn-outline-luxury group hover:shadow-glow" asChild>
-              <Link to="/portfolio">
-                View All Projects
-                <ArrowRight className="ml-2 h-5 w-5 transition-all duration-300 group-hover:translate-x-2" />
-              </Link>
-            </Button>
+          {/* Projects Carousel */}
+          <div className="relative">
+            <Carousel
+              opts={{
+                align: "start",
+                loop: true,
+              }}
+              plugins={[
+                Autoplay({
+                  delay: 4000,
+                }),
+              ]}
+              className="w-full"
+            >
+              <CarouselContent className="-ml-2 md:-ml-4">
+                {projects.map((project, index) => (
+                  <CarouselItem key={project.id} className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
+                    <Card 
+                      className="group project-card hover-lift border-0 shadow-soft overflow-hidden cursor-pointer"
+                      onClick={() => handleImageClick(project.image, project.title)}
+                    >
+                      <div className="relative overflow-hidden aspect-[4/3]">
+                        <LazyImage
+                          src={project.image} 
+                          alt={project.title}
+                          className="w-full h-full object-cover transition-all duration-700 ease-out group-hover:scale-110"
+                          priority={index === 0}
+                          sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                          quality={90}
+                        />
+                        
+                        {/* Overlay with gradient and text */}
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
+                        
+                        {/* Category badge */}
+                        <div className="absolute top-4 left-4 z-10">
+                          <span className="bg-primary/90 text-primary-foreground px-3 py-1 rounded-full text-sm font-medium shadow-md backdrop-blur-sm">
+                            {project.category}
+                          </span>
+                        </div>
+                        
+                        {/* Text overlay */}
+                        <div className="absolute bottom-0 left-0 right-0 p-6 text-white z-10">
+                          <h3 className="text-xl md:text-2xl font-playfair font-medium mb-2 group-hover:text-primary/90 transition-colors duration-300">
+                            {project.title}
+                          </h3>
+                          <p className="text-white/90 leading-relaxed text-sm md:text-base">
+                            {project.description}
+                          </p>
+                        </div>
+                        
+                        {/* Hover effect */}
+                        <div className="absolute inset-0 bg-primary/10 opacity-0 group-hover:opacity-100 transition-all duration-500" />
+                      </div>
+                    </Card>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious className="left-4" />
+              <CarouselNext className="right-4" />
+            </Carousel>
           </div>
         </div>
       </section>
