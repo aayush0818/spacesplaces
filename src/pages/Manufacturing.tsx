@@ -54,7 +54,7 @@ const Manufacturing = () => {
     },
     {
       title: "Assembly Line & Quality Check",
-      image: "/lovable-uploads/935f905f-4ba0-41dc-91eb-b8722b0e0376.png",
+      image: "/lovable-uploads/128344b8-edfa-47d8-b310-d37a179430cd.png",
       description: "Final assembly, finishing & quality check process",
       advantages: [
         "Panels assembled with pre-drilled joints",
@@ -67,7 +67,7 @@ const Manufacturing = () => {
     },
     {
       title: "Site Installation",
-      image: "/lovable-uploads/128344b8-edfa-47d8-b310-d37a179430cd.png",
+      image: "/lovable-uploads/935f905f-4ba0-41dc-91eb-b8722b0e0376.png",
       description: "Professional installation by trained technicians",
       advantages: [
         "Assembled by trained technicians",
