@@ -62,14 +62,7 @@ const Manufacturing = () => {
               <p className="text-xl md:text-2xl text-muted-foreground mb-8 leading-relaxed">
                 We bring your designs to life in our state-of-the-art facility using advanced European and Indian machinery to ensure accuracy, speed, and long-lasting quality.
               </p>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12 mx-[31px]">
-                
-                
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-primary mb-2">100%</div>
-                  <div className="text-muted-foreground">Quality Assured</div>
-                </div>
-              </div>
+              
             </div>
           </div>
         </section>
