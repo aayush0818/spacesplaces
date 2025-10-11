@@ -133,7 +133,7 @@ const Footer = () => {
               <div>
                 <div className="text-sm text-background/80">Visit Us</div>
                 <div className="font-medium text-sm">348, Powai Plaza, Hiranandani Gardens, Powai, Mumbai 400076</div>
-                
+                <div className="font-medium text-sm mt-2">107, Jay Ambe Industrial Estate, Near Jay Jalaram Complex, Pimplas</div>
               </div>
             </div>
           </div>
