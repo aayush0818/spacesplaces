@@ -1,13 +1,15 @@
 
 import { useState, useEffect } from 'react';
-import { Menu, X, Phone, Mail } from 'lucide-react';
+import { Menu, X, Phone, Mail, LogIn, Shield } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Link, useLocation } from 'react-router-dom';
+import { useAuth } from '@/hooks/useAuth';
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();
+  const { user, isAdmin, signOut } = useAuth();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -79,7 +81,29 @@ const Navigation = () => {
                 info@spacesplaces.in
               </a>
             </div>
-            <Button className="btn-luxury ml-3 px-4 py-2 text-sm" asChild>
+            {user ? (
+              <div className="flex items-center gap-2 ml-3">
+                {isAdmin && (
+                  <Button variant="outline" size="sm" asChild>
+                    <Link to="/admin">
+                      <Shield className="h-4 w-4 mr-1" />
+                      Admin
+                    </Link>
+                  </Button>
+                )}
+                <Button variant="outline" size="sm" onClick={signOut}>
+                  Logout
+                </Button>
+              </div>
+            ) : (
+              <Button variant="outline" size="sm" className="ml-3" asChild>
+                <Link to="/auth">
+                  <LogIn className="h-4 w-4 mr-1" />
+                  Login
+                </Link>
+              </Button>
+            )}
+            <Button className="btn-luxury px-4 py-2 text-sm" asChild>
               <Link to="/contact">Get Free Quote</Link>
             </Button>
           </div>
@@ -110,6 +134,35 @@ const Navigation = () => {
                 </Link>
               ))}
               <div className="pt-4 border-t space-y-3">
+                {user ? (
+                  <>
+                    {isAdmin && (
+                      <Button variant="outline" className="w-full" asChild onClick={() => setIsMobileMenuOpen(false)}>
+                        <Link to="/admin">
+                          <Shield className="h-4 w-4 mr-2" />
+                          Admin Panel
+                        </Link>
+                      </Button>
+                    )}
+                    <Button
+                      variant="outline"
+                      className="w-full"
+                      onClick={() => {
+                        signOut();
+                        setIsMobileMenuOpen(false);
+                      }}
+                    >
+                      Logout
+                    </Button>
+                  </>
+                ) : (
+                  <Button variant="outline" className="w-full" asChild onClick={() => setIsMobileMenuOpen(false)}>
+                    <Link to="/auth">
+                      <LogIn className="h-4 w-4 mr-2" />
+                      Login
+                    </Link>
+                  </Button>
+                )}
                 <a href="tel:+919082169969" className="flex items-center text-muted-foreground py-2">
                   <Phone className="h-4 w-4 mr-2" />
                   +91 9082169969
