@@ -121,7 +121,7 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
         title: "Welcome back!",
         description: "You have successfully signed in.",
       });
-      navigate('/');
+      navigate('/admin');
     }
 
     return { error };
