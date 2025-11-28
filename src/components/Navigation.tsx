@@ -81,7 +81,7 @@ const Navigation = () => {
                 info@spacesplaces.in
               </a>
             </div>
-            {isAdmin && (
+            {user && (
               <div className="flex items-center gap-2 ml-3">
                 <Button variant="outline" size="sm" asChild>
                   <Link to="/admin">
@@ -125,7 +125,7 @@ const Navigation = () => {
                 </Link>
               ))}
               <div className="pt-4 border-t space-y-3">
-                {isAdmin && (
+                {user && (
                   <>
                     <Button variant="outline" className="w-full" asChild onClick={() => setIsMobileMenuOpen(false)}>
                       <Link to="/admin">
