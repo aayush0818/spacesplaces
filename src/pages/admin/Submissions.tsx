@@ -126,7 +126,7 @@ const Submissions = () => {
   return (
     <div className="space-y-6">
       <div>
-        <h1 className="text-3xl font-playfair font-bold">Contact Submissions</h1>
+        <h1 className="text-2xl sm:text-3xl font-playfair font-bold">Contact Submissions</h1>
         <p className="text-muted-foreground mt-1">View and manage contact form submissions</p>
       </div>
 
@@ -164,17 +164,17 @@ const Submissions = () => {
           No submissions found
         </div>
       ) : (
-        <div className="border rounded-lg overflow-hidden">
+        <div className="border rounded-lg overflow-x-auto">
           <Table>
             <TableHeader>
               <TableRow>
-                <TableHead>Status</TableHead>
-                <TableHead>Name</TableHead>
-                <TableHead>Email</TableHead>
-                <TableHead>Phone</TableHead>
-                <TableHead>Message</TableHead>
-                <TableHead>Date</TableHead>
-                <TableHead>Actions</TableHead>
+                <TableHead className="whitespace-nowrap">Status</TableHead>
+                <TableHead className="whitespace-nowrap">Name</TableHead>
+                <TableHead className="hidden md:table-cell whitespace-nowrap">Email</TableHead>
+                <TableHead className="hidden lg:table-cell whitespace-nowrap">Phone</TableHead>
+                <TableHead className="hidden sm:table-cell">Message</TableHead>
+                <TableHead className="whitespace-nowrap">Date</TableHead>
+                <TableHead className="whitespace-nowrap">Actions</TableHead>
               </TableRow>
             </TableHeader>
             <TableBody>
@@ -185,10 +185,10 @@ const Submissions = () => {
                   onClick={() => openDetails(submission)}
                 >
                   <TableCell>{getStatusBadge(submission.status)}</TableCell>
-                  <TableCell className="font-medium">
+                  <TableCell className="font-medium whitespace-nowrap">
                     {submission.first_name} {submission.last_name}
                   </TableCell>
-                  <TableCell>
+                  <TableCell className="hidden md:table-cell">
                     <a
                       href={`mailto:${submission.email}`}
                       className="text-primary hover:underline"
@@ -197,7 +197,7 @@ const Submissions = () => {
                       {submission.email}
                     </a>
                   </TableCell>
-                  <TableCell>
+                  <TableCell className="hidden lg:table-cell">
                     <a
                       href={`tel:${submission.phone}`}
                       className="text-primary hover:underline"
@@ -206,19 +206,20 @@ const Submissions = () => {
                       {submission.phone}
                     </a>
                   </TableCell>
-                  <TableCell className="max-w-xs truncate">
+                  <TableCell className="hidden sm:table-cell max-w-xs truncate">
                     {submission.message}
                   </TableCell>
                   <TableCell className="text-sm text-muted-foreground">
                     {format(new Date(submission.created_at), 'MMM dd, yyyy')}
                   </TableCell>
                   <TableCell>
-                    <div className="flex gap-2" onClick={(e) => e.stopPropagation()}>
+                    <div className="flex flex-col sm:flex-row gap-2" onClick={(e) => e.stopPropagation()}>
                       {submission.status !== 'read' && (
                         <Button
                           size="sm"
                           variant="outline"
                           onClick={() => updateStatus(submission.id, 'read')}
+                          className="whitespace-nowrap"
                         >
                           Mark Read
                         </Button>
@@ -228,6 +229,7 @@ const Submissions = () => {
                           size="sm"
                           variant="outline"
                           onClick={() => updateStatus(submission.id, 'replied')}
+                          className="whitespace-nowrap"
                         >
                           Mark Replied
                         </Button>
