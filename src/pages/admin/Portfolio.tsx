@@ -231,9 +231,9 @@ const PortfolioManagement = () => {
 
   return (
     <div className="space-y-6">
-      <div className="flex justify-between items-center">
+      <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4">
         <div>
-          <h1 className="text-3xl font-playfair font-bold">Portfolio Management</h1>
+          <h1 className="text-2xl sm:text-3xl font-playfair font-bold">Portfolio Management</h1>
           <p className="text-muted-foreground mt-1">Manage your portfolio items</p>
         </div>
         <Dialog open={isDialogOpen} onOpenChange={(open) => {
@@ -241,7 +241,7 @@ const PortfolioManagement = () => {
           if (!open) resetForm();
         }}>
           <DialogTrigger asChild>
-            <Button className="btn-luxury">
+            <Button className="btn-luxury w-full sm:w-auto">
               <Plus className="h-4 w-4 mr-2" />
               Add Project
             </Button>
