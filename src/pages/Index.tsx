@@ -1,6 +1,6 @@
-
 import Navigation from '@/components/Navigation';
 import Hero from '@/components/Hero';
+import IntroSection from '@/components/IntroSection';
 import WhyChooseUs from '@/components/WhyChooseUs';
 import FeaturedProjects from '@/components/FeaturedProjects';
 import Services from '@/components/Services';
@@ -28,6 +28,9 @@ const Index = () => {
 
         {/* Main Content Sections */}
         <main className="overflow-hidden">
+          {/* Intro Section */}
+          <IntroSection />
+
           {/* Why Choose Us Section */}
           <WhyChooseUs />
 
