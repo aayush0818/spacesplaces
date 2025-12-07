@@ -37,29 +37,11 @@ const Hero = () => {
       </Carousel>
 
       {/* Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-black/70 z-10"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-black/30 to-black/50 z-10"></div>
 
       {/* Hero Content */}
       <div className="absolute inset-0 z-20 flex items-center justify-center px-4">
         <div className="w-full max-w-6xl mx-auto text-center">
-          
-          {/* Main Heading */}
-          <div className="mb-6">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-montserrat font-bold text-white leading-tight">
-              Transform Your
-              <span className="block bg-gradient-to-r from-primary-glow to-primary bg-clip-text text-transparent mt-2 drop-shadow-2xl">
-                Spaces & Places
-              </span>
-            </h1>
-          </div>
-          
-          {/* Subtitle */}
-          <div className="mb-8">
-            <p className="text-base sm:text-lg md:text-xl text-white leading-relaxed font-medium drop-shadow-lg max-w-3xl mx-auto">
-              We create extraordinary interior experiences that blend luxury with functionality. 
-              From concept to completion, every space tells your unique story.
-            </p>
-          </div>
 
           {/* Action Buttons */}
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-8 sm:mb-12 justify-center">
