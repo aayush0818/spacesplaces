@@ -40,7 +40,7 @@ const Hero = () => {
       <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-black/30 to-black/50 z-10"></div>
 
       {/* Hero Content */}
-      <div className="absolute inset-0 z-20 flex flex-col justify-end px-4 pb-[15%] sm:pb-[12%] md:pb-[10%]">
+      <div className="absolute inset-0 z-20 flex flex-col justify-end px-4 pb-6 sm:pb-8 md:pb-10">
         <div className="w-full max-w-6xl mx-auto text-center">
 
           {/* Action Buttons */}
