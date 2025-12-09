@@ -1,4 +1,4 @@
-import { Home, Building, Sofa, ChefHat, BookOpen, CheckCircle } from 'lucide-react';
+import { Home, Building, Sofa, ChefHat, BookOpen, CheckCircle, ArrowRight } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
@@ -16,35 +16,35 @@ const Services = () => {
     subtitle: "Create a space that feels like you",
     description: "Transform your home into a sanctuary that reflects your personality and lifestyle with thoughtful design.",
     portfolioCategory: "residential",
-    details: "From complete home makeovers to single-room transformations, we create living spaces that blend comfort with style. Our designs incorporate your personal preferences, family needs, and lifestyle requirements."
+    details: "From complete home makeovers to single-room transformations, we create living spaces that blend comfort with style."
   }, {
     icon: Building,
     title: "Commercial Spaces",
     subtitle: "Designs that work for your business",
     description: "Professional environments that boost productivity while expressing your company's identity and values.",
     portfolioCategory: "commercial",
-    details: "We design offices, retail stores, restaurants, and hospitality spaces that enhance brand identity and employee productivity. Functional layouts meet aesthetic appeal for spaces that work hard for your business."
+    details: "We design offices, retail stores, restaurants, and hospitality spaces that enhance brand identity and productivity."
   }, {
     icon: Sofa,
     title: "Custom Furniture",
-    subtitle: "Tailor-made pieces that elevate your space",
+    subtitle: "Tailor-made pieces that elevate",
     description: "Bespoke furniture designed specifically for your space, lifestyle, and functional requirements.",
     portfolioCategory: "custom-furniture",
-    details: "Every piece is crafted to your exact specifications. From wardrobes that maximize storage to statement pieces that become conversation starters, our furniture is built to last and designed to impress."
+    details: "Every piece is crafted to your exact specifications—from wardrobes that maximize storage to statement pieces."
   }, {
     icon: ChefHat,
     title: "Modular Kitchens",
-    subtitle: "Ergonomic layouts with beautiful finishes",
+    subtitle: "Ergonomic layouts, beautiful finishes",
     description: "Smart kitchen solutions that blend functionality with style for the heart of your home.",
     portfolioCategory: "modular-kitchen",
-    details: "Our modular kitchens feature premium hardware, durable materials, and smart storage solutions. We optimize workflow with ergonomic layouts while ensuring the kitchen becomes your home's most stylish room."
+    details: "Our modular kitchens feature premium hardware, durable materials, and smart storage solutions."
   }, {
     icon: BookOpen,
     title: "Study Units",
-    subtitle: "Ergonomic, elegant workspaces",
+    subtitle: "Elegant, focused workspaces",
     description: "Focused environments designed to boost productivity and creativity in compact, organized spaces.",
     portfolioCategory: "study-units",
-    details: "Purpose-built study units with integrated storage, cable management, and ergonomic design. Perfect for home offices, children's study areas, or dedicated workspaces that inspire focus and creativity."
+    details: "Purpose-built study units with integrated storage, cable management, and ergonomic design."
   }];
 
   return <section id="services" className="py-16 lg:py-24">
@@ -59,45 +59,38 @@ const Services = () => {
           </p>
         </div>
 
-        {/* Services Accordion */}
-        <div className="max-w-4xl mx-auto mb-16">
-          <Accordion type="single" collapsible className="space-y-4">
-            {mainServices.map((service, index) => {
-              const IconComponent = service.icon;
-              return (
-                <AccordionItem 
-                  key={service.title} 
-                  value={`service-${index}`}
-                  className="bg-card border border-border rounded-lg px-6 hover:shadow-lg transition-all duration-300"
+        {/* Services Grid with Accordion Details */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+          {mainServices.map((service, index) => {
+            const IconComponent = service.icon;
+            return (
+              <div 
+                key={service.title}
+                className="bg-card rounded-2xl border border-border p-6 hover:shadow-elegant transition-all duration-300 hover:border-primary/30 group"
+              >
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:bg-primary/20 transition-colors duration-300">
+                    <IconComponent className="h-7 w-7 text-primary" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-playfair font-medium text-foreground">{service.title}</h3>
+                    <p className="text-primary font-medium text-sm">{service.subtitle}</p>
+                  </div>
+                </div>
+                
+                <p className="text-muted-foreground text-sm leading-relaxed mb-4">
+                  {service.details}
+                </p>
+                
+                <Link 
+                  to={`/portfolio?category=${service.portfolioCategory}`}
+                  className="inline-flex items-center text-primary font-medium text-sm hover:gap-2 transition-all duration-300"
                 >
-                  <AccordionTrigger className="hover:no-underline py-4">
-                    <div className="flex items-center gap-4">
-                      <div className="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center flex-shrink-0">
-                        <IconComponent className="h-7 w-7 text-primary" />
-                      </div>
-                      <div className="text-left">
-                        <span className="text-xl font-playfair font-medium text-foreground block">{service.title}</span>
-                        <span className="text-primary font-medium text-sm">{service.subtitle}</span>
-                      </div>
-                    </div>
-                  </AccordionTrigger>
-                  <AccordionContent className="pb-4">
-                    <div className="pl-[4.5rem]">
-                      <p className="text-muted-foreground leading-relaxed mb-4">
-                        {service.details}
-                      </p>
-                      <Link 
-                        to={`/portfolio?category=${service.portfolioCategory}`}
-                        className="inline-flex items-center text-primary font-medium hover:underline"
-                      >
-                        View {service.title} Projects →
-                      </Link>
-                    </div>
-                  </AccordionContent>
-                </AccordionItem>
-              );
-            })}
-          </Accordion>
+                  View Projects <ArrowRight className="ml-1 h-4 w-4" />
+                </Link>
+              </div>
+            );
+          })}
         </div>
 
         {/* Additional Services */}
