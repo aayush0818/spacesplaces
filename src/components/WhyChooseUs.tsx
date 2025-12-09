@@ -1,4 +1,10 @@
 import { CheckCircle, Award, Wrench, Package, Home, Palette } from 'lucide-react';
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
 const WhyChooseUs = () => {
   const rawMaterials = [
@@ -73,7 +79,7 @@ const WhyChooseUs = () => {
           </p>
         </div>
 
-        {/* Sourcing of Raw Materials */}
+        {/* Sourcing of Raw Materials - Accordion */}
         <div className="mb-20">
           <div className="text-center mb-12">
             <h3 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
@@ -84,22 +90,32 @@ const WhyChooseUs = () => {
             </p>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-8">
-            {rawMaterials.map((material, index) => (
-              <div key={index} className="bg-card border border-border rounded-lg p-6 hover:shadow-lg transition-all duration-300">
-                <div className="flex items-center mb-4">
-                  <div className="w-8 h-8 bg-primary text-primary-foreground rounded-full flex items-center justify-center font-bold text-sm mr-3">
-                    {index + 1}
-                  </div>
-                  <h4 className="text-xl font-semibold text-foreground">{material.title}</h4>
-                </div>
-                <p className="text-muted-foreground leading-relaxed">{material.description}</p>
-              </div>
-            ))}
+          <div className="max-w-3xl mx-auto">
+            <Accordion type="single" collapsible className="space-y-4">
+              {rawMaterials.map((material, index) => (
+                <AccordionItem 
+                  key={index} 
+                  value={`material-${index}`}
+                  className="bg-card border border-border rounded-lg px-6 hover:shadow-lg transition-all duration-300"
+                >
+                  <AccordionTrigger className="hover:no-underline py-4">
+                    <div className="flex items-center gap-3">
+                      <div className="w-8 h-8 bg-primary text-primary-foreground rounded-full flex items-center justify-center font-bold text-sm flex-shrink-0">
+                        {index + 1}
+                      </div>
+                      <span className="text-xl font-semibold text-foreground text-left">{material.title}</span>
+                    </div>
+                  </AccordionTrigger>
+                  <AccordionContent className="pb-4">
+                    <p className="text-muted-foreground leading-relaxed pl-11">{material.description}</p>
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
           </div>
         </div>
 
-        {/* Our Process */}
+        {/* Our Process - Accordion */}
         <div className="mb-20">
           <div className="text-center mb-12">
             <h3 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
@@ -107,43 +123,48 @@ const WhyChooseUs = () => {
             </h3>
           </div>
           
-          <div className="space-y-8">
-            {processStages.map((stage, index) => {
-              const IconComponent = stage.icon;
-              return (
-                <div key={index} className="bg-card border border-border rounded-lg p-6 md:p-8 hover:shadow-lg transition-all duration-300">
-                  <div className="flex flex-col md:flex-row md:items-start gap-6">
-                    <div className="flex items-center gap-4 md:flex-col md:items-center md:gap-2 md:min-w-[120px]">
-                      <div className="w-12 h-12 bg-primary text-primary-foreground rounded-full flex items-center justify-center">
-                        <IconComponent className="w-6 h-6" />
+          <div className="max-w-4xl mx-auto">
+            <Accordion type="single" collapsible defaultValue="process-0" className="space-y-4">
+              {processStages.map((stage, index) => {
+                const IconComponent = stage.icon;
+                return (
+                  <AccordionItem 
+                    key={index} 
+                    value={`process-${index}`}
+                    className="bg-card border border-border rounded-lg px-6 hover:shadow-lg transition-all duration-300"
+                  >
+                    <AccordionTrigger className="hover:no-underline py-4">
+                      <div className="flex items-center gap-4">
+                        <div className="w-12 h-12 bg-primary text-primary-foreground rounded-full flex items-center justify-center flex-shrink-0">
+                          <IconComponent className="w-6 h-6" />
+                        </div>
+                        <div className="text-left">
+                          <span className="text-sm font-medium text-primary block">{stage.stage}</span>
+                          <span className="text-lg md:text-xl font-semibold text-foreground">{stage.title}</span>
+                        </div>
                       </div>
-                      <div className="text-center">
-                        <span className="text-sm font-medium text-primary">{stage.stage}</span>
-                        <h4 className="text-lg md:text-xl font-semibold text-foreground mt-1">
-                          {stage.title}
-                        </h4>
+                    </AccordionTrigger>
+                    <AccordionContent className="pb-4">
+                      <div className="pl-16">
+                        <p className="text-muted-foreground mb-4 leading-relaxed">
+                          {stage.description}
+                        </p>
+                        {stage.points.length > 0 && (
+                          <ul className="space-y-2">
+                            {stage.points.map((point, pointIndex) => (
+                              <li key={pointIndex} className="flex items-start gap-3">
+                                <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+                                <span className="text-muted-foreground">{point}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        )}
                       </div>
-                    </div>
-                    
-                    <div className="flex-1">
-                      <p className="text-muted-foreground mb-4 leading-relaxed">
-                        {stage.description}
-                      </p>
-                      {stage.points.length > 0 && (
-                        <ul className="space-y-2">
-                          {stage.points.map((point, pointIndex) => (
-                            <li key={pointIndex} className="flex items-start gap-3">
-                              <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-                              <span className="text-muted-foreground">{point}</span>
-                            </li>
-                          ))}
-                        </ul>
-                      )}
-                    </div>
-                  </div>
-                </div>
-              );
-            })}
+                    </AccordionContent>
+                  </AccordionItem>
+                );
+              })}
+            </Accordion>
           </div>
         </div>
 

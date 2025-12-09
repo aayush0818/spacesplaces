@@ -1,30 +1,39 @@
-
 import { Compass, Sun, Flame, Leaf, CheckCircle, ArrowRight } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
 const VastuSection = () => {
   const vastuBenefits = [
     {
       icon: Compass,
       title: "Directional Harmony",
-      description: "Room layouts aligned with cardinal directions for natural energy flow"
+      description: "Room layouts aligned with cardinal directions for natural energy flow",
+      details: "We carefully plan each room's placement according to Vastu principles. Living areas face east for morning sunlight, kitchens in the southeast for fire element balance, and bedrooms positioned for restful sleep."
     },
     {
       icon: Sun,
       title: "Light & Air Optimization",
-      description: "Thoughtful placement of openings for sunlight and ventilation"
+      description: "Thoughtful placement of openings for sunlight and ventilation",
+      details: "Natural light and air circulation are fundamental to Vastu. We design window placements, door orientations, and ventilation systems to maximize positive energy flow throughout your space."
     },
     {
       icon: Flame,
       title: "Elemental Balance",
-      description: "Design that respects the five natural elements: earth, water, fire, air, and space"
+      description: "Design that respects the five natural elements: earth, water, fire, air, and space",
+      details: "Each zone of your home represents different elements. We ensure proper placement of water features, kitchen appliances, heavy furniture, and open spaces to create harmony between all five elements."
     },
     {
       icon: Leaf,
       title: "Holistic Wellness",
-      description: "Interiors that support mental clarity, restful sleep, and emotional balance"
+      description: "Interiors that support mental clarity, restful sleep, and emotional balance",
+      details: "Vastu-aligned spaces promote overall well-being. From color psychology to furniture arrangement, every detail is designed to reduce stress, improve focus, and create a peaceful living environment."
     }
   ];
 
@@ -52,31 +61,42 @@ const VastuSection = () => {
           </p>
         </div>
 
-        {/* Why It Matters */}
+        {/* Why It Matters - Accordion */}
         <div className="mb-16">
           <h3 className="text-2xl md:text-3xl font-playfair text-center text-foreground mb-12">
             Why It Matters
           </h3>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {vastuBenefits.map((benefit, index) => {
-              const IconComponent = benefit.icon;
-              return (
-                <Card key={index} className="border-0 shadow-soft hover:shadow-elegant transition-all duration-300 hover-lift">
-                  <CardContent className="p-6 text-center">
-                    <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-2xl mb-4">
-                      <IconComponent className="h-8 w-8 text-primary" />
-                    </div>
-                    <h4 className="text-lg font-playfair font-medium text-foreground mb-3">
-                      {benefit.title}
-                    </h4>
-                    <p className="text-muted-foreground text-sm leading-relaxed">
-                      {benefit.description}
-                    </p>
-                  </CardContent>
-                </Card>
-              );
-            })}
+          <div className="max-w-3xl mx-auto">
+            <Accordion type="single" collapsible className="space-y-4">
+              {vastuBenefits.map((benefit, index) => {
+                const IconComponent = benefit.icon;
+                return (
+                  <AccordionItem 
+                    key={index} 
+                    value={`vastu-${index}`}
+                    className="bg-card border border-border rounded-lg px-6 hover:shadow-lg transition-all duration-300"
+                  >
+                    <AccordionTrigger className="hover:no-underline py-4">
+                      <div className="flex items-center gap-4">
+                        <div className="w-12 h-12 bg-primary/10 rounded-2xl flex items-center justify-center flex-shrink-0">
+                          <IconComponent className="h-6 w-6 text-primary" />
+                        </div>
+                        <div className="text-left">
+                          <span className="text-lg font-playfair font-medium text-foreground block">{benefit.title}</span>
+                          <span className="text-sm text-muted-foreground">{benefit.description}</span>
+                        </div>
+                      </div>
+                    </AccordionTrigger>
+                    <AccordionContent className="pb-4">
+                      <p className="text-muted-foreground leading-relaxed pl-16">
+                        {benefit.details}
+                      </p>
+                    </AccordionContent>
+                  </AccordionItem>
+                );
+              })}
+            </Accordion>
           </div>
         </div>
 
