@@ -133,11 +133,20 @@ const Footer = () => {
                 <div className="text-sm text-background/80">Visit Us</div>
                 <div className="font-medium text-sm">348, Powai Plaza, Hiranandani Gardens, Powai, Mumbai 400076</div>
                 <div className="font-medium text-sm mt-2">107, Jay Ambe Industrial Estate, Near Jay Jalaram Complex, Pimplas</div>
-                
-                {/* Made by PlusMinus */}
-                
               </div>
             </div>
+          </div>
+          
+          {/* Made by PlusMinus */}
+          <div className="text-right mt-6">
+            <a 
+              href="https://plusminus-liard.vercel.app/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-background/60 hover:text-primary text-sm transition-colors"
+            >
+              Made by PlusMinus
+            </a>
           </div>
         </div>
 
