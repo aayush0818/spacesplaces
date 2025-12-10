@@ -1,4 +1,3 @@
-
 import { Phone, Mail, MapPin, Instagram, Facebook, Twitter, Linkedin } from 'lucide-react';
 import { Link } from 'react-router-dom';
 const Footer = () => {
@@ -136,17 +135,7 @@ const Footer = () => {
                 <div className="font-medium text-sm mt-2">107, Jay Ambe Industrial Estate, Near Jay Jalaram Complex, Pimplas</div>
                 
                 {/* Made by PlusMinus */}
-                <div className="mt-3 pt-3 border-t border-background/20">
-                  <span className="text-background/50 text-sm">Made by </span>
-                  <a 
-                    href="https://plusminus-liard.vercel.app/" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="text-primary hover:text-primary/80 text-sm font-medium transition-colors"
-                  >
-                    PlusMinus
-                  </a>
-                </div>
+                
               </div>
             </div>
           </div>
