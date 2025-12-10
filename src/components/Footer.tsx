@@ -155,6 +155,19 @@ const Footer = () => {
               </Link>
             </div>
           </div>
+          
+          {/* Made by PlusMinus */}
+          <div className="text-center mt-6 pt-4 border-t border-background/10">
+            <span className="text-background/50 text-sm">Made by </span>
+            <a 
+              href="https://plusminus-liard.vercel.app/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-primary hover:text-primary/80 text-sm font-medium transition-colors"
+            >
+              PlusMinus
+            </a>
+          </div>
         </div>
       </div>
     </footer>;
