@@ -140,8 +140,8 @@ const Footer = () => {
           {/* Made by PlusMinus */}
           <div className="text-right mt-6">
             <a 
-              href="https://plusminus-liard.vercel.app/" 
-              target="_blank" 
+              href="https://plusminusdigital.in/" 
+              target="_blank"
               rel="noopener noreferrer"
               className="text-background/60 hover:text-primary text-sm transition-colors"
             >
