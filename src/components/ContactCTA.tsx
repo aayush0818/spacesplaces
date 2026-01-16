@@ -1,11 +1,80 @@
-
-import { Phone, Mail, MapPin, ArrowRight } from 'lucide-react';
+import { useState } from 'react';
+import { Phone, Mail, MapPin, ArrowRight, Loader2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
+import { supabase } from '@/integrations/supabase/client';
+import { toast } from '@/hooks/use-toast';
+
 const ContactCTA = () => {
-  return <section id="contact" className="py-16 lg:py-24">
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    phone: '',
+    email: '',
+    message: ''
+  });
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({ ...prev, [name]: value }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    if (!formData.firstName || !formData.phone || !formData.email) {
+      toast({
+        title: 'Missing fields',
+        description: 'Please fill in all required fields',
+        variant: 'destructive'
+      });
+      return;
+    }
+
+    setIsSubmitting(true);
+    
+    try {
+      const { error } = await supabase
+        .from('contact_submissions')
+        .insert({
+          first_name: formData.firstName,
+          last_name: formData.lastName || '',
+          phone: formData.phone,
+          email: formData.email,
+          message: formData.message || ''
+        });
+
+      if (error) throw error;
+
+      toast({
+        title: 'Success!',
+        description: 'Your message has been sent. We\'ll contact you within 24 hours.',
+      });
+
+      setFormData({
+        firstName: '',
+        lastName: '',
+        phone: '',
+        email: '',
+        message: ''
+      });
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      toast({
+        title: 'Error',
+        description: 'Failed to send message. Please try again.',
+        variant: 'destructive'
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
+  return (
+    <section id="contact" className="py-16 lg:py-24">
       <div className="container mx-auto px-4 max-w-7xl">
         <div className="grid lg:grid-cols-2 gap-16 items-start">
           {/* Contact Information */}
@@ -73,39 +142,93 @@ const ContactCTA = () => {
                 Get Your Free Quote
               </h3>
               
-              <form className="space-y-6">
+              <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>
                     <label className="block text-sm font-medium text-foreground mb-2">
-                      Full Name *
+                      First Name *
                     </label>
-                    <Input placeholder="Enter your name" className="border-border focus:border-primary" />
+                    <Input 
+                      name="firstName"
+                      value={formData.firstName}
+                      onChange={handleInputChange}
+                      placeholder="Enter first name" 
+                      className="border-border focus:border-primary" 
+                    />
                   </div>
+                  <div>
+                    <label className="block text-sm font-medium text-foreground mb-2">
+                      Last Name
+                    </label>
+                    <Input 
+                      name="lastName"
+                      value={formData.lastName}
+                      onChange={handleInputChange}
+                      placeholder="Enter last name" 
+                      className="border-border focus:border-primary" 
+                    />
+                  </div>
+                </div>
+
+                <div className="grid md:grid-cols-2 gap-4">
                   <div>
                     <label className="block text-sm font-medium text-foreground mb-2">
                       Phone Number *
                     </label>
-                    <Input placeholder="Enter your phone" type="tel" className="border-border focus:border-primary" />
+                    <Input 
+                      name="phone"
+                      value={formData.phone}
+                      onChange={handleInputChange}
+                      placeholder="Enter your phone" 
+                      type="tel" 
+                      className="border-border focus:border-primary" 
+                    />
                   </div>
-                </div>
-
-                <div>
-                  <label className="block text-sm font-medium text-foreground mb-2">
-                    Email Address *
-                  </label>
-                  <Input placeholder="Enter your email" type="email" className="border-border focus:border-primary" />
+                  <div>
+                    <label className="block text-sm font-medium text-foreground mb-2">
+                      Email Address *
+                    </label>
+                    <Input 
+                      name="email"
+                      value={formData.email}
+                      onChange={handleInputChange}
+                      placeholder="Enter your email" 
+                      type="email" 
+                      className="border-border focus:border-primary" 
+                    />
+                  </div>
                 </div>
 
                 <div>
                   <label className="block text-sm font-medium text-foreground mb-2">
                     Project Details
                   </label>
-                  <Textarea placeholder="Tell us about your project requirements, timeline, etc." rows={4} className="border-border focus:border-primary resize-none" />
+                  <Textarea 
+                    name="message"
+                    value={formData.message}
+                    onChange={handleInputChange}
+                    placeholder="Tell us about your project requirements, timeline, etc." 
+                    rows={4} 
+                    className="border-border focus:border-primary resize-none" 
+                  />
                 </div>
 
-                <Button className="btn-luxury w-full group">
-                  Get Free Quote
-                  <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+                <Button 
+                  type="submit" 
+                  disabled={isSubmitting}
+                  className="btn-luxury w-full group"
+                >
+                  {isSubmitting ? (
+                    <>
+                      <Loader2 className="mr-2 h-5 w-5 animate-spin" />
+                      Sending...
+                    </>
+                  ) : (
+                    <>
+                      Get Free Quote
+                      <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+                    </>
+                  )}
                 </Button>
 
                 <p className="text-xs text-muted-foreground text-center">
@@ -117,6 +240,8 @@ const ContactCTA = () => {
           </Card>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default ContactCTA;
