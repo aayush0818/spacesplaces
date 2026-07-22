@@ -2,7 +2,7 @@
 
 Marketing and portfolio site for Spaces Places — an interior design and manufacturing studio. The site showcases completed projects, services, and manufacturing capabilities, and includes an authenticated admin panel for managing portfolio content and contact form submissions.
 
-**Live site:** [spacesplaces.vercel.app](https://spacesplaces.vercel.app)
+**Live site:** [spacesplaces.in(https://spacesplaces.in)
 
 ## Overview
 
